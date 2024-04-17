@@ -1,0 +1,170 @@
+/* CSS CONTACTO */
+
+/* TAGS */
+
+
+/* IDS */
+#tituloContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 816px;
+    top: 454px;
+}
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 168px;
+}
+
+#encuentranos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#datos_encuentranos {
+    display: flex;
+    width: 395px;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 755px;
+    top: 1296px;
+}
+
+#mancha_encuentranos {
+    width: 1400px;
+    height: 770.3px;
+    transform: rotate(-0.073deg);
+    padding-left: 3%;
+}
+
+#instagram {
+    width: 64px;
+    height: 64px;
+}
+
+#facebook {
+    width: 64px;
+    height: 64px;
+}
+
+#contactanos {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#datos_contactanos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 766px;
+    top: 2210px;
+}
+
+#mancha_contactanos {
+    width: 1439.969px;
+    height: 625.787px;
+    transform: rotate(-0.073deg);
+}
+
+#horario {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10%;
+}
+
+#datos_horario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 726px;
+    top: 3004px;
+}
+
+#mancha_horario {
+    width: 1416.19px;
+    height: 611.143px;
+    transform: rotate(-0.073deg);
+}
+
+#pregunta {
+    display: flex;
+    width: 1440px;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 8%;
+    padding-bottom: 8%;
+    background: var(--base-tierra, #F5EFE1);
+    box-shadow: 0px -6px 14px 0px rgba(167, 122, 54, 0.40), 0px 6px 14px 0px rgba(167, 122, 54, 0.40);
+}
+
+#titulo_pregunta {
+    display: flex;
+    flex-direction: column;
+    width: 1441px;
+    align-items: center;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+}
+
+#datos_contacto {
+    display: flex;
+    width: 428px;
+    height: 187px;
+    padding: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: -70px;
+    margin-top: 3%;
+}
+
+#obs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-left: 2%;
+}
+
+#enviar{
+    padding-left: 3%;
+}
+
+/* CLASES */
+.foto_principal_contacto {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 1440px;
+    height: 720px;
+    margin-top: 0px;
+}
+
+.h2 {
+    color: black !important;
+    margin: 3%;
+    width: 100%;
+}
+
+.h2preguntas {
+    margin-bottom: 1%;
+}
+

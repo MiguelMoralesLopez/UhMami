@@ -1,0 +1,32 @@
+/* CSS DE LOGIN */
+
+/* TAGS */
+body {
+    height: 80px !important;
+}
+
+/* IDS */
+#titulo_login {
+    margin-top: 5%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 83px;
+    margin-bottom: 6%;
+}
+
+#datos_login {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+#botones_form {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 104px;
+}

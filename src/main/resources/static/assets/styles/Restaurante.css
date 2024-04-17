@@ -1,0 +1,108 @@
+/* CSS RESTAURANTE */
+
+/* TAGS */
+body{
+    height: 4000px;
+}
+
+p.p {
+    color: #000;
+    text-align: center;
+    font-family: Simonetta;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+/* IDS */
+#principalRestaurante {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 82px;
+}
+
+#tituloRestaurante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 565px;
+    top: 226px;
+}
+
+#infoRestaurante {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#btnCartaYreserva {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 204px;
+}
+
+#fotosRestaurante {
+    display: flex;
+    width: 1440px;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+#nuestroChef{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#recomendacion {
+    display: flex;
+    width: 1440px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#fotoRecomendacion {
+    width: 1440px;
+    height: 623px;
+    
+}
+
+#btn_recomendacion{ 
+    position: absolute;
+    margin: 5%;
+    margin-top: 25%;
+}
+
+#btn_recomendacion:hover{
+    color: var(--MARCA-Verde-oscuro, #616D69);
+}
+
+
+/* CLASES */
+.foto_principal_restaurante {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 1440px;
+    height: 720px;
+    margin-top: 0px;
+}
+
+.fotos {
+    width: 718px;
+    height: 600px;
+    border: 1px solid #000;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}

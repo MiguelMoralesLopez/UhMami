@@ -1,0 +1,178 @@
+/* CSS CARTA */
+
+/* TAGS */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 138px;
+}
+
+h2 {
+    text-align: left !important;
+}
+
+ol.listaAlergenos {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+li.alergenos {
+    display: flex;
+    gap: 12px;
+}
+
+p.p1 {
+    width: 180px;
+}
+
+p.p2 {
+    width: 384px;
+}
+
+
+ol.listaComida {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 0;
+}
+
+li.lista {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+hr {
+    width: 575px;
+}
+
+
+
+/* IDS */
+#principal_carta {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#tituloNuestraCarta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 19%;
+    top: 16%;
+}
+
+#paraEmpezar {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#titulo_empezar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 21%;
+    top: 136%;
+}
+
+#titulo_principales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 21%;
+    top: 370%;
+}
+
+#titulo_terminar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 705%;
+}
+
+#titulo_bebidas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 30%;
+    top: 868%;
+}
+
+#alergenos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#frescoComienzo {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left:13%;
+}
+
+#l1izq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#l1drc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+#cocktails{
+    margin-bottom: 10%;
+}
+
+
+
+/* CLASES */
+.foto_principal_carta {
+    width: 1440px;
+    height: 768px;
+    display: flex;
+}
+
+.fotosCarta {
+    width: 1440px;
+    height: 780px;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+    margin-top: 3%;
+}
+
+.textoLista {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.h5NoIcon {
+    width: 514px;
+    height: 40px;
+}
+
+.Icon{
+    width: 59px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/styles/Listado_de_reservas.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
+        <title>Listado de reservas</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <button class="botones_nav"><a
+                        href="restaurante.html">Restaurante</a></button>
+                <button class="botones_nav"><a
+                        href="carta.html">Carta</a></button>
+                <a href="home.html"><img class="logo" src="assets/img/logo.png"
+                        alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a
+                        href="contacto.html">Contacto</a></button>
+                <button class="botones_nav"><a
+                        href="reservas.html">Reservas</a></button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="datos_fecha">
+                <article id="calendario">
+                    <label for="fecha">Fecha : </label>
+                    <input type="date" id="fecha"
+                        th:name="fecha">
+                </article>
+                <article>
+                    <button id="pdf" class="botones_principales">Generar PDF</button>
+                        <button id="nueva_reserva" class="botones_principales">Nueva reserva</button>
+                </article>
+            </section>
+            <section id="listado">
+                <h2>Listado de reservas:</h2>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <section id="footer">
+                <article id="datos">
+                    <img src="assets/img/logoPeque.png" alt="Logo Uhmami" />
+                    <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
+                    <p class="txt_footer">UhMami@contacto.com</p>
+                </article>
+                <article id="legal">
+                    <p><a href="#" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a href="#" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a href="#" class="txt_footer">Aviso legal</a></p>
+                    <p><a href="#" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
+            </section>
+        </footer>
+
+    </body>
+</html>

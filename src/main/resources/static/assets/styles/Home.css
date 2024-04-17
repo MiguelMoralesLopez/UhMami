@@ -1,0 +1,186 @@
+
+
+/* CSS HOME */
+
+/* TAGS */
+
+p.p {
+    width: 660px;
+}
+
+
+/* IDS */
+#nuestra_historia {
+    display: inline-flex;
+    flex-direction: column;
+    margin-top: 5%;;
+}
+
+#historia {
+    display: flex;
+}
+
+#sumergete {
+    margin-top: 10%;
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    flex-shrink: 0;
+    background: var(--base-tierra, #F5EFE1);
+    box-shadow: 0px -6px 14px 0px rgba(167, 122, 54, 0.40), 0px 6px 14px 0px rgba(167, 122, 54, 0.40);
+}
+
+#fotosSumergete {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -55px;
+}
+
+#caja_empezar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+#caja_principales {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+#caja_postres {
+    display: flex;
+    align-items: center;
+    border: 1px solid #000;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+#empezar {
+    display: flex;
+    width: 479px;
+    height: 481px;
+    align-items: center;
+}
+
+#principales {
+    display: flex;
+    width: 479px;
+    height: 481px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#postre {
+    display: flex;
+    width: 479px;
+    height: 481px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#reserva {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 43px;
+}
+
+#resenas {
+    display: flex;
+    padding: 71px 226px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+#boton_empezar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    margin: 5%;
+    margin-top: 15%;
+}
+
+#boton_princ {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    margin: 5%;
+    margin-top: 15%;
+}
+
+#boton_postres {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    margin: 5%;
+    margin-top: 15%;
+}
+
+#sec_reservar {
+    display: flex;
+    height: 245px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 5%;
+    margin-bottom: 13%;
+}
+
+#resenas {
+    display: flex;
+    height: 600px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background: var(--base-tierra, #F5EFE1);
+    box-shadow: 0px -6px 14px 0px rgba(167, 122, 54, 0.40), 0px 6px 14px 0px rgba(167, 122, 54, 0.40);
+    margin-bottom: 10%;
+}
+
+#cont_resenas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    width: 984px;
+    height: 448px;
+}
+
+#resena {
+    display: flex;
+    width: 984px;
+    height: 225px;
+    align-items: center;
+    gap: 32px;
+}
+
+
+/* CLASES */
+.foto_principal_home {
+    width: 1440px;
+    height: 915px;
+}
+
+
+.chef {
+    width: 560px;
+    height: 800px;
+    transform: rotate(6.128deg);
+    padding-top: 8%;
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25); 
+}
+
+.parrafos {
+    width: 700px;
+}

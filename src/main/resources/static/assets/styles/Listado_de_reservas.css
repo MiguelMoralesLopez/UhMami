@@ -1,0 +1,16 @@
+/* CSS LISTADO DE RESERVAS */
+
+/* TAGS */
+h2{
+    text-align: left !important;
+}
+
+/* IDS */
+#datos_fecha {
+    display: inline-flex;
+    align-items: center;
+    gap: 203px;
+    margin-top: 10%;
+}
+
+/* CLASES */

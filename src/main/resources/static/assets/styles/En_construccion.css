@@ -1,0 +1,13 @@
+/* CSS CONSTRUCCION*/
+
+/* IDS */
+body{
+    max-height: 100px !important;
+}
+
+/* TAGS */
+#btn_volver {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
