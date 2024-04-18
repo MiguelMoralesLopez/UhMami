@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/styles/Reservas.css">
-        <link rel="stylesheet" href="assets/styles/Styles.css">
+        <link rel="stylesheet" href="/UhMami/src/main/resources/static/assets/styles/Reservas.css">
+        <link rel="stylesheet" href="/UhMami/src/main/resources/static/assets/styles/Styles.css">
         <title>Reservas</title>
     </head>
     <body>
@@ -14,7 +14,7 @@
                         href="restaurante.html">Restaurante</a></button>
                 <button class="botones_nav"><a
                         href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo" src="assets/img/logo.png"
+                <a href="home.html"><img class="logo" src="/UhMami/src/main/resources/static/assets/img/logo.png"
                         alt="Logo UhMami" /></a>
                 <button class="botones_nav"><a
                         href="contacto.html">Contacto</a></button>
@@ -28,7 +28,7 @@
                 <section id="principalReserva">
                     <img
                         class="foto_principal_reserva"
-                        src="assets/img/21.jpg"
+                        src="/UhMami/src/main/resources/static/assets/img/21.jpg"
                         alt="foto tarta" />
                     <article id="tituloReservas">
                         <h1>Reservas</h1>
@@ -36,7 +36,7 @@
                 </section>
                 <section id="reservar">
                     <img class="fondo_titulo"
-                        src="assets/img/tit_reservar.png" />
+                        src="/UhMami/src/main/resources/static/assets/img/tit_reservar.png" />
                 </section>
                 <form id="form" th:action="@{/reservar}" th:object="${cliente}"
                     th:method="post">
@@ -115,7 +115,7 @@
                     <article id="plano_mesas">
                         <p><label>Elige tu mesa: </label></p>
                         <div id="plano">
-                            <img id="foto_plano" src="assets/img/plano_color.png"
+                            <img id="foto_plano" src="/UhMami/src/main/resources/static/assets/img/plano_color.png"
                                 alt="foto plano del restaurante" />
                         </div>
                     </article>
@@ -163,22 +163,22 @@
 
                 <section id="fotosComida">
                     <article id="arriba">
-                        <img class="foto" src="assets/img/princip.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/34.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/30.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/40.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/princip.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/34.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/30.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/40.jpg" alt="foto comida" />
                     </article>
                     <article id="abajo">
-                        <img class="foto" src="assets/img/28.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/37.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/103.jpg" alt="foto comida" />
-                        <img class="foto" src="assets/img/32.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/28.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/37.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/103.jpg" alt="foto comida" />
+                        <img class="foto" src="/UhMami/src/main/resources/static/assets/img/32.jpg" alt="foto comida" />
                     </article>
                 </section>
 
                 <section id="necesitas">
                     <article id="titulo_necesitas">
-                        <img id="foto_necesitas" src="assets/img/tit_necesitas.png" />
+                        <img id="foto_necesitas" src="/UhMami/src/main/resources/static/assets/img/tit_necesitas.png" />
                     </article>
                     <form id="form" th:action="@{/modificar}"  th:object="${reserva}" th:method="post">
                         <article id="datos_modificar_reserva">
@@ -198,7 +198,7 @@
             <footer>
                 <section id="footer">
                     <article id="datos">
-                        <img src="assets/img/logoPeque.png" alt="Logo Uhmami" />
+                        <img src="/UhMami/src/main/resources/static/assets/img/logoPeque.png" alt="Logo Uhmami" />
                         <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>
