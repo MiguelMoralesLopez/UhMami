@@ -53,14 +53,13 @@ body {
 }
 
 #foto_plano {
-    width: 1067px;
-    height: 644px;
+    width: 1200px;
+    height: 800px;
     border: 1px solid #000;
     margin-bottom: 3%;
     margin-left: 1%;
     border-radius: 10px;
 }
-
 
 #grupo {
     display: flex;
@@ -128,4 +127,17 @@ body {
     height: 350px;
     border: 1px solid #000;
     box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 10% 18% 18% 30% 12%;
+    gap: 1px;
+    position: absolute;
+    left: 25%;
+    top: 1990px;
+}
+
+.item {
+    padding: 10px;
 }
