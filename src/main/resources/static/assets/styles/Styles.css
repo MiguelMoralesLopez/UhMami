@@ -355,6 +355,30 @@ footer {
     line-height: normal;
 }
 
+/* BOTONES MODIFICAR */
+
+.botones_modificar {
+    background: transparent;
+    background-image: url(../img/boton_modificar.png);
+    border: 0px;
+    margin: 0 auto;
+    margin-top: 5%;
+    display: flex;
+    width: 230px;
+    height: 75px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.botones_modificar:hover {
+    background-image: url(../img/btn_modif_hover.png);
+}
+
+.botones_modificar:active {
+    background-image: url(../img/btn_modif_clicked.png);
+}
+
+
 
 /* ELEMENTOS DE FORMULARIOS */
 input {
