@@ -132,12 +132,109 @@ body {
 .container {
     display: grid;
     grid-template-columns: 10% 18% 18% 30% 12%;
+    grid-template-rows: 160px 60px 120px 100px 100px;
     gap: 1px;
     position: absolute;
-    left: 25%;
-    top: 1990px;
+    left: 24.5%;
+    top: 2000px;
 }
 
 .item {
-    padding: 10px;
+    padding: 12px;
+}
+
+.dos_cuadrada{
+    background: transparent;
+    background-image: url(../img/2_cuadrada_normal.png);
+    width: 49px;
+    height: 86px;
+    border: 0px;
+}
+
+.dos_cuadrada:hover{
+    background-image: url(../img/2_cuadrada_verde.png);
+}
+
+.dos_cuadrada:active{
+    background-image: url(../img/2_cuadrada_naranja.png);
+}
+
+.dos_redonda{
+    background: transparent;
+    background-image: url(../img/2_redonda_normal.png);
+    width: 104px;
+    height: 56px;
+    border: 0px;
+}
+
+.dos_redonda:hover{
+    background-image: url(../img/2_redonda_verde.png);
+}
+
+.dos_redonda:active{
+    background-image: url(../img/2_redonda_naranja.png);
+}
+
+.cuatro_cuadrada{
+    background: transparent;
+    background-image: url(../img/4_cuadrada_normal.png);
+    width: 99px;
+    height: 103px;
+    border: 0px;
+}
+
+.cuatro_cuadrada:hover{
+    background-image: url(../img/4_cuadrada_verde.png);
+}
+
+.cuatro_cuadrada:active{
+    background-image: url(../img/4_cuadrada_naranja.png);
+}
+
+.cuatro_redonda{
+    background: transparent;
+    background-image: url(../img/4_redonda_normal.png);
+    width: 129px;
+    height: 128px;
+    border: 0px;
+}
+
+.cuatro_redonda:hover{
+    background-image: url(../img/4_redonda_verde.png);
+}
+
+.cuatro_redonda:active{
+    background-image: url(../img/4_redonda_naranja.png);
+}
+
+.seis{
+    background: transparent;
+    background-image: url(../img/6_normal.png);
+    width: 110px;
+    height: 144px;
+    border: 0px;
+}
+
+.seis:hover{
+    background-image: url(../img/6_verde.png);
+}
+
+.seis:active{
+    background-image: url(../img/6_naranja.png);
+}
+
+.ocho{
+    background: transparent;
+    background-image: url(../img/8_normal.png);
+    width: 186px;
+    height: 114px;
+    border: 0px;
+}
+
+.ocho:hover{
+    background-image: url(../img/8_verde.png);
+}
+
+.ocho:active{
+    background-image: url(../img/8_naranja.png);
 }
