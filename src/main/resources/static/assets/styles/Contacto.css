@@ -1,7 +1,9 @@
 /* CSS CONTACTO */
 
 /* TAGS */
-
+body{
+    height: 50px !important;
+}
 
 /* IDS */
 #tituloContacto {
