@@ -1,5 +1,11 @@
 package uhmami.modelo.repository;
 
-public interface UsuarioRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import uhmami.modelo.entities.Usuario;
+
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, String>{
 
 }

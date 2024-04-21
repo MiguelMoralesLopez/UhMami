@@ -43,7 +43,8 @@ public class DataUserConfiguration{
 			.requestMatchers("/static/**").permitAll()
 			.requestMatchers("/img/**").permitAll()
 			.requestMatchers("/css/**").permitAll()
-			.requestMatchers("/").permitAll());
+			.requestMatchers("/").permitAll()
+			.anyRequest().permitAll());
 		// El formulario de Login no requiere autenticacion
 		return http.build();
 	}
