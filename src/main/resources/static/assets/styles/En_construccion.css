@@ -6,8 +6,16 @@ body{
 }
 
 /* TAGS */
+#error {
+    width: 100%;
+    height: 925px;
+}
+
 #btn_volver {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+    margin: 5%;
+    margin-top: 39%;
 }

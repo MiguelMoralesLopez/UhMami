@@ -113,13 +113,76 @@
                         </section>
                     </section>
 
-                    <article id="plano_mesas">
+                    <section id="plano_mesas">
                         <p><label>Elige tu mesa: </label></p>
-                        <div id="plano">
+                        <article id="plano">
                             <img id="foto_plano" src="../static/assets/img/plano_color.png"
                                 alt="foto plano del restaurante" />
-                        </div>
-                    </article>
+                        </article>
+                        <article class="container">
+                            <!-- 1º fila de mesas -->
+                            <div class="item">
+                                <button class="dos_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item"></div>
+                            <div class="item">
+                                <button class="cuatro_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item" style="margin:0 auto;">
+                                <button class="seis"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item">
+                                <button class="cuatro_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+
+                            <!-- 2º fila de mesas -->
+                            <div class="item"></div>
+                            <div class="item">
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"  style="margin: 0 auto;">
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+
+                            <!-- 3º fila de mesas -->
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item">
+                                <button class="ocho"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item"></div>
+
+                            <!-- 4º fila de mesas -->
+                            <div class="item"></div>
+                            <div class="item">
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item"></div>
+                            <div class="item"></div>
+                            <div class="item"  style="margin: 0 auto;">
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+
+                            <!-- 5º fila de mesas -->
+                            <div class="item">
+                                <button class="dos_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item"></div>
+                            <div class="item">
+                                <button class="cuatro_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item" style="margin:0 auto;">
+                                <button class="seis"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+                            <div class="item">
+                                <button class="cuatro_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
+                            </div>
+
+                        </article>
+                    </section>
 
                     <article id="obs">
                         <p><label>Observaciones: </label><br>
