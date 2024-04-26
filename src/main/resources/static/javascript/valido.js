@@ -11,6 +11,7 @@ const formulario = document.getElementById('formReserva')
 const warningIcon = document.getElementById("warning-icon");
 const errorEmail = document.getElementById('errorEmail')
 
+//Validaciones 
 var nomCorrecto = false
 var apeCorrecto = false
 var emCorrecto = false
@@ -21,12 +22,6 @@ var horaCorrecto = false
 var polCorrecto = false
 var errorE = false
 var errorT = false
-
-
-
-
-
-
 
 
 //Añado un escucha para cada input
@@ -200,6 +195,7 @@ fecha.addEventListener('focusin', ()=> {
         comensales.focus()
     }
     if(fecha.value != null){
+        console.log('fecha correcto')
         fechaCorrecto = true
     }
     else
@@ -212,6 +208,7 @@ fecha.addEventListener('focusin', ()=> {
 
 hora.addEventListener('click', () => {
     if(hora.value!=null){
+        console.log('hora elegida')
         horaCorrecto = true
     }
     else{
@@ -233,14 +230,15 @@ politica.addEventListener('click',()=> {
     }
 })
 
-formulario.addEventListener('submit',(e) => {
+/*formulario.addEventListener('submit',(e) => {
 e.preventDefault();
 
 })
+*/
 
 
 
-
+/*
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
     var validado = false
@@ -256,4 +254,4 @@ function validateReservaForm() {
     }
    
    
-
+*/
