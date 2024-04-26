@@ -5,6 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../static/assets/styles/Reservas.css">
         <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+
+        
         <title>Reservas</title>
     </head>
     <body>
@@ -38,27 +40,29 @@
                     <img class="fondo_titulo"
                         src="../static/assets/img/tit_reservar.png" />
                 </section>
-                <form id="form" th:action="@{/reservar}" th:object="${cliente}"
-                    th:method="post">
+                <form id="formReserva" class ="form" th:action="@{/reservar}" th:object="${cliente}"
+                    th:method="post" onsubmit="return validateReservaForm()">
                     <article id="datos_reservar">
-                        <p><input class="input_corto" type="text"
+                        <p><input id = "nombrereserva" class="input_corto" type="text"
                                 th:name="nombre" th:field="*{nombre}"
-                                placeholder="Nombre" /></p>
-                        <p><input class="input_largo" type="text"
+                                placeholder="Nombre" /> 
+                            </p>
+                        <p><input id = "apellidoreserva" class="input_largo" type="text"
                                 th:name="apellidos" th:field="*{apellidos}"
-                                placeholder="Apellidos" /></p>
-                        <p><input class="input_largo" type="email"
+                                placeholder="Apellidos" /> </p>
+                        <p><input id = "emailreserva" class="input_largo" type="email"
                                 th:name="email" th:field="*{email}"
                                 placeholder="Email" /></p>
-                        <p><input class="input_corto" type="text"
+                        <p><input id="telefonoreserva" class="input_corto" type="text"
                                 th:name="telefono" th:field="*{telefono}"
                                 placeholder="Teléfono" /></p>
+                                <p id="errorEmail"></p>
                     </article>
 
                     <section id="datos_reservar">
                         <article id="comensales">
                             <p><label for="comensales">Comensales : </label>
-                                <select name="comensales.idComensal">
+                                <select name="comensales.idComensal" id="comensalreserva">
                                     <option value="1"> 1 </option>
                                     <option value="2"> 2 </option>
                                     <option value="3"> 3 </option>
@@ -79,7 +83,7 @@
                             <article id="hora">
                                 <article id="horas">
                                     <label for="hora">Hora : </label>
-                                    <select name="horas.idHora">
+                                    <select name="horas.idHora" id="horaReserva">
                                         <option value="1230"> 12:30
                                         </option>
                                         <option value="1300"> 13:00
@@ -121,28 +125,28 @@
                         <article class="container">
                             <!-- 1º fila de mesas -->
                             <div class="item">
-                                <button class="dos_cuadrada"></button>
+                                <button class="dos_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item"></div>
                             <div class="item">
-                                <button class="cuatro_cuadrada"></button>
+                                <button class="cuatro_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item" style="margin:0 auto;">
-                                <button class="seis"></button>
+                                <button class="seis"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item">
-                                <button class="cuatro_redonda"></button>
+                                <button class="cuatro_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
 
                             <!-- 2º fila de mesas -->
                             <div class="item"></div>
                             <div class="item">
-                                <button class="dos_redonda"></button>
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item"></div>
                             <div class="item"></div>
                             <div class="item"  style="margin: 0 auto;">
-                                <button class="dos_redonda"></button>
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
 
                             <!-- 3º fila de mesas -->
@@ -150,34 +154,34 @@
                             <div class="item"></div>
                             <div class="item"></div>
                             <div class="item">
-                                <button class="ocho"></button>
+                                <button class="ocho"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item"></div>
 
                             <!-- 4º fila de mesas -->
                             <div class="item"></div>
                             <div class="item">
-                                <button class="dos_redonda"></button>
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item"></div>
                             <div class="item"></div>
                             <div class="item"  style="margin: 0 auto;">
-                                <button class="dos_redonda"></button>
+                                <button class="dos_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
 
                             <!-- 5º fila de mesas -->
                             <div class="item">
-                                <button class="dos_cuadrada"></button>
+                                <button class="dos_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item"></div>
                             <div class="item">
-                                <button class="cuatro_cuadrada"></button>
+                                <button class="cuatro_cuadrada"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item" style="margin:0 auto;">
-                                <button class="seis"></button>
+                                <button class="seis"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
                             <div class="item">
-                                <button class="cuatro_redonda"></button>
+                                <button class="cuatro_redonda"><a th:href="@{/gestionarReserva/{id}(id=${mesa.idMesa})}"></a></button>
                             </div>
 
                         </article>
@@ -191,22 +195,25 @@
                                 placeholder="Observaciones..."></textarea></p>
                     </article>
 
-                    <article id="politicas">
+                    <article id="politicasreserva">
                         <input type="checkbox" id="politica" name="politica">
                         <label for="politica">Acepto el aviso legal y la política de privacidad</label><br>
                     </article>
 
                     <br>
-                    <button id="reservar" type="submit"
+                    <button id="enviarReserva" type="submit"
                         class="botones_principales">Reservar</button>
                 </form>
+
+
+
 
                 <section id="grupo">
                     <article id="titulo_grupo">
                         <h2 class="h2preguntas">¿Vas a venir en grupo? </h2>
                         <h6>Pregúntanos la disponibilidad aquí</h6>
                     </article>
-                    <form id="form" th:action="@{/contacto/grupo}"  th:object="${grupo}" th:method="post">
+                    <form id="formulariocontacto" class = "form" th:action="@{/contacto/grupo}"  th:object="${grupo}" th:method="post">
                         <article id="datos_contacto">
                             <p><input class="input_corto" type="text" th:name="nombre" th:field="*{nombre}"
                                     placeholder="Nombre"/></p>
@@ -255,7 +262,7 @@
                     </form>
                 </section>
 
-
+                <script src="../static/javascript/valido.js"></script>
             </main>
 
             <footer>
