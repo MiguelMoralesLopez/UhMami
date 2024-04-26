@@ -164,7 +164,8 @@ body {
     background-image: url(../img/2_cuadrada_verde.png);
 }
 
-.dos_cuadrada:active{
+.dos_cuadrada:active,
+.dos_cuadrada:focus{
     background-image: url(../img/2_cuadrada_naranja.png);
 }
 
@@ -180,7 +181,8 @@ body {
     background-image: url(../img/2_redonda_verde.png);
 }
 
-.dos_redonda:active{
+.dos_redonda:active,
+.dos_redonda:focus{
     background-image: url(../img/2_redonda_naranja.png);
 }
 
@@ -196,7 +198,8 @@ body {
     background-image: url(../img/4_cuadrada_verde.png);
 }
 
-.cuatro_cuadrada:active{
+.cuatro_cuadrada:active,
+.cuatro_cuadrada:focus{
     background-image: url(../img/4_cuadrada_naranja.png);
 }
 
@@ -208,11 +211,13 @@ body {
     border: 0px;
 }
 
-.cuatro_redonda:hover{
+.cuatro_redonda:hover,
+.cuatro_redonda:focus{
     background-image: url(../img/4_redonda_verde.png);
 }
 
-.cuatro_redonda:active{
+.cuatro_redonda:active,
+.cuatro_redonda:focus{
     background-image: url(../img/4_redonda_naranja.png);
 }
 
@@ -228,7 +233,8 @@ body {
     background-image: url(../img/6_verde.png);
 }
 
-.seis:active{
+.seis:active,
+.seis:focus{
     background-image: url(../img/6_naranja.png);
 }
 
@@ -244,7 +250,8 @@ body {
     background-image: url(../img/8_verde.png);
 }
 
-.ocho:active{
+.ocho:active,
+.ocho:focus{
     background-image: url(../img/8_naranja.png);
 }
 

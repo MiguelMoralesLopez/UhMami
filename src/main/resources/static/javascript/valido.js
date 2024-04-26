@@ -6,6 +6,7 @@ const comensales = document.getElementById('comensalreserva')
 const fecha = document.getElementById('fecha')
 const hora = document.getElementById('horaReserva')
 const politica = document.getElementById('politica')
+const mapa =  document.querySelector("#plano_mesas > article.container")
 
 const formulario = document.getElementById('formReserva')
 const warningIcon = document.getElementById("warning-icon");
@@ -140,16 +141,19 @@ telefono.addEventListener('focusout', () => {
                 errorEmail.style.fontSize = '20px'
                 errorEmail.style.color ='#E13600'
                 errorEmail.textContent='Formato email y teléfono incorrectos'
+               
                 }
                 else{
                     errorEmail.style.fontSize = '20px'
                     errorEmail.style.color ='#E13600'
                     errorEmail.textContent='Formato teléfono incorrecto'
+                    mapa.style.top = '2038px'
                 }
      
             }
             else{
                 console.log('telefono completado')
+                mapa.style.top = '2000px'
                 telCorrecto = true
                 
         } 
@@ -230,15 +234,54 @@ politica.addEventListener('click',()=> {
     }
 })
 
-/*formulario.addEventListener('submit',(e) => {
+
+
+
+
+
+//MESAS
+var mesa1 = document.getElementById('mesa1')
+var otramesa = false
+mesa1.addEventListener('click',() =>{
+        
+        console.log('esta activo')
+    
+   
+})
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+formulario.addEventListener('submit',(e) => {
 e.preventDefault();
 
 })
-*/
 
 
 
-/*
+
+
+
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
     var validado = false
@@ -254,4 +297,4 @@ function validateReservaForm() {
     }
    
    
-*/
+
