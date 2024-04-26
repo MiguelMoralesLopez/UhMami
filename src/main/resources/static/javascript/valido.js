@@ -253,25 +253,6 @@ mesa1.addEventListener('click',() =>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 formulario.addEventListener('submit',(e) => {
 e.preventDefault();
 
