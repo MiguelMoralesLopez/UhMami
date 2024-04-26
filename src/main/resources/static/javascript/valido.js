@@ -90,20 +90,25 @@ email.addEventListener('focusout', () => {
         if(em!= ""){
             if (!emailRegex.test(em)) {
                 console.log('no pasa')
-               return errorE = true
+                errorEmail.style.color ='#E13600'
+                errorEmail.textContent='Formato email incorrecto'
+                errorE = true
                 
             }
             else{
-               return  errorE = false
-        } 
+                errorE = false
+                errorEmail.textContent=''
+             } 
         }
-    }
+        }   
+
+        
 })
 
 
 //aviso de telefono incorrecto
 telefono.addEventListener('focusout', () => {
-    var tel = telefono.value.trim();
+    const tel = telefono.value.trim();
     
     if (tel== "") {
         console.log('estoy en telefono vacio')
@@ -121,46 +126,45 @@ telefono.addEventListener('focusout', () => {
     }
     else{
         var telefonoRegex = /(\+34|0034|34)?[-]*(6|7)[ -]*([0-9][ -]*){8}/;
-        if(tel!= ""){
             if (!telefonoRegex.test(tel)) {
                 console.log('no pasa')
-                return errorT = true
-               
-                
+                if(errorE == true){
+                errorEmail.style.color ='#E13600'
+                errorEmail.textContent='Formato email y telefono incorrectos'
+                }
+                else{
+                    errorEmail.style.color ='#E13600'
+                    errorEmail.textContent='Formato telefono incorrecto'
+                }
+     
             }
             else{
-               return errorT = false
-                console.log('si pasa')
+                errorEmail.textContent=''
                 
         } 
-        }
+        
     }
 })
 
-/*
-if(errorE==true || errorT==true ){
-    errorEmail.style.color ='#E13600'
-    errorEmail.textContent='Formato telefono y email incorrecto'
-}
-else{
-    errorEmail.textContent=''
-}
 
-if(errorE==true ){
-    errorEmail.style.color ='#E13600'
-    errorEmail.textContent='Formato email incorrecto'
-}
-else{
-    errorEmail.textContent=''
-}
-if(errorT==true ){
-    errorEmail.style.color ='#E13600'
-    errorEmail.textContent='Formato telefono incorrecto'
-}
-else{
-    errorEmail.textContent=''
-}
-*/
+//Aviso de elegir los comensales
+
+var elegirComensal = 0
+comensales.addEventListener('focusin', ()=>{
+    
+    elegirComensal = 1
+})
+
+
+fecha.addEventListener('focusin', ()=> {
+    if(elegirComensal == 0){
+        alert('Por favor, dígamos cuantos comensales son.')
+        comensales.focus()
+        elegirComensal = 1
+    }
+
+})
+
 
 
 
@@ -186,24 +190,10 @@ function validateReservaForm() {
 
     }
     
-    
-
-    
-      
+  
         return validado;
 
     }
    
    
 
-
-function validateContactoForm() {
-    var nombre = document.getElementById("nombrecontacto").value;
-    var telefono = document.getElementById("telefonocontacto").value;
-
-    if (nombre === "" || telefono === "") {
-        alert("Por favor, complete todos los campos obligatorios.");
-        return false;
-    }
-    return true;
-}
