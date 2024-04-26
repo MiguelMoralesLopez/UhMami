@@ -50,11 +50,11 @@
                                 placeholder="Apellidos" /> </p>
                         <p><input id = "emailreserva" class="input_largo" type="email"
                                 th:name="email" th:field="*{email}"
-                                placeholder="Email" /></p>
+                                placeholder="Email" /> <span class="span_email" id="errorEmail"></span></p>
                         <p><input id="telefonoreserva" class="input_corto" type="text"
                                 th:name="telefono" th:field="*{telefono}"
-                                placeholder="Teléfono" /></p>
-                                <p id="errorEmail"></p>
+                                placeholder="Teléfono" /> <span id="errorTelefono"></span></p>
+                                
                     </article>
 
                     <section id="datos_reservar">

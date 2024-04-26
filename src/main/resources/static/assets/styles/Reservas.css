@@ -39,16 +39,8 @@ body {
     margin-bottom: 5%;
 }
 
-.form {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 10%;
-}
-
 #datos_reservar {
-    width: 712px;
+    width: 812px;
     margin-top: 3%;
 }
 
@@ -107,6 +99,7 @@ body {
     padding-bottom: 0%;
 }
 
+
 /* CLASES */
 .foto_principal_reserva {
     display: inline-flex;
@@ -122,8 +115,20 @@ body {
     font-size: 26px;
 }
 
+.span_email{
+    width: 600px;
+}
+
 .h2preguntas {
     margin-bottom: 1%;
+}
+
+.form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10%;
 }
 
 .foto {
@@ -140,7 +145,7 @@ body {
     gap: 1px;
     position: absolute;
     left: 24.5%;
-    top: 2000px;
+    top: 1626px;
 }
 
 .item {
