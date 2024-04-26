@@ -147,13 +147,12 @@ telefono.addEventListener('focusout', () => {
                     errorEmail.style.fontSize = '20px'
                     errorEmail.style.color ='#E13600'
                     errorEmail.textContent='Formato teléfono incorrecto'
-                    mapa.style.top = '2038px'
+                    mapa.style.top = '1624px'
                 }
      
             }
             else{
                 console.log('telefono completado')
-                mapa.style.top = '2000px'
                 telCorrecto = true
                 
         } 
