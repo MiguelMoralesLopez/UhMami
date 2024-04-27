@@ -239,11 +239,13 @@ politica.addEventListener('click',()=> {
 
 
 //MESAS
+var mesaSeleccionada
 var mesa1 = document.getElementById('mesa1')
 var otramesa = false
 mesa1.addEventListener('click',() =>{
         
         console.log('esta activo')
+        mesa1 = 1
     
    
 })
