@@ -10,8 +10,8 @@ const mapa =  document.querySelector("#plano_mesas > article.container")
 
 const formulario = document.getElementById('formReserva')
 const warningIcon = document.getElementById("warning-icon");
-const errorEmail = document.getElementById('errorEmail')
-
+const errorTel = document.getElementById('errorTel')
+var mesaSeleccionada = document.getElementById('mesaSeleccionada')
 //Validaciones 
 var nomCorrecto = false
 var apeCorrecto = false
@@ -23,7 +23,7 @@ var horaCorrecto = false
 var polCorrecto = false
 var errorE = false
 var errorT = false
-
+var mesaCorrecta = false
 
 //Añado un escucha para cada input
 
@@ -89,19 +89,17 @@ email.addEventListener('focusout', () => {
         })      
     }
     else{
+        var unaAlerta = 0
         var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if(em!= ""){
             if (!emailRegex.test(em)) {
                 console.log('no pasa')
-                errorEmail.style.color ='#E13600'
-                errorEmail.textContent='Formato email incorrecto'
-                errorEmail.style.fontSize = '20px'
-                errorE = true
-                
+                if(unaAlerta == 0){
+                    alert('Formato incorrecto')
+                    errorE= true
+                } 
             }
             else{
-                
-                errorEmail.textContent=''
                 errorE = false
              } 
         }
@@ -127,7 +125,6 @@ telefono.addEventListener('focusout', () => {
 
 
         telefono.addEventListener('focusin',() => {
-            
             telefono.value = ''
             telefono.style.color = '#616D69'
             telefono.placeholder = ''
@@ -137,19 +134,10 @@ telefono.addEventListener('focusout', () => {
         var telefonoRegex = /(\+34|0034|34)?[-]*(6|7)[ -]*([0-9][ -]*){8}/;
             if (!telefonoRegex.test(tel)) { //Si no pasa la prueba de telefono
                 console.log('no pasa telefono')
-                if(errorE == true){
-                errorEmail.style.fontSize = '20px'
-                errorEmail.style.color ='#E13600'
-                errorEmail.textContent='Formato email y teléfono incorrectos'
-               
-                }
-                else{
-                    errorEmail.style.fontSize = '20px'
-                    errorEmail.style.color ='#E13600'
-                    errorEmail.textContent='Formato teléfono incorrecto'
-                    mapa.style.top = '1624px'
-                }
-     
+                    errorTel.style.fontSize = '20px'
+                    errorTel.style.color ='#E13600'
+                    errorTel.textContent='Formato teléfono incorrecto'
+                    telCorrecto = false
             }
             else{
                 console.log('telefono completado')
@@ -197,20 +185,23 @@ fecha.addEventListener('focusin', ()=> {
         elegirComensal = 1
         comensales.focus()
     }
+
     if(fecha.value != null){
         console.log('fecha correcto')
         fechaCorrecto = true
     }
     else
+    {
+    console.log('Fecha sin seleccionar')
     fechaCorrecto = false
-
+    }
 })
 
 
 //Validación de elegir hora
 
 hora.addEventListener('click', () => {
-    if(hora.value!=null){
+    if(hora.value!=''){
         console.log('hora elegida')
         horaCorrecto = true
     }
@@ -239,26 +230,135 @@ politica.addEventListener('click',()=> {
 
 
 //MESAS
-var mesaSeleccionada
+
+
 var mesa1 = document.getElementById('mesa1')
-var otramesa = false
+
 mesa1.addEventListener('click',() =>{
+        mesaSeleccionada.value = 1   
+         mesaCorrecta = true
+        console.log('mesa 1 eleginada')
         
-        console.log('esta activo')
-        mesa1 = 1
-    
    
 })
+
+var mesa2 = document.getElementById('mesa2')
+
+mesa2.addEventListener('click',() =>{
+        
+        console.log('mesa 2 eleginada')
+        mesaSeleccionada.value = 2  
+        mesaCorrecta = true
    
-
-
-
-
-formulario.addEventListener('submit',(e) => {
-e.preventDefault();
-
 })
 
+var mesa3 = document.getElementById('mesa3')
+
+mesa3.addEventListener('click',() =>{
+        
+        console.log('mesa 3 eleginada')
+        mesaSeleccionada.value = 3  
+        mesaCorrecta = true
+})
+
+var mesa4 = document.getElementById('mesa4')
+
+mesa4.addEventListener('click',() =>{
+        
+        console.log('mesa 4 eleginada')
+        mesaSeleccionada.value = 4 
+        mesaCorrecta = true
+   
+})
+
+var mesa5 = document.getElementById('mesa5')
+
+mesa5.addEventListener('click',() =>{
+        
+        console.log('mesa 5 eleginada')
+        mesaSeleccionada.value = 5   
+        mesaCorrecta = true
+   
+})
+
+var mesa6 = document.getElementById('mesa6')
+
+mesa6.addEventListener('click',() =>{
+        
+        console.log('mesa 6 eleginada')
+        mesaSeleccionada.value = 6  
+        mesaCorrecta = true
+   
+})
+
+var mesa7 = document.getElementById('mesa7')
+
+mesa7.addEventListener('click',() =>{
+        
+        console.log('mesa 7 eleginada')
+        mesaSeleccionada.value = 7 
+        mesaCorrecta = true
+})
+
+var mesa8 = document.getElementById('mesa8')
+
+mesa8.addEventListener('click',() =>{
+        
+        console.log('mesa 8 elegida')
+        mesaSeleccionada.value = 8   
+        mesaCorrecta = true
+   
+})
+
+var mesa9 = document.getElementById('mesa9')
+
+mesa9.addEventListener('click',() =>{
+        
+        console.log('mesa 9 eleginada')
+        mesaSeleccionada.value = 9
+        mesaCorrecta = true
+   
+})
+
+var mesa10 = document.getElementById('mesa10')
+
+mesa10.addEventListener('click',() =>{
+        
+        console.log('mesa 10 eleginada')
+        mesaSeleccionada.value = 10
+        mesaCorrecta = true
+   
+})
+
+var mesa11 = document.getElementById('mesa11')
+
+mesa11.addEventListener('click',() =>{
+        
+        console.log('mesa 11 eleginada')
+        mesaSeleccionada.value = 11
+        mesaCorrecta = true
+   
+})
+
+var mesa12 = document.getElementById('mesa12')
+
+mesa12.addEventListener('click',() =>{
+        
+        console.log('mesa 12 eleginada')
+        mesaSeleccionada.value = 12
+        mesaCorrecta = true
+   
+})
+
+var mesa13 = document.getElementById('mesa13')
+
+mesa13.addEventListener('click',() =>{
+        
+        console.log('mesa 13 eleginada')
+        mesaSeleccionada.value = 13
+        mesaCorrecta = true
+   
+})
 
 
 
@@ -267,15 +367,28 @@ e.preventDefault();
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
     var validado = false
+    
+    if (nombre.value === "" || apellido.value=="" || email.value=="" || telefono.value=="" ) {
+        nombre.focus()
+        alert('Faltan campos de rellenar')
+        validado = false
+    }else{
+    if(nomCorrecto === true && 
+    apeCorrecto === true &&
+    emCorrecto === true &&
+    telCorrecto === true &&
+    comenCorrecto === true &&
+    fechaCorrecto === true &&
+    horaCorrecto === true &&
+    polCorrecto === true &&
+    mesaCorrecta===true ){
+        validado = true
+        console.log('todo correcto')
+        alert('Reserva realizada!')
+    }}
 
-    if (nombre.value === "") {
-        console.log('estoy en nombre vacio')
-        
-        nombre.placeholder = ("Introduzca el nombre")
- 
-    }
-      return validado;
-
+      
+    return validado;
     }
    
    
