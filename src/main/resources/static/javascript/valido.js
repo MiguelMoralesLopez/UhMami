@@ -140,6 +140,7 @@ telefono.addEventListener('focusout', () => {
                     telCorrecto = false
             }
             else{
+                errorTel.textContent = ''
                 console.log('telefono completado')
                 telCorrecto = true
                 
