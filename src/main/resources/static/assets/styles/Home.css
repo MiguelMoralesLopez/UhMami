@@ -1,5 +1,3 @@
-
-
 /* CSS HOME */
 
 /* TAGS */
@@ -13,7 +11,8 @@ p.p {
 #nuestra_historia {
     display: inline-flex;
     flex-direction: column;
-    margin-top: 5%;;
+    margin-top: 5%;
+    ;
 }
 
 #historia {
@@ -178,9 +177,51 @@ p.p {
     height: 800px;
     transform: rotate(6.128deg);
     padding-top: 8%;
-    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25); 
+    box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
 .parrafos {
     width: 700px;
 }
+
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*landscape*/
+@media (min-width: 992px) and (max-width: 1200px)and (orientation:landscape) {
+
+    .foto_principal_home {
+        width: 100%;
+    }
+
+    p.p {
+        width: 660px;
+    }
+
+    .chef {
+        width: 360px;
+        height: 600px;
+        padding-top: 8%;
+    }
+
+
+}
+
+/*Portrait*/
+@media (min-width: 576px) and (max-width: 992px) and (orientation:portrait) {}
+
+/*fin tablet*/
+
+/*movil*/
+/*landscape*/
+@media (min-width: 576px) and (max-width: 992px) and (orientation:landscape) {
+    body {}
+}
+
+/*Portrait*/
+@media (max-width: 576px)and (orientation:portrait) {
+    body {}
+}
+
+/*fin movil*/
