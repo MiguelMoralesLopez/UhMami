@@ -231,6 +231,34 @@ p.p {
     .parrafos{
         width: 430px;
     }
+
+    #sec_reservar{
+        margin-bottom: 5%;
+        margin-top: 1%;
+    }
+
+    #resenas{
+        height: 450px;
+        padding: 0px;
+    }
+
+    #resena {
+        width: 745px;
+        height: 225px;
+    }
+
+    #cont_resenas{
+        gap: 0px;
+    }
+
+    .foto_resena {
+        width: 200px;
+        height: 190px;
+      }
+
+      .txt_footer{
+        font-size: 26px;
+      }
 }
 
 /*Portrait*/

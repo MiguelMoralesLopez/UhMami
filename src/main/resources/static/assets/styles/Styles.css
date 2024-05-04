@@ -1,7 +1,7 @@
 /* -- CSS COMUN EN TODAS LAS PÁGINAS -- */
 /* FUENTES */
 @font-face {
-    font-family: 'BrittanySignature';
+    font-family: 'Brittany Signature';
     src: url('../fonts/BrittanySignature.ttf') format('truetype');
 }
 
@@ -700,6 +700,11 @@ select {
         margin-top: 25%;
     }
 
+    h2{
+        font-size: 43px;
+        margin-bottom: 16px;
+    }
+
     h3 {
         font-size: 65px;
     }
@@ -725,10 +730,19 @@ select {
     /* FOOTER */
     #footer {
         width: 100%;
+        gap: 46px;
     }
 
     #datos {
         margin-left: 3%;
+    }
+
+    #legal{
+        gap: 0px;
+    }
+
+    #logo_footer{
+        width: 65%;
     }
 }
 
