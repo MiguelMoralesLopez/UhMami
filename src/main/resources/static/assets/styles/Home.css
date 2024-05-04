@@ -228,7 +228,9 @@ p.p {
 /*movil*/
 /*landscape*/
 @media (min-width: 576px) and (max-width: 992px) and (orientation:landscape) {
-    body {}
+    .parrafos{
+        width: 430px;
+    }
 }
 
 /*Portrait*/
