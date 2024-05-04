@@ -207,7 +207,7 @@ p.p {
         width: 490px;
     }
 
-    .parrafos{
+    .parrafos {
         width: 569px;
     }
 
@@ -228,16 +228,16 @@ p.p {
 /*movil*/
 /*landscape*/
 @media (min-width: 576px) and (max-width: 992px) and (orientation:landscape) {
-    .parrafos{
+    .parrafos {
         width: 430px;
     }
 
-    #sec_reservar{
+    #sec_reservar {
         margin-bottom: 5%;
         margin-top: 1%;
     }
 
-    #resenas{
+    #resenas {
         height: 450px;
         padding: 0px;
     }
@@ -247,18 +247,30 @@ p.p {
         height: 225px;
     }
 
-    #cont_resenas{
+    #cont_resenas {
         gap: 0px;
     }
 
     .foto_resena {
         width: 200px;
         height: 190px;
-      }
+    }
 
-      .txt_footer{
+    .txt_footer {
         font-size: 26px;
-      }
+    }
+
+    #empezar{
+        width: 100%;
+    }
+
+    #principales{
+        width: 100%;
+    }
+
+    #postre{
+        width: 100%;
+    }
 }
 
 /*Portrait*/
