@@ -684,6 +684,27 @@ select {
     .txt_footer{
         width: 500px;
     }
+
+
+    #formReserva{
+        margin-left: 30%;
+    }
+
+    #plano{
+        width: 100%;
+        margin-left: -20%;
+    }
+
+    .container{
+        margin-left: -22%;
+        margin-top: -16%;
+    }
+
+    #enviarReserva{
+        margin-left: 22%;
+    }
+
+
 }
 
 /*Landscape*/
