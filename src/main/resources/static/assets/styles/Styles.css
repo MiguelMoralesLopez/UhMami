@@ -582,6 +582,7 @@ select {
 
     .botones_nav a {
         font-size: 30px;
+        padding-top: 12px;
     }
 
     /* BOTONES PRINCIPALES */
@@ -614,6 +615,7 @@ select {
     .botones_secundarios a:hover {
         font-size: 30px;
     }
+
 
     /* TITULOS */
     .fondo_titulo {

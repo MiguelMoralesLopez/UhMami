@@ -176,7 +176,7 @@ p.p {
     gap: 32px;
 }
 
-#foto_principal{
+#foto_principal {
     width: 100%;
 }
 
@@ -204,15 +204,17 @@ p.p {
 /* MEDIA QUERIES */
 
 /*Tablet*/
-/*landscape*/
-@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
-
-    
-
-}
-
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px)and (orientation:landscape) {
+@media (min-width: 810px) and (max-width: 1080px){
+
+    body{
+        width: 1080px;
+    }
+
+    main{
+        width: 1080px !important;
+    }
+
     p.p {
         width: 490px;
     }
@@ -228,8 +230,7 @@ p.p {
     }
 
     .foto_principal_home{
-        margin-left: -17%;
-        width: 1180px;
+        width: 1080px !important;
     }
 
     #sumergete {
@@ -237,37 +238,46 @@ p.p {
         margin-top: 3% !important;
     }
 
-    #resenas{
-        width: 100%;
+    #resenas {
+        width: 450px;
         height: 420px;
     }
 
-    #cont_resenas{
+    #cont_resenas {
+        width: 900px;
         margin-top: -4%;
     }
 
-    #resena{
+    #resena {
         width: 80%;
     }
 
-    #boton_empezar{
-        margin:6%;
+    #boton_empezar {
+        margin: 6%;
         margin-top: 20%;
     }
 
-    #boton_princ{
-        margin:6%;
+    #boton_princ {
+        margin: 6%;
         margin-top: 20%;
     }
 
-    #boton_postres{
-        margin:6%;
+    #boton_postres {
+        margin: 6%;
         margin-top: 20%;
+    }
+
+    #postre{
+        width: 100%;
     }
 
 }
 
 
+/*landscape*/
+@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
+   
+    
+}
 
 /*fin tablet*/
-
