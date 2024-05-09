@@ -1,7 +1,7 @@
 /* -- CSS COMUN EN TODAS LAS PÁGINAS -- */
 /* FUENTES */
 @font-face {
-    font-family: 'BrittanySignature';
+    font-family: 'Brittany Signature';
     src: url('../fonts/BrittanySignature.ttf') format('truetype');
 }
 
@@ -31,8 +31,7 @@
 body {
     margin: 0 auto;
     display: flex;
-    max-width: 1440px;
-    min-width: 1200px;
+    width: 1440px;
     height: 4800px;
     padding-bottom: 554px;
     flex-direction: column;
@@ -152,6 +151,7 @@ header {
 }
 
 nav {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -528,8 +528,37 @@ select {
 /* MEDIA QUERIES */
 
 /*Tablet*/
-/*landscape*/
-@media (min-width: 992px) and (max-width: 1200px)and (orientation:landscape) {
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px){
+
+    main {
+        width: 1080px;
+    }
+
+    header {
+        width: 1080px;
+        height: 200px;
+    }
+
+    nav {
+        width: 1041px;
+        margin: auto; 
+    }
+
+    p {
+        width: 810px;
+        margin: 0px;
+    }
+
+    p.p {
+        width: 500px !important;
+    }
+
+
+    .parrafos {
+        width: 500px !important;
+    }
+
 
     /* HEADER */
     .logo {
@@ -566,9 +595,7 @@ select {
         padding-bottom: 2%;
     }
 
-
     /* BOTONES SECUNDARIOS */
-
     .botones_secundarios {
         background-size: cover;
         width: 225px;
@@ -586,8 +613,8 @@ select {
 
     /* TITULOS */
     .fondo_titulo {
-        width: 500px;
-        height: 205px;
+        width: 460px;
+        height: 190px;
         margin-bottom: 2%;
     }
 
@@ -599,7 +626,7 @@ select {
     }
 
     h2 {
-        font-size: 65px;
+        font-size: 46px;
     }
 
     h3 {
@@ -624,23 +651,148 @@ select {
         font-size: 26px;
     }
 
+    /* FOOTER */
+    footer{
+        width: 1080px;
+    }
 
+    #footer{
+        width: 1080px;
+        gap:0px;
+        margin-left: 15%;
+    }
+
+    #datos{
+        width: 50%;
+    }
+
+    #legal{
+        width: 40%;
+    }
+
+    p{
+        width: 100%;
+    }
+    .txt_footer{
+        width: 500px;
+    }
 }
 
-/*Portrait*/
-@media (min-width: 576px) and (max-width: 992px) and (orientation:portrait) {}
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px){
+
+}
 
 /*fin tablet*/
 
 /*movil*/
 /*landscape*/
-@media (min-width: 576px) and (max-width: 992px) and (orientation:landscape) {
-    body {}
+@media (min-width: 812px) and (max-width: 375px){
+
+    main {
+        margin-left: 3%;
+    }
+
+    /* HEADER */
+    .logo {
+        width: 240px;
+        height: 158px;
+    }
+
+    /* NAV */
+    nav {
+        margin: 0px;
+    }
+
+    /* BOTONES NAVEGADOR */
+    .botones_nav {
+
+        width: 176px;
+        height: 54px;
+    }
+
+    .botones_nav a {
+        font-size: 26px;
+        padding-top: 12px;
+    }
+
+    /* BOTONES SECUNDARIOS */
+    .botones_secundarios {
+        background-size: cover;
+        width: 225px;
+        height: 70px;
+    }
+
+    .botones_secundarios a {
+        font-size: 30px;
+        padding-left: 2%;
+    }
+
+    .botones_secundarios a:hover {
+        font-size: 30px;
+    }
+
+    /* TITULOS */
+    .fondo_titulo {
+        width: 408px;
+        height: 160px;
+    }
+
+    /* TAGS */
+    h1 {
+        font-size: 100px;
+        margin: 16px;
+        margin-top: 25%;
+    }
+
+    h2 {
+        font-size: 43px;
+        margin-bottom: 16px;
+    }
+
+    h3 {
+        font-size: 65px;
+    }
+
+    h4 {
+        font-size: 34px;
+        margin: 8px;
+    }
+
+    h5 {
+        font-size: 28px;
+        width: 450px;
+    }
+
+    h6 {
+        font-size: 34px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+
+    /* FOOTER */
+    #footer {
+        width: 100%;
+        gap: 46px;
+    }
+
+    #datos {
+        margin-left: 3%;
+    }
+
+    #legal {
+        gap: 0px;
+    }
+
+    #logo_footer {
+        width: 65%;
+    }
 }
 
 /*Portrait*/
-@media (max-width: 576px)and (orientation:portrait) {
-    body {}
-}
+@media (min-width: 375px) and (max-width: 812px) and (orientation:portrait) {}
+
 
 /*fin movil*/
