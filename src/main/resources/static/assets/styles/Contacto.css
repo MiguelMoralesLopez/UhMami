@@ -1,7 +1,7 @@
 /* CSS CONTACTO */
 
 /* TAGS */
-body{
+body {
     height: 50px !important;
 }
 
@@ -145,7 +145,7 @@ body{
     padding-left: 2%;
 }
 
-#enviar{
+#enviar {
     padding-left: 3%;
 }
 
@@ -170,3 +170,57 @@ body{
     margin-bottom: 1%;
 }
 
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #tituloContacto{
+        margin-right: -38%;
+        margin-top: -7%;
+    }
+
+    h1{
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 15%;
+    }
+
+    h4{
+        width: 100%;
+        margin-left: 135%;
+    }
+
+    #datos_encuentranos {
+        margin-left: -38%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    #datos_contactanos {
+        margin-right: -35%;
+    }
+
+    #datos_horario{
+        margin-right: -35%;
+    }
+
+    #footer{
+        margin-right: 5%;
+    }
+
+    #logo_footer{
+        margin-right: -15%;
+    }
+
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) {
+
+  
+}
