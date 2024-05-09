@@ -31,8 +31,7 @@
 body {
     margin: 0 auto;
     display: flex;
-    max-width: 1440px;
-    min-width: 1200px;
+    width: 1440px;
     height: 4800px;
     padding-bottom: 554px;
     flex-direction: column;
@@ -152,6 +151,7 @@ header {
 }
 
 nav {
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -528,11 +528,37 @@ select {
 /* MEDIA QUERIES */
 
 /*Tablet*/
-/*landscape*/
-@media (min-width: 992px) and (max-width: 1200px)and (orientation:landscape) {
-    body {
-        height: 1000px !important;
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px){
+
+    main {
+        width: 1080px;
     }
+
+    header {
+        width: 1080px;
+        height: 200px;
+    }
+
+    nav {
+        width: 1041px;
+        margin: auto; 
+    }
+
+    p {
+        width: 810px;
+        margin: 0px;
+    }
+
+    p.p {
+        width: 500px !important;
+    }
+
+
+    .parrafos {
+        width: 500px !important;
+    }
+
 
     /* HEADER */
     .logo {
@@ -626,25 +652,44 @@ select {
     }
 
     /* FOOTER */
-    #footer {
-        width: 100%;
+    footer{
+        width: 1080px;
     }
 
-    #datos {
-        margin-left: 3%;
+    #footer{
+        width: 1080px;
+        gap:0px;
+        margin-left: 15%;
+    }
+
+    #datos{
+        width: 50%;
+    }
+
+    #legal{
+        width: 40%;
+    }
+
+    p{
+        width: 100%;
+    }
+    .txt_footer{
+        width: 500px;
     }
 }
 
-/*Portrait*/
-@media (min-width: 576px) and (max-width: 992px) and (orientation:portrait) {}
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px){
+
+}
 
 /*fin tablet*/
 
 /*movil*/
 /*landscape*/
-@media (min-width: 576px) and (max-width: 992px) and (orientation:landscape) {
+@media (min-width: 812px) and (max-width: 375px){
 
-    main{
+    main {
         margin-left: 3%;
     }
 
@@ -700,7 +745,7 @@ select {
         margin-top: 25%;
     }
 
-    h2{
+    h2 {
         font-size: 43px;
         margin-bottom: 16px;
     }
@@ -737,18 +782,17 @@ select {
         margin-left: 3%;
     }
 
-    #legal{
+    #legal {
         gap: 0px;
     }
 
-    #logo_footer{
+    #logo_footer {
         width: 65%;
     }
 }
 
 /*Portrait*/
-@media (max-width: 576px)and (orientation:portrait) {
-    body {}
-}
+@media (min-width: 375px) and (max-width: 812px) and (orientation:portrait) {}
+
 
 /*fin movil*/
