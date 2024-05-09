@@ -688,10 +688,12 @@ select {
 
     #formReserva{
         margin-left: 30%;
+        margin-top: -5%;
     }
 
     #form{
         margin-left: 10%;
+        margin-top: -3%;
     }
 
     #botones_modificar_y_cancelar{
@@ -707,7 +709,7 @@ select {
 
     .container{
         margin-left: -22%;
-        margin-top: -16%;
+        margin-top: -22%;
     }
 
     #enviarReserva{
