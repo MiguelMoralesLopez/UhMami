@@ -35,25 +35,6 @@ body {
 }
 
 
-/* MEDIA QUERIES */
-
-/*Tablet*/
-/*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) {
-
-    #tituloReservas{
-        margin-right: -38%;
-        margin-top: -5%;
-    }
-
-    h1{
-        width: 100%;
-        margin-left: 100%;
-        margin-top: 15%;
-    }
-
-}
-
 #reservar {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -278,4 +259,30 @@ body {
 .mensajeError{
     color: red;
     font-size: 24px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #tituloReservas{
+        margin-right: -38%;
+        margin-top: -5%;
+    }
+
+    #tituloGestionarReserva{
+        margin-right: -38%;
+        margin-top: -5%;
+    }
+
+    h1{
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 15%;
+    }
+
 }
