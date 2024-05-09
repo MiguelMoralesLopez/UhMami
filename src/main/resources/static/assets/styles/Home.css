@@ -213,12 +213,6 @@ p.p {
 
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px)and (orientation:landscape) {
-
-    body{
-        width: 810px;
-        height: 50px;;
-    }
-
     p.p {
         width: 490px;
     }
@@ -271,9 +265,6 @@ p.p {
         margin-top: 20%;
     }
 
-    #logo_footer{
-        margin-left: -20%;
-    }
 }
 
 
