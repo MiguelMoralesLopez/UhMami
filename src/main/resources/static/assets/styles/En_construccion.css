@@ -1,7 +1,7 @@
 /* CSS CONSTRUCCION*/
 
 /* IDS */
-body{
+body {
     max-height: 100px !important;
 }
 
@@ -18,4 +18,25 @@ body{
     position: absolute;
     margin: 5%;
     margin-top: 39%;
+}
+
+#construccion{
+    max-width: 100%;
+}
+
+
+
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #btn_volver {
+        margin-top: 69%;
+    }
+
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
+
+    
 }

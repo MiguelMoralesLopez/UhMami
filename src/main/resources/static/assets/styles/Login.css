@@ -30,3 +30,20 @@ body {
     align-items: flex-start;
     gap: 104px;
 }
+
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px){
+
+    #form{
+        margin-left: 0px !important;
+        margin-top: 0px !important;
+    }   
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
+   
+    
+}
+
+
