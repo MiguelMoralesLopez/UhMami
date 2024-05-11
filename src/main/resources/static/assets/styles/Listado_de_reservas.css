@@ -92,3 +92,18 @@ tr {
     justify-content: center;
     padding-right: 11%;
 }
+
+
+/*MEDIA QUERIES*/
+/*TABLET*/
+@media (min-width: 810px) and (max-width: 1080px){
+
+    #datos_fecha{
+        margin-bottom: 10%;
+    }
+
+    #listado{
+        display: none;
+    }
+
+}

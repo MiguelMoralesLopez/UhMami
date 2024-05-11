@@ -30,7 +30,12 @@ body {
 @media (min-width: 810px) and (max-width: 1080px) {
 
     #btn_volver {
-        margin-top: 69%;
+        margin-top: 60%;
+    }
+
+    img{
+        max-width: 100%;  
+        height: 810px;  
     }
 
 }
