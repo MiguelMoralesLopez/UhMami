@@ -175,7 +175,7 @@ body {
 
 /*Tablet*/
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) {
+@media (min-width: 810px) and (max-width: 1080px){
 
     #tituloContacto{
         margin-right: -38%;
@@ -221,11 +221,15 @@ body {
     }
 
     #footer{
-        margin-right: 5%;
+        margin-right: 2%;
     }
 
     #logo_footer{
-        margin-right: -15%;
+        margin-right: 5%;
+    }
+
+    #footer p{
+        text-align: left;
     }
 
 }
