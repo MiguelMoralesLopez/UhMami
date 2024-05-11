@@ -1,6 +1,10 @@
 /* CSS HOME */
 
 /* TAGS */
+main{
+    margin-left: 0px;
+    margin-right: 0px;
+}
 
 p.p {
     width: 660px;
@@ -213,6 +217,8 @@ p.p {
 
     main{
         width: 1080px !important;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     p.p {

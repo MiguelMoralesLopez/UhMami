@@ -188,6 +188,10 @@ body {
         margin-top: 15%;
     }
 
+    h6{
+        margin-bottom: 2% !important;
+    }
+
     #datos_encuentranos {
         margin-left: -38%;
     }
@@ -196,12 +200,24 @@ body {
         text-align: center;
     }
 
+    p label{
+        margin-left: -70%;
+    }
+
     #datos_contactanos {
         margin-right: -35%;
     }
 
     #datos_horario{
         margin-right: -35%;
+    }
+
+    #form{
+        margin-left: 0px !important;
+    }
+
+    #datos_contacto{
+        margin-left: -10%;
     }
 
     #footer{
