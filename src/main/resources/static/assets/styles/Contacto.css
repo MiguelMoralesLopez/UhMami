@@ -1,7 +1,9 @@
 /* CSS CONTACTO */
 
 /* TAGS */
-
+body {
+    height: 50px !important;
+}
 
 /* IDS */
 #tituloContacto {
@@ -143,7 +145,7 @@
     padding-left: 2%;
 }
 
-#enviar{
+#enviar {
     padding-left: 3%;
 }
 
@@ -168,3 +170,72 @@
     margin-bottom: 1%;
 }
 
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px){
+
+    #tituloContacto{
+        margin-right: -38%;
+        margin-top: -7%;
+    }
+
+    h1{
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 15%;
+    }
+
+    h6{
+        margin-bottom: 2% !important;
+    }
+
+    #datos_encuentranos {
+        margin-left: -38%;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    p label{
+        margin-left: -70%;
+    }
+
+    #datos_contactanos {
+        margin-right: -35%;
+    }
+
+    #datos_horario{
+        margin-right: -35%;
+    }
+
+    #form{
+        margin-left: 0px !important;
+    }
+
+    #datos_contacto{
+        margin-left: -10%;
+    }
+
+    #footer{
+        margin-right: 2%;
+    }
+
+    #logo_footer{
+        margin-right: 5%;
+    }
+
+    #footer p{
+        text-align: left;
+    }
+
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) {
+
+  
+}

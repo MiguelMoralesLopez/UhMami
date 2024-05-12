@@ -19,3 +19,19 @@ body{
     margin: 5%;
     margin-top: 38%;
 }
+
+
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #btn_volver {
+        margin-top: 69%;
+    }
+
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
+
+    
+}
