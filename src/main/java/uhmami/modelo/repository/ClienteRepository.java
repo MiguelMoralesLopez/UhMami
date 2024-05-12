@@ -7,5 +7,5 @@ import uhmami.modelo.entities.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Integer>{
-
+	Cliente findByNombreAndTelefono(String nombre, Integer telefono);
 }

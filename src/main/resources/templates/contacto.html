@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +10,11 @@
     <body>
         <header>
             <nav>
-                <button class="botones_nav"><a
-                        href="restaurante.html">Restaurante</a></button>
-                <button class="botones_nav"><a
-                        href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo" src="assets/img/logo.png"
-                        alt="Logo UhMami" /></a>
-                <button class="botones_nav"><a
-                        href="contacto.html">Contacto</a></button>
-                <button class="botones_nav"><a
-                        href="reservas.html">Reservas</a></button>
+                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
             </nav>
         </header>
 
@@ -86,23 +81,31 @@
                     <h2 class="h2preguntas">¿Tienes alguna pregunta?</h2>
                     <h6>Coméntanoslo y resolvemos tus dudas</h6>
                 </article>
-                <form id="form" th:action="@{/contacto/alta}"  th:object="${usuarioContacto}" th:method="post">
-                    <article id="datos_contacto">
-                        <p><input class="input_corto" type="text" th:name="nombre" th:field="*{nombre}"
-                                placeholder="Nombre"/></p>
-                        <p><input class="input_corto" type="text"
-                                th:name="telefono" th:field="*{telefono}" placeholder="Teléfono"/></p>
-                    </article>
-                    <article id="obs">
-                        <p><label>Observaciones: </label><br>
-                            <textarea id="observacionesContacto"
-                                th:name="observacioneContacto" th:field="*{observaciones}" cols="50" rows="8"
-                                placeholder="Accesibilidad del local, productos“halal” o “kosher”......"></textarea></p>
-                    </article>
-                    <br>
-                        <button id="enviar" type="submit" class="botones_principales">Enviar</button>
-                </form>
-            </section>
+			<form id="form" th:action="@{/contacto/alta}" th:method="post">
+				<article id="datos_contacto">
+					<p>
+						<input class="input_corto" type="text"
+							th:value="${nombre}" name="nombre" placeholder="Nombre" />
+					</p>
+					<p>
+						<input class="input_corto" type="text"
+							th:value="${telefono}" name="telefono"
+							placeholder="Teléfono" />
+					</p>
+				</article>
+				<article id="obs">
+					<p>
+						<label>Observaciones: </label><br>
+						<textarea id="observacionesContacto"
+							th:text="${comentario}" name="comentario" cols="50"
+							rows="8"
+							placeholder="Accesibilidad del local, productos 'halal' o 'kosher'..."></textarea>
+					</p>
+				</article>
+				<br>
+				<button id="enviar" type="submit" class="botones_principales">Enviar</button>
+			</form>
+		</section>
         </main>
 
         <footer>

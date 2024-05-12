@@ -8,6 +8,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -21,7 +23,11 @@ public class Consulta implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID")
 	private Integer id;
+	@ManyToOne
+	@JoinColumn(name="ID_cliente")
 	private Cliente cliente;
+	@Column(name="comentario")
 	private String comentario;
+	@Column(name="fecha")
 	private Date fecha;
 }

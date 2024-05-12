@@ -10,16 +10,11 @@
     <body>
         <header>
             <nav>
-                <button class="botones_nav"><a
-                        href="restaurante.html">Restaurante</a></button>
-                <button class="botones_nav"><a
-                        href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo" src="assets/img/logo.png"
-                        alt="Logo UhMami" /></a>
-                <button class="botones_nav"><a
-                        href="contacto.html">Contacto</a></button>
-                <button class="botones_nav"><a
-                        href="reservas.html">Reservas</a></button>
+                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
             </nav>
         </header>
 
@@ -38,20 +33,19 @@
                     <img class="fondo_titulo"
                         src="assets/img/tit_reservar.png" />
                 </section>
-                <form id="form" th:action="@{/reservar}" th:object="${cliente}"
-                    th:method="post">
+                <form id="form" th:action="@{/reservar}" th:method="post">
                     <article id="datos_reservar">
                         <p><input class="input_corto" type="text"
-                                th:name="nombre" th:field="*{nombre}"
+                                name="nombre" th:value="${nombre}"
                                 placeholder="Nombre" /></p>
                         <p><input class="input_largo" type="text"
-                                th:name="apellidos" th:field="*{apellidos}"
+                                name="apellidos" th:value="${apellidos}"
                                 placeholder="Apellidos" /></p>
                         <p><input class="input_largo" type="email"
-                                th:name="email" th:field="*{email}"
+                                name="email" th:value="${email}"
                                 placeholder="Email" /></p>
                         <p><input class="input_corto" type="text"
-                                th:name="telefono" th:field="*{telefono}"
+                                name="telefono" th:value="${telefono}"
                                 placeholder="Teléfono" /></p>
                     </article>
 
@@ -74,7 +68,7 @@
                             <article id="calendario">
                                 <label for="fecha">Fecha : </label>
                                 <input type="date" id="fecha"
-                                    th:name="fecha">
+                                    name="fecha">
                             </article>
                             <article id="hora">
                                 <article id="horas">
@@ -123,8 +117,8 @@
                     <article id="obs">
                         <p><label>Observaciones: </label><br>
                             <textarea id="observacionesReservar"
-                                th:name="observacioneReservar"
-                                th:field="*{observaciones}" cols="50" rows="8"
+                                name="observacioneReservar"
+                                th:value="${observaciones}" cols="50" rows="8"
                                 placeholder="Observaciones..."></textarea></p>
                     </article>
 
@@ -145,15 +139,15 @@
                     </article>
                     <form id="form" th:action="@{/contacto/grupo}"  th:object="${grupo}" th:method="post">
                         <article id="datos_contacto">
-                            <p><input class="input_corto" type="text" th:name="nombre" th:field="*{nombre}"
+                            <p><input class="input_corto" type="text" name="nombre" th:value="${nombre}"
                                     placeholder="Nombre"/></p>
                             <p><input class="input_corto" type="text"
-                                    th:name="telefono" th:field="*{telefono}" placeholder="Teléfono"/></p>
+                                    name="telefono" th:value="${telefono}" placeholder="Teléfono"/></p>
                         </article>
                         <article id="obs">
                             <p><label>Observaciones: </label><br>
                                 <textarea id="observacionesContacto"
-                                    th:name="observacioneGrupo" th:field="*{observaciones}" cols="50" rows="8"
+                                    name="observacioneGrupo" th:value="${observaciones}" cols="50" rows="8"
                                     placeholder="Observaciones..."></textarea></p>
                         </article>
                         <br>
@@ -182,10 +176,10 @@
                     </article>
                     <form id="form" th:action="@{/modificar}"  th:object="${reserva}" th:method="post">
                         <article id="datos_modificar_reserva">
-                            <p><input class="input_largo" type="text" th:name="identificador" th:field="*{identificador}"
+                            <p><input class="input_largo" type="text" name="identificador" th:value="${identificador}"
                                     placeholder="Identificador de la reserva"/></p> <br>
                             <p><input class="input_largo" type="email"
-                                    th:name="email" th:field="*{email}" placeholder="Email"/></p>
+                                    name="email" th:value="${email}" placeholder="Email"/></p>
                         </article>
                         <br>
                             <button id="gestionar" type="submit" class="botones_principales">Gestionar <br> mi reserva</button>

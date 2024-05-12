@@ -16,9 +16,8 @@ public class MesaConReserva implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	private Mesa idMesa;
-	@Id
 	private Reserva idReserva;
+	private Mesa idMesa;
 	private Date fecha;
 	private Date hora;
 

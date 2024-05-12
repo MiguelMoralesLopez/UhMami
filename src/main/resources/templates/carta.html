@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,16 +10,11 @@
     <body>
         <header>
             <nav>
-                <button class="botones_nav"><a
-                        href="restaurante.html">Restaurante</a></button>
-                <button class="botones_nav"><a
-                        href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo" src="assets/img/logo.png"
-                        alt="Logo UhMami" /></a>
-                <button class="botones_nav"><a
-                        href="contacto.html">Contacto</a></button>
-                <button class="botones_nav"><a
-                        href="reservas.html">Reservas</a></button>
+                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
             </nav>
         </header>
         <main>

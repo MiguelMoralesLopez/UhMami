@@ -5,8 +5,9 @@ import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.entities.Mesa;
 import uhmami.modelo.entities.MesaConReserva;
+import uhmami.modelo.entities.Reserva;
 
 @Repository
-public interface MesaConReservaRepository extends JpaRepository<MesaConReserva, Mesa>{
+public interface MesaConReservaRepository extends JpaRepository<MesaConReserva, Reserva>{
 
 }
