@@ -300,7 +300,21 @@ p.p {
    #cont_resenas{
     margin-top: -20%;
    }
-    
+}
+/*fin tablet*/
+
+
+/*movil*/
+/*Landscape*/
+@media (min-width: 390px) and (max-width: 812px) and (orientation:landscape) {
+
+
 }
 
-/*fin tablet*/
+
+/*Portrait*/
+@media (min-width: 390px) and (max-width: 812px) and (orientation:portrait) {
+
+
+}
+

@@ -762,7 +762,7 @@ select {
 /*fin tablet*/
 
 /*movil*/
-/*Portrait*/
+/*Landscape*/
 @media (min-width: 375px) and (max-width: 812px) and (orientation:landscape) {
 
     main {
@@ -868,8 +868,17 @@ select {
 }
 
 
-/*Portrait*/
-@media (min-width: 812px) and (max-width: 390px) and (orientation:portrait) {}
+/*Landscape*/
+@media (min-width: 390px) and (max-width: 812px) and (orientation:landscape) {
 
+
+}
+
+
+/*Portrait*/
+@media (min-width: 390px) and (max-width: 812px) and (orientation:portrait) {
+
+
+}
 
 /*fin movil*/
