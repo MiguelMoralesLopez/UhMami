@@ -871,14 +871,13 @@ select {
 /*Landscape*/
 @media (min-width: 390px) and (max-width: 812px) and (orientation:landscape) {
 
-
 }
 
 
 /*Portrait*/
 @media (min-width: 390px) and (max-width: 812px) and (orientation:portrait) {
 
-
+  
 }
 
 /*fin movil*/
