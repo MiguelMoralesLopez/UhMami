@@ -1,0 +1,10 @@
+/* CSS Menú hamgurguesa */
+
+.boton_cerrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 38px;
+    height: 40px;
+    margin-top: 30px;
+}

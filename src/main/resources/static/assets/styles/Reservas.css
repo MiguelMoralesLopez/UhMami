@@ -34,33 +34,25 @@ body {
     align-items: center;
 }
 
+
 #reservar {
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-#form {
-    display: inline-flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 10%;
-}
-
 #datos_reservar {
-    width: 712px;
+    width: 812px;
     margin-top: 3%;
 }
 
 #foto_plano {
-    width: 1067px;
-    height: 644px;
+    width: 1200px;
+    height: 800px;
     border: 1px solid #000;
     margin-bottom: 3%;
     margin-left: 1%;
     border-radius: 10px;
 }
-
 
 #grupo {
     display: flex;
@@ -103,6 +95,11 @@ body {
 #necesitas {
     margin-bottom: 5%;
 }
+#errorMail{
+    margin-bottom: 0%;
+    padding-bottom: 0%;
+}
+
 
 /* CLASES */
 .foto_principal_reserva {
@@ -119,8 +116,20 @@ body {
     font-size: 26px;
 }
 
+.span_email{
+    width: 600px;
+}
+
 .h2preguntas {
     margin-bottom: 1%;
+}
+
+.form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10%;
 }
 
 .foto {
@@ -128,4 +137,152 @@ body {
     height: 350px;
     border: 1px solid #000;
     box-shadow: 6px 6px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 10% 18% 18% 30% 12%;
+    grid-template-rows: 160px 60px 120px 100px 100px;
+    gap: 1px;
+    position: absolute;
+    left: 24.5%;
+    top: 2010px;
+}
+
+.item {
+    padding: 12px;
+}
+
+.dos_cuadrada{
+    background: transparent;
+    background-image: url(../img/2_cuadrada_normal.png);
+    width: 49px;
+    height: 86px;
+    border: 0px;
+}
+
+.dos_cuadrada:hover{
+    background-image: url(../img/2_cuadrada_verde.png);
+}
+
+.dos_cuadrada:active,
+.dos_cuadrada:focus{
+    background-image: url(../img/2_cuadrada_naranja.png);
+}
+
+.dos_redonda{
+    background: transparent;
+    background-image: url(../img/2_redonda_normal.png);
+    width: 104px;
+    height: 56px;
+    border: 0px;
+}
+
+.dos_redonda:hover{
+    background-image: url(../img/2_redonda_verde.png);
+}
+
+.dos_redonda:active,
+.dos_redonda:focus{
+    background-image: url(../img/2_redonda_naranja.png);
+}
+
+.cuatro_cuadrada{
+    background: transparent;
+    background-image: url(../img/4_cuadrada_normal.png);
+    width: 99px;
+    height: 103px;
+    border: 0px;
+}
+
+.cuatro_cuadrada:hover{
+    background-image: url(../img/4_cuadrada_verde.png);
+}
+
+.cuatro_cuadrada:active,
+.cuatro_cuadrada:focus{
+    background-image: url(../img/4_cuadrada_naranja.png);
+}
+
+.cuatro_redonda{
+    background: transparent;
+    background-image: url(../img/4_redonda_normal.png);
+    width: 129px;
+    height: 128px;
+    border: 0px;
+}
+
+.cuatro_redonda:hover,
+.cuatro_redonda:focus{
+    background-image: url(../img/4_redonda_verde.png);
+}
+
+.cuatro_redonda:active,
+.cuatro_redonda:focus{
+    background-image: url(../img/4_redonda_naranja.png);
+}
+
+.seis{
+    background: transparent;
+    background-image: url(../img/6_normal.png);
+    width: 110px;
+    height: 144px;
+    border: 0px;
+}
+
+.seis:hover{
+    background-image: url(../img/6_verde.png);
+}
+
+.seis:active,
+.seis:focus{
+    background-image: url(../img/6_naranja.png);
+}
+
+.ocho{
+    background: transparent;
+    background-image: url(../img/8_normal.png);
+    width: 186px;
+    height: 114px;
+    border: 0px;
+}
+
+.ocho:hover{
+    background-image: url(../img/8_verde.png);
+}
+
+.ocho:active,
+.ocho:focus{
+    background-image: url(../img/8_naranja.png);
+}
+
+.mensajeError{
+    color: red;
+    font-size: 24px;
+}
+
+
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #tituloReservas{
+        margin-right: -38%;
+        margin-top: -5%;
+    }
+
+    #tituloGestionarReserva{
+        margin-right: -38%;
+        margin-top: -5%;
+    }
+
+    h1{
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 15%;
+    }
+
 }

@@ -125,7 +125,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left:13%;
+    margin-left: 13%;
 }
 
 #l1izq {
@@ -135,14 +135,14 @@ hr {
     gap: 40px;
 }
 
-#l1drc{
+#l1drc {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
 }
 
-#cocktails{
+#cocktails {
     margin-bottom: 10%;
 }
 
@@ -173,6 +173,82 @@ hr {
     height: 40px;
 }
 
-.Icon{
+.Icon {
     width: 59px;
 }
+
+
+/* MEDIA QUERIES */
+
+/*Tablet*/
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #tituloNuestraCarta {
+        margin-left: -20%;
+        margin-top: -6%;
+        width: 100%;
+    }
+
+    h1 {
+        width: 100%;
+        margin-left: 100%;
+        margin-top: 15%;
+    }
+
+    #h4 {
+        margin-left: 5%;
+        line-height: 70px;
+        text-align: center;
+    }
+
+    #h4secciones {
+        width: 100%;
+        margin-right: 30%;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    h3 {
+        margin-right: 25%;
+    }
+
+    ol.listaAlergenos {
+        gap: 8px;
+    }
+
+    p.p1 {
+        width: 120px;
+    }
+
+    #frescoComienzo{
+        width: 67%;
+    }
+
+    ol.listaComida{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #titulo_principales{
+        top: 470%;
+    }
+
+    #titulo_terminar{
+        top: 956%;
+        left: 20%;
+    }
+
+    #titulo_bebidas{
+        top: 1185%;
+        left: 24%;
+    }
+
+    
+
+}
+
+
+
+
+

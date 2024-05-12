@@ -1,13 +1,47 @@
 /* CSS CONSTRUCCION*/
 
 /* IDS */
-body{
+body {
     max-height: 100px !important;
 }
 
 /* TAGS */
+#error {
+    width: 100%;
+    height: 925px;
+}
+
 #btn_volver {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+    margin: 5%;
+    margin-top: 39%;
+}
+
+#construccion{
+    max-width: 100%;
+}
+
+
+
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) {
+
+    #btn_volver {
+        margin-top: 60%;
+    }
+
+    img{
+        max-width: 100%;  
+        height: 810px;  
+    }
+
+}
+
+/*Landscape*/
+@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
+
+    
 }
