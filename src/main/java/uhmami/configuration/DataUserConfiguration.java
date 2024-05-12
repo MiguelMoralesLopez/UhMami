@@ -40,9 +40,9 @@ public class DataUserConfiguration{
 		.csrf(csrf -> csrf.disable());
 		// Los recursos estáticos no requieren autenticación
 		http.authorizeHttpRequests(authorize -> authorize
-			.requestMatchers("/static/**").permitAll()
-			.requestMatchers("/img/**").permitAll()
-			.requestMatchers("/css/**").permitAll()
+			.requestMatchers("../css/**").permitAll()
+			.requestMatchers("../img/**").permitAll()
+			.requestMatchers("../static/**").permitAll()
 			.requestMatchers("/").permitAll()
 			.anyRequest().permitAll());
 		// El formulario de Login no requiere autenticacion

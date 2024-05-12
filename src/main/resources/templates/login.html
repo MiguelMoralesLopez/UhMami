@@ -3,15 +3,15 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/assets/styles/Login.css">
-        <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+        <link rel="stylesheet" href="assets/styles/Login.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
         <title>Login</title>
     </head>
     <body>
         <main>
             <section id="titulo_login">
                 <img class="fondo_titulo"
-                    src="../static/assets/img/tit_login.png" />
+                    src="assets/img/tit_login.png" />
             </section>
             <form id="form" th:action="@{/login}" th:object="${usuario}"
                 th:method="post">
