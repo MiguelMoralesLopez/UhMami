@@ -2,29 +2,33 @@ package uhmami.modelo.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.entities.MesaConReserva;
+import uhmami.modelo.repository.MesaConReservaRepository;
 
 @Repository
 public class MesaConReservaServiceImpl implements MesaConReservaService{
+	
+	@Autowired
+	private MesaConReservaRepository mesaConReservaRepository;
 
 	@Override
 	public MesaConReserva buscarPorMesa(Integer idMesa) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return mesaConReservaRepository.findByIdMesa(idMesa);
 	}
 
 	@Override
 	public MesaConReserva buscarPorReserva(Integer idReserva) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return mesaConReservaRepository.findByIdMesa(idReserva);
 	}
 
 	@Override
 	public List<MesaConReserva> buscarTodas() {
-		// TODO Auto-generated method stub
-		return null;
+		return mesaConReservaRepository.findAll();
 	}
 
 	@Override

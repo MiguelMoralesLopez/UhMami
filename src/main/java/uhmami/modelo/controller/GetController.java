@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Consulta;
 
 @Controller
@@ -25,7 +26,8 @@ public class GetController {
 	}
 	
 	@GetMapping("/reservas")
-	public String mostrarReservas() {
+	public String mostrarReservas(Model model) {
+		model.addAttribute("reservaDto", new ReservaDto());
 		return "reservas";
 	}
 	
