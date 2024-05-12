@@ -283,14 +283,22 @@ p.p {
 /*landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
+    body{
+        height: 100px !important;
+    }
+
     nav{
         width: 810px;
         margin-left: 0px;
         margin-right: 0px;
     }
 
-   #footer{
-    width: 810px;
+   p{
+    font-size: 25px;
+   }
+
+   #cont_resenas{
+    margin-top: -20%;
    }
     
 }
