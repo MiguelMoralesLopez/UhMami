@@ -15,7 +15,7 @@ public class ReservaDto {
 	private String email;
 	private String telefono;
 	private String comensales;
-	private Date fecha;
+	private String fecha;
 	private String hora;
 	private String mesa;
 	private String observaciones;

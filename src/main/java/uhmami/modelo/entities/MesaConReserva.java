@@ -19,6 +19,6 @@ public class MesaConReserva implements Serializable{
 	private Reserva idReserva;
 	private Mesa idMesa;
 	private Date fecha;
-	private Date hora;
+	private String hora;
 
 }

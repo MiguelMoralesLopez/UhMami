@@ -9,7 +9,7 @@ public interface MesaConReservaService {
 	MesaConReserva buscarPorMesa(Integer idMesa);
 	MesaConReserva buscarPorReserva(Integer idReserva);
 	List<MesaConReserva> buscarTodas();
-	boolean altaMesaConReserva(Integer idReserva);
+	boolean altaMesaConReserva(MesaConReserva mesaConReserva);
 	boolean borrarMesaConReserva (Integer idReserva);
 	boolean modificarMesaConReserva (MesaConReserva mesaConReserva);
 

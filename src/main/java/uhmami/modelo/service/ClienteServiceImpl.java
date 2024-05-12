@@ -30,6 +30,7 @@ public class ClienteServiceImpl implements ClienteService{
 		return true;
 	}
 
+	
 	@Override
 	public boolean borrarCliente(Integer idCliente) {
 		if(buscarUno(idCliente) != null) {

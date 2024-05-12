@@ -32,21 +32,29 @@ public class MesaConReservaServiceImpl implements MesaConReservaService{
 	}
 
 	@Override
-	public boolean altaMesaConReserva(Integer idReserva) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean altaMesaConReserva(MesaConReserva mesaConReserva) {
+		mesaConReservaRepository.save(mesaConReserva);
+		return true;
 	}
 
 	@Override
 	public boolean borrarMesaConReserva(Integer idReserva) {
-		// TODO Auto-generated method stub
-		return false;
+		if(buscarPorReserva(idReserva) != null) {
+			mesaConReservaRepository.delete(buscarPorReserva(idReserva));
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	@Override
 	public boolean modificarMesaConReserva(MesaConReserva mesaConReserva) {
-		// TODO Auto-generated method stub
-		return false;
+		if(buscarPorReserva(mesaConReserva.getIdReserva().getId()) != null) {
+			mesaConReservaRepository.save(mesaConReserva);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

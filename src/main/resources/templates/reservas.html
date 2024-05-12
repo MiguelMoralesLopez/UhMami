@@ -41,9 +41,9 @@
 			<section id="reservar">
 				<img class="fondo_titulo" src="assets/img/tit_reservar.png" />
 			</section>
-			<form id="formReserva" class="form" th:action="@{/reservar}"
+			<form id="formReserva" class="form" th:action="@{/reservas/reservar}"
 				th:object="${reservaDto}" th:method="post"
-				onsubmit="return validateReservaForm()">
+				>
 				<article id="datos_reservar">
 					<p>
 						<input id="nombrereserva" class="input_corto" type="text"
@@ -117,7 +117,7 @@
 							alt="foto plano del restaurante" />
 					</article>
 					<article class="container">
-						<input id="mesaSeleccionada" type="hidden" value="0" />
+						<input id="mesaSeleccionada" type="hidden" th:field="*{mesa}" />
 						<!-- 1º fila de mesas -->
 						<div class="item">
 							<button type="button" id="mesa1" class="dos_cuadrada"></button>
