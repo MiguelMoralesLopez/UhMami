@@ -113,8 +113,7 @@ p.p {
 
 /*Tablet*/
 /*Landscape*/
-@media (min-width: 810px) and (max-width: 1080px){
-
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
     #tituloRestaurante{
         width: 100%;
     }
@@ -146,7 +145,21 @@ p.p {
 }
 
 /*Portrait*/
-@media (min-width: 1080px) and (max-width: 810px){
-    
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
+    body{
+        width: 810px !important;
+    }
+
+    main{
+        width: 810px !important;
+    }
+
+    header{
+        width: 810px !important;
+    }
+
+    nav{
+        width: 810px;
+    }
 }
 
