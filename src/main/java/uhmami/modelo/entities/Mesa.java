@@ -1,12 +1,14 @@
 package uhmami.modelo.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 import lombok.Data;
 
@@ -21,5 +23,7 @@ public class Mesa implements Serializable {
 	@Column(name="ID")
 	private Integer id;
 	private Integer comensales;
+	@ManyToMany(mappedBy = "mesas")
+    private List<Reserva> reservas;
 
 }

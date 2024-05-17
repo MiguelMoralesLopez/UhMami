@@ -1,12 +1,11 @@
 package uhmami.modelo.entities;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
@@ -22,9 +21,8 @@ public class Reserva implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID")
-	private Integer id;
+	private String id;
 	private Integer comensales;
 	private String observaciones;
 	@ManyToOne
@@ -43,6 +41,12 @@ public class Reserva implements Serializable {
 			@JoinColumn(name="ID_mesa")
 			}
 		)
-	private List<Mesa> mesa;
+	private List<Mesa> mesas;
+	
+	@Column(name="fecha")
+    private Date fecha;
+
+    @Column(name="hora")
+    private String hora;
 
 }

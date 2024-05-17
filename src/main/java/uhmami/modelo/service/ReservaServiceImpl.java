@@ -15,7 +15,7 @@ public class ReservaServiceImpl implements ReservaService{
 	private ReservaRepository reservaRepository;
 
 	@Override
-	public Reserva buscarUna(Integer idReserva) {
+	public Reserva buscarUna(String idReserva) {
 		return reservaRepository.findById(idReserva).orElse(null);
 	}
 
@@ -31,7 +31,7 @@ public class ReservaServiceImpl implements ReservaService{
 	}
 
 	@Override
-	public boolean eliminarReserva(Integer idReserva) {
+	public boolean eliminarReserva(String idReserva) {
 		if(buscarUna(idReserva) != null) {
 			reservaRepository.delete(buscarUna(idReserva));
 			return true;

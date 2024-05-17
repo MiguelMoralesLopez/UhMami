@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import uhmami.modelo.entities.Reserva;
 
 @Repository
-public interface ReservaRepository extends JpaRepository<Reserva, Integer>{
+public interface ReservaRepository extends JpaRepository<Reserva, String>{
 
 }
