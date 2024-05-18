@@ -161,5 +161,45 @@ p.p {
     nav{
         width: 810px;
     }
+
+    .foto_principal_restaurante{
+        width: 100%;
+    }
+
+    h1{
+        margin-top: 0px;
+        margin-left: 150%;
+        margin-top: 5%;
+    }
+
+    h4{
+        margin-left: 150%;
+        width: 650px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    p.p{
+        font-size: 25px;
+    }
+
+    #infoRestaurante{
+        width: 700px;
+        gap: 40px;
+    }
+
+    #fotosRestaurante{
+        width: 810px;
+    }
+
+    .fotos{
+        width: 49.7%;
+        height: 400px;
+    }
+
+    .fondo_titulo{
+        width: 400px;
+        height: 180px;
+    }
 }
 
