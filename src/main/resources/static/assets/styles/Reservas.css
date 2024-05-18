@@ -95,7 +95,8 @@ body {
 #necesitas {
     margin-bottom: 5%;
 }
-#errorMail{
+
+#errorMail {
     margin-bottom: 0%;
     padding-bottom: 0%;
 }
@@ -116,7 +117,7 @@ body {
     font-size: 26px;
 }
 
-.span_email{
+.span_email {
     width: 600px;
 }
 
@@ -153,7 +154,7 @@ body {
     padding: 12px;
 }
 
-.dos_cuadrada{
+.dos_cuadrada {
     background: transparent;
     background-image: url(../img/2_cuadrada_normal.png);
     width: 49px;
@@ -161,16 +162,16 @@ body {
     border: 0px;
 }
 
-.dos_cuadrada:hover{
+.dos_cuadrada:hover {
     background-image: url(../img/2_cuadrada_verde.png);
 }
 
 .dos_cuadrada:active,
-.dos_cuadrada:focus{
+.dos_cuadrada:focus {
     background-image: url(../img/2_cuadrada_naranja.png);
 }
 
-.dos_redonda{
+.dos_redonda {
     background: transparent;
     background-image: url(../img/2_redonda_normal.png);
     width: 104px;
@@ -178,16 +179,16 @@ body {
     border: 0px;
 }
 
-.dos_redonda:hover{
+.dos_redonda:hover {
     background-image: url(../img/2_redonda_verde.png);
 }
 
 .dos_redonda:active,
-.dos_redonda:focus{
+.dos_redonda:focus {
     background-image: url(../img/2_redonda_naranja.png);
 }
 
-.cuatro_cuadrada{
+.cuatro_cuadrada {
     background: transparent;
     background-image: url(../img/4_cuadrada_normal.png);
     width: 99px;
@@ -195,16 +196,16 @@ body {
     border: 0px;
 }
 
-.cuatro_cuadrada:hover{
+.cuatro_cuadrada:hover {
     background-image: url(../img/4_cuadrada_verde.png);
 }
 
 .cuatro_cuadrada:active,
-.cuatro_cuadrada:focus{
+.cuatro_cuadrada:focus {
     background-image: url(../img/4_cuadrada_naranja.png);
 }
 
-.cuatro_redonda{
+.cuatro_redonda {
     background: transparent;
     background-image: url(../img/4_redonda_normal.png);
     width: 129px;
@@ -213,16 +214,16 @@ body {
 }
 
 .cuatro_redonda:hover,
-.cuatro_redonda:focus{
+.cuatro_redonda:focus {
     background-image: url(../img/4_redonda_verde.png);
 }
 
 .cuatro_redonda:active,
-.cuatro_redonda:focus{
+.cuatro_redonda:focus {
     background-image: url(../img/4_redonda_naranja.png);
 }
 
-.seis{
+.seis {
     background: transparent;
     background-image: url(../img/6_normal.png);
     width: 110px;
@@ -230,16 +231,16 @@ body {
     border: 0px;
 }
 
-.seis:hover{
+.seis:hover {
     background-image: url(../img/6_verde.png);
 }
 
 .seis:active,
-.seis:focus{
+.seis:focus {
     background-image: url(../img/6_naranja.png);
 }
 
-.ocho{
+.ocho {
     background: transparent;
     background-image: url(../img/8_normal.png);
     width: 186px;
@@ -247,16 +248,16 @@ body {
     border: 0px;
 }
 
-.ocho:hover{
+.ocho:hover {
     background-image: url(../img/8_verde.png);
 }
 
 .ocho:active,
-.ocho:focus{
+.ocho:focus {
     background-image: url(../img/8_naranja.png);
 }
 
-.mensajeError{
+.mensajeError {
     color: red;
     font-size: 24px;
 }
@@ -266,23 +267,153 @@ body {
 /* MEDIA QUERIES */
 
 /*Tablet*/
-/*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) {
+/*Landscape*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
 
-    #tituloReservas{
+    #tituloReservas {
         margin-right: -38%;
         margin-top: -5%;
     }
 
-    #tituloGestionarReserva{
+    #tituloGestionarReserva {
         margin-right: -38%;
         margin-top: -5%;
     }
 
-    h1{
+    h1 {
         width: 100%;
         margin-left: 100%;
         margin-top: 15%;
     }
+
+}
+
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+
+    main {
+        width: 810px !important;
+    }
+
+    h1 {
+        font-size: 80px !important;
+        margin-right: 180% !important;
+    }
+
+    h2 {
+        font-size: 58px !important;
+    }
+
+    h6 {
+        font-size: 30px !important;
+    }
+
+    #reservas {
+        width: 810px !important;
+    }
+
+    #principal_width {
+        width: 810px !important;
+    }
+
+    .foto_principal_reserva {
+        width: 810px !important;
+        height: 500px;
+    }
+
+    .fondo_titulo {
+        width: 400px !important;
+        height: 180px !important;
+    }
+
+    .container {
+        width: 55%;
+        top: 1502px;
+        left: 8%;
+        grid-template-rows: 113px 7px 53px 50px;
+        gap: 1%
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    #tituloReservas {
+        right: 0px;
+        top: 230px;
+    }
+
+    #plano_mesas {
+        width: 810px;
+    }
+
+    #foto_plano {
+        width: 810px;
+        height: 450px;
+        margin-left: 0%;
+    }
+
+    .dos_cuadrada {
+        width: 35px;
+        height: 60px;
+        background-size: contain;
+    }
+
+    .cuatro_cuadrada {
+        width: 68px;
+        height: 70px;
+        background-size: contain;
+    }
+
+    .dos_redonda {
+        width: 70px;
+        height: 38px;
+        background-size: contain;
+    }
+
+    .cuatro_redonda {
+        width: 90px;
+        height: 90px;
+        background-size: contain;
+    }
+
+    .seis {
+        width: 77px;
+        height: 100px;
+        background-size: contain;
+    }
+
+    .ocho {
+        width: 130px;
+        height: 80px;
+        background-size: contain;
+    }
+
+
+    #grupo {
+        width: 810px;
+        height: 800px;
+    }
+
+    #titulo_grupo {
+        width: 810px;
+    }
+
+    .foto {
+        width: 49.5%;
+    }
+
+    #foto_necesitas {
+        width: 500px;
+        margin-left: 11%;
+    }
+
+
+    #botones_modificar_y_cancelar{
+        margin-top: 5%;
+        margin-left: 15%;
+        margin-bottom: 5%;
+    }
+
 
 }

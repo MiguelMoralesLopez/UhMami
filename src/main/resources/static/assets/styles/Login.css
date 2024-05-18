@@ -31,19 +31,27 @@ body {
     gap: 104px;
 }
 
-/*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px){
+/*Landscape*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
 
-    #form{
+    #form {
         margin-left: 0px !important;
         margin-top: 0px !important;
-    }   
+    }
+
+    #enviar {
+        font-size: 30px;
+    }
 }
 
-/*Landscape*/
-@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
-   
-    
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+    #enviar {
+        padding-bottom: 3%;
+    }
+
+    #volver a {
+        font-size: 34px !important;
+    }
+
 }
-
-

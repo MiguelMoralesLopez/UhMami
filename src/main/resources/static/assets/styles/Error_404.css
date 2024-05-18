@@ -21,8 +21,8 @@ body{
 }
 
 
-/*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) {
+/*Landscape*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
 
     #btn_volver {
         margin-top: 69%;
@@ -30,8 +30,14 @@ body{
 
 }
 
-/*Landscape*/
-@media (min-width: 1080px) and (max-width: 810px) and (orientation:portrait) {
 
-    
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+    #error{
+        height: 600px;
+    }
+
+    #btn_volver {
+        margin-top: 60%;
+    }
 }
