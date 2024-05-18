@@ -256,7 +256,6 @@ p.p {
     #resenas {
         width: 450px;
         height: 420px;
-        margin-right: 5%;
     }
 
     #cont_resenas {
@@ -304,6 +303,7 @@ p.p {
    #cont_resenas{
     margin-top: -20%;
    }
+
 }
 /*fin tablet*/
 

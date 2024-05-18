@@ -8,7 +8,7 @@ main {
     gap: 138px;
 }
 
-h1{
+h1 {
     margin-top: 0px;
 }
 
@@ -217,7 +217,7 @@ hr {
         margin-right: 25%;
     }
 
-    h1{
+    h1 {
         margin-top: 0px !important;
         padding-top: 0%;
     }
@@ -230,108 +230,114 @@ hr {
         width: 120px;
     }
 
-    #frescoComienzo{
+    #frescoComienzo {
         width: 67%;
     }
 
-    ol.listaComida{
+    ol.listaComida {
         flex-direction: column;
         gap: 40px;
     }
 
-    #tituloNuestraCarta{
+    #tituloNuestraCarta {
         height: 200px;
         margin-top: 15%;
         margin-left: -20%;
     }
 
-    #titulo_principales{
+    #titulo_principales {
         top: 470%;
     }
 
-    #titulo_terminar{
+    #titulo_terminar {
         top: 956%;
         left: 20%;
     }
 
-    #titulo_bebidas{
+    #titulo_bebidas {
         top: 1185%;
         left: 24%;
-    }   
+    }
 
-    .Icon{
+    .Icon {
         width: 40px;
     }
 
-    ol.listaAlergenos{
+    ol.listaAlergenos {
         gap: 20px;
     }
 
 }
 
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
-    h1{
+    h1 {
         font-size: 80px !important;
         margin-top: 0px !important;
         padding-top: 10%;
     }
 
-    h4{
+    h4 {
         font-size: 25px !important;
     }
 
-    h3{
+    h3 {
         font-size: 60px !important;
     }
 
-    #h4{
+    #h4 {
         font-size: 25px !important;
         text-align: center;
     }
 
-    .foto_principal_carta , .fotosCarta{
+    #h4secciones{
+        width: 700px;
+        text-align: center;
+    }
+
+    .foto_principal_carta,
+    .fotosCarta {
         height: 500px;
     }
 
-    #tituloNuestraCarta{
+    #tituloNuestraCarta {
         left: 1% !important;
     }
 
-    #titulo_empezar{
+    #titulo_empezar {
         left: 1% !important;
-        top:75% !important;
+        top: 75% !important;
     }
 
-    li.alergenos{
+    li.alergenos {
         width: 150px;
     }
 
-    p{
+    p {
         font-size: 20px !important;
     }
 
-    .Icon{
+    .Icon {
         width: 40px !important;
         height: 40px !important;
     }
 
-    h2{
+    h2 {
         text-align: center !important;
     }
 
-    ol.listaAlergenos{
+    ol.listaAlergenos {
         width: 100%;
         gap: 0px;
         padding-left: 1%;
     }
 
-    #frescoComienzo{
+    #frescoComienzo {
         width: 810px;
         align-items: center;
         margin-left: 0%;
     }
 
-    ol.listaComida{
+    ol.listaComida {
         width: 810px;
         flex-direction: column;
         gap: 43px;
@@ -339,9 +345,25 @@ hr {
     }
 
 
+    #titulo_principales {
+        left: 0px;
+        top: 302% !important;
+        margin-left: 8%;
+    }
+
+    #titulo_terminar{
+        left: 0px;
+        top: 667% !important;
+        margin-left: 8%;
+    }
+
+    #titulo_bebidas{
+        left: 0px;
+        top: 815% !important;
+        margin-left: 8%;
+    }
+
+    
+
+
 }
-
-
-
-
-
