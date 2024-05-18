@@ -1,7 +1,7 @@
 /* CSS RESTAURANTE */
 
 /* TAGS */
-body{
+body {
     height: 4000px;
 }
 
@@ -59,7 +59,7 @@ p.p {
     margin-top: 5%;
 }
 
-#nuestroChef{
+#nuestroChef {
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -75,16 +75,16 @@ p.p {
 #fotoRecomendacion {
     width: 1440px;
     height: 623px;
-    
+
 }
 
-#btn_recomendacion{ 
+#btn_recomendacion {
     position: absolute;
     margin: 5%;
     margin-top: 25%;
 }
 
-#btn_recomendacion:hover{
+#btn_recomendacion:hover {
     color: var(--MARCA-Verde-oscuro, #616D69);
 }
 
@@ -113,47 +113,47 @@ p.p {
 
 /*Tablet*/
 /*Landscape*/
-@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
-    #tituloRestaurante{
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
+    #tituloRestaurante {
         width: 100%;
     }
 
-    h1{
+    h1 {
         width: 100%;
         margin-left: 100%;
         margin-top: 15%;
     }
 
-    h4{
+    h4 {
         width: 100%;
         margin-left: 135%;
     }
 
-    p.p{
+    p.p {
         width: 800px !important;
         text-align: justify;
         font-size: 26px;
     }
 
-    #btn_recomendacion{
+    #btn_recomendacion {
         margin-top: 44%;
         margin-left: 18%;
         height: 100px;
         width: 30%;
     }
-    
+
 }
 
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
 
-    .foto_principal_restaurante{
+    .foto_principal_restaurante {
         width: 100%;
         height: 600px;
     }
 
-    h1{
+    h1 {
         width: 100%;
         margin-top: 0px;
         margin-left: 150%;
@@ -161,41 +161,41 @@ p.p {
         font-size: 80px;
     }
 
-    h4{
+    h4 {
         margin-left: 150%;
         width: 650px;
         text-align: center;
         font-size: 30px;
     }
 
-    p.p{
+    p.p {
         font-size: 25px;
     }
 
-    #infoRestaurante{
+    #infoRestaurante {
         width: 700px;
         gap: 40px;
     }
 
-    #fotosRestaurante{
+    #fotosRestaurante {
         width: 810px;
     }
 
-    .fotos{
+    .fotos {
         width: 49.7%;
         height: 400px;
     }
 
-    .fondo_titulo{
+    .fondo_titulo {
         width: 400px;
         height: 180px;
     }
 
-    #fotoRecomendacion{
-       height: 500px;
+    #fotoRecomendacion {
+        height: 500px;
     }
 
-    #btn_recomendacion{
+    #btn_recomendacion {
         width: 230px;
         height: 70px;
         background-size: contain;
@@ -204,12 +204,58 @@ p.p {
         margin-top: 50%;
     }
 
-    #btn_recomendacion a{
+    #btn_recomendacion a {
         font-size: 25px;
     }
 
-    #btnCartaYreserva{
-        gap:80px;
+    #btnCartaYreserva {
+        gap: 80px;
     }
 }
 
+
+/*Fin tablet*/
+
+/*Inicio movil*/
+/*Landscape*/
+@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+
+    p.p{
+        font-size: 23px !important;
+        width: 700px !important ;
+    }
+
+    #tituloRestaurante{
+        right: 0px;
+    
+    }
+
+    #infoRestaurante{
+        width: 700px !important;
+    }
+
+    #btnCartaYreserva{
+        gap:100px !important;
+    }
+
+    .foto_principal_restaurante {
+        width: 100%;
+    }
+
+    #fotosRestaurante{
+        width: 100%;
+    }
+
+    #recomendacion{
+        width: 100%;
+    }
+
+    #fotoRecomendacion{
+        width: 100%;
+    }
+}
+
+/*Portrait*/
+@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+
+/*fin movil*/

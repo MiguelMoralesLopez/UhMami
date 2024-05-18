@@ -414,6 +414,19 @@ body {
         margin-left: 15%;
         margin-bottom: 5%;
     }
-
-
 }
+
+/*Fin tablet*/
+
+
+/*Inicio movil*/
+/*Landscape*/
+@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+
+ 
+}
+
+/*Portrait*/
+@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+
+/*fin movil*/

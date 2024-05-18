@@ -294,10 +294,11 @@ p.p {
 
 
 /*landscape*/
-@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
 
     body{
         height: 100px !important;
+     
     }
 
     h2{
@@ -307,6 +308,7 @@ p.p {
 
     nav{
         width: 810px;
+        padding: 0px;
     }
 
     #foto_principal{
