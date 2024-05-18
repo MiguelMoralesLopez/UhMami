@@ -282,6 +282,10 @@ p.p {
         margin-top: 20%;
     }
 
+    #principales{
+        width: 100%;
+       }
+
     #postre{
         width: 100%;
     }
@@ -296,12 +300,94 @@ p.p {
         height: 100px !important;
     }
 
+    h2{
+        margin-top: 4%;
+        font-size: 40px;
+    }
+
+    nav{
+        width: 810px;
+    }
+
+    #foto_principal{
+        width: 810px ;
+    }
+
+    .foto_principal_home{
+        width: 810px;
+    }
+
+    .fondo_titulo{
+        width: 480px;
+    }
+
+    #nuestra_historia{
+        width: 810px;
+    }
+
+    #fotosSumergete{
+        flex-direction: column;
+    }
+
+    #caja_empezar , #caja_principales, #caja_postres{
+        width: 100%;
+    }
+
+    #empezar{
+        width: 100%;
+        height: 600px;
+    }
+
+    #principales{
+        width: 100%;
+        height: 600px;
+    }
+
+    #postre{
+        width: 100%;
+        height: 600px;
+    } 
+
+    #resenas{
+        width: 810px;
+        padding: 0px;
+    }
+
+    #resena{
+        width: 670px;
+    }
+
+    #cont_resenas{
+        width: 600px;
+        margin-top: 5% !important;
+    }
+
    p{
     font-size: 25px;
    }
 
-   #cont_resenas{
-    margin-top: -20%;
+   .parrafos{
+    width: 500px;
+   }
+
+   p.p{
+    width: 500px;
+   }
+
+
+   .chef{
+    width: 280px;
+    height: 450px;
+   }
+
+   .botones_secundarios{
+    width: 271px;
+    height: 83px;
+   }
+
+   #boton_empezar, #boton_postres, #boton_princ{
+    margin-left: 28%;
+    margin-top: 30%;
    }
 
 }

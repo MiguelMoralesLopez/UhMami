@@ -812,6 +812,11 @@ select {
         padding-bottom: 5%;
     }
 
+    .botones_secundarios{
+        width: 230px;
+        height: 70px;
+    }
+
     /* FORMULARIOS */
 
     .form{
