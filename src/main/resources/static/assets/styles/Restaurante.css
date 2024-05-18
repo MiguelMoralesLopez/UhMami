@@ -146,21 +146,7 @@ p.p {
 
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
-    body{
-        width: 810px !important;
-    }
 
-    main{
-        width: 810px !important;
-    }
-
-    header{
-        width: 810px !important;
-    }
-
-    nav{
-        width: 810px;
-    }
 
     .foto_principal_restaurante{
         width: 100%;
@@ -200,6 +186,27 @@ p.p {
     .fondo_titulo{
         width: 400px;
         height: 180px;
+    }
+
+    #fotoRecomendacion{
+       height: 500px;
+    }
+
+    #btn_recomendacion{
+        width: 230px;
+        height: 70px;
+        background-size: contain;
+        margin: 0px;
+        margin-left: 50%;
+        margin-top: 50%;
+    }
+
+    #btn_recomendacion a{
+        font-size: 25px;
+    }
+
+    #btnCartaYreserva{
+        gap:80px;
     }
 }
 

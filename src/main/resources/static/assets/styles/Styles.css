@@ -724,38 +724,84 @@ select {
 /*landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
+    body {
+        width: 810px !important;
+        height: 50px !important;
+    }
+
+    main {
+        width: 810px !important;
+    }
+
+    header {
+        width: 810px !important;
+    }
+
     nav {
-        width: 1040px !important;
-        margin-left: 0px;
-        margin-right: 0px;
+        width: 810px;
+        padding-left: 0px;
     }
 
     #footer {
-        width: 1080px !important;
+        width: 810px !important;
         gap: 50px;
+        height: 250px;
     }
 
-    #datos{
+    #datos {
         width: 55%;
     }
 
-    .logo{
-        width: 240px;
-        height: 180px;
+    #legal {
+        align-items: flex-start;
+        gap: 0px;
+        margin-top: 2%;
+    }
+
+    p.txt_footer {
+        font-size: 25px;
+    }
+
+    a.txt_footer {
+        font-size: 25px;
+    }
+
+    .logo {
+        width: 200px;
+        height: 140px;
+    }
+
+    #logo_footer {
+        width: 70%;
     }
 
     /* BOTONES NAVEGADOR */
     .botones_nav {
-        width: 210px;
-        height: 70px;
-        background-size: cover;
+        width: 150px;
+        height: 55px;
+        background-size: contain;
     }
 
     .botones_nav a {
-        font-size: 28px;
-        padding-top: 12px;
+        font-size: 24px;
+        padding-top: 6px;
         padding-left: 0px;
     }
+
+
+    /* BOTONES PRINCIPALES */
+    .botones_principales{
+        width: 240px;
+        height: 70px;
+        background-size: contain;
+    }
+
+    .botones_principales a{
+        font-size: 32px;
+        padding-left: 0px;
+        width: 100%;
+    }
+
 
 }
 
@@ -869,15 +915,10 @@ select {
 
 
 /*Landscape*/
-@media (min-width: 390px) and (max-width: 812px) and (orientation:landscape) {
-
-}
+@media (min-width: 390px) and (max-width: 812px) and (orientation:landscape) {}
 
 
 /*Portrait*/
-@media (min-width: 390px) and (max-width: 812px) and (orientation:portrait) {
-
-  
-}
+@media (min-width: 390px) and (max-width: 812px) and (orientation:portrait) {}
 
 /*fin movil*/

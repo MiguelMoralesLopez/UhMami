@@ -211,16 +211,6 @@ p.p {
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px){
 
-    body{
-        width: 1080px;
-    }
-
-    main{
-        width: 1080px !important;
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
     p.p {
         width: 490px;
     }
@@ -236,7 +226,7 @@ p.p {
     }
 
     .foto_principal_home{
-        width: 1080px !important;
+        width: 100%
     }
 
     #sumergete {
@@ -283,14 +273,12 @@ p.p {
 /*landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
-    body{
-        height: 100px !important;
+    html{
+        width: 810px !important;
     }
 
-    nav{
-        width: 810px;
-        margin-left: 0px;
-        margin-right: 0px;
+    body{
+        height: 100px !important;
     }
 
    p{
