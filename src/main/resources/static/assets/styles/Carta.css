@@ -8,6 +8,10 @@ main {
     gap: 138px;
 }
 
+h1{
+    margin-top: 0px;
+}
+
 h2 {
     text-align: left !important;
 }
@@ -182,18 +186,18 @@ hr {
 
 /*Tablet*/
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) {
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
 
     #tituloNuestraCarta {
-        margin-left: -20%;
-        margin-top: -6%;
+        padding-left: -20%;
+        padding-top: -6%;
         width: 100%;
     }
 
     h1 {
         width: 100%;
         margin-left: 100%;
-        margin-top: 15%;
+        padding-top: 18%;
     }
 
     #h4 {
@@ -213,6 +217,11 @@ hr {
         margin-right: 25%;
     }
 
+    h1{
+        margin-top: 0px !important;
+        padding-top: 0%;
+    }
+
     ol.listaAlergenos {
         gap: 8px;
     }
@@ -230,6 +239,12 @@ hr {
         gap: 40px;
     }
 
+    #tituloNuestraCarta{
+        height: 200px;
+        margin-top: 15%;
+        margin-left: -20%;
+    }
+
     #titulo_principales{
         top: 470%;
     }
@@ -242,9 +257,87 @@ hr {
     #titulo_bebidas{
         top: 1185%;
         left: 24%;
+    }   
+
+    .Icon{
+        width: 40px;
     }
 
-    
+    ol.listaAlergenos{
+        gap: 20px;
+    }
+
+}
+
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+    h1{
+        font-size: 80px !important;
+        margin-top: 0px !important;
+        padding-top: 10%;
+    }
+
+    h4{
+        font-size: 25px !important;
+    }
+
+    h3{
+        font-size: 60px !important;
+    }
+
+    #h4{
+        font-size: 25px !important;
+        text-align: center;
+    }
+
+    .foto_principal_carta , .fotosCarta{
+        height: 500px;
+    }
+
+    #tituloNuestraCarta{
+        left: 1% !important;
+    }
+
+    #titulo_empezar{
+        left: 1% !important;
+        top:75% !important;
+    }
+
+    li.alergenos{
+        width: 150px;
+    }
+
+    p{
+        font-size: 20px !important;
+    }
+
+    .Icon{
+        width: 40px !important;
+        height: 40px !important;
+    }
+
+    h2{
+        text-align: center !important;
+    }
+
+    ol.listaAlergenos{
+        width: 100%;
+        gap: 0px;
+        padding-left: 1%;
+    }
+
+    #frescoComienzo{
+        width: 810px;
+        align-items: center;
+        margin-left: 0%;
+    }
+
+    ol.listaComida{
+        width: 810px;
+        flex-direction: column;
+        gap: 43px;
+        align-items: center;
+    }
+
 
 }
 

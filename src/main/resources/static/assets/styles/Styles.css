@@ -679,6 +679,7 @@ select {
 
     #legal {
         width: 40%;
+        gap:30px;
     }
 
     p {
@@ -745,7 +746,7 @@ select {
     #footer {
         width: 810px !important;
         gap: 50px;
-        height: 250px;
+        height: 200px;
     }
 
     #datos {
@@ -763,7 +764,11 @@ select {
     }
 
     a.txt_footer {
-        font-size: 25px;
+        font-size: 20px;
+    }
+
+    #logo_footer{
+        width: 250px !important;
     }
 
     .logo {

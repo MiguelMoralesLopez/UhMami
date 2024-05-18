@@ -181,7 +181,7 @@ p.p {
 }
 
 #foto_principal {
-    width: 100%;
+    width: 1440px;
 }
 
 
@@ -209,10 +209,11 @@ p.p {
 
 /*Tablet*/
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px){
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
 
-    p.p {
-        width: 490px;
+    p{
+        width: 83%;
+        padding-left: 7%;
     }
 
     .parrafos {
@@ -226,7 +227,25 @@ p.p {
     }
 
     .foto_principal_home{
-        width: 100%
+        width: 1080px !important;
+    }
+
+    #empezar , #principales , #postre{
+        height: 350px;
+        width: 100%;
+    }
+
+    #nuestra_historia{
+        width: 1080px !important;
+    }
+
+    #historia{
+        padding-left: 3.7%;
+        gap:30px;
+    }
+
+    #foto_principal {
+        width: 1080px !important;
     }
 
     #sumergete {
@@ -237,6 +256,7 @@ p.p {
     #resenas {
         width: 450px;
         height: 420px;
+        margin-right: 5%;
     }
 
     #cont_resenas {
@@ -272,10 +292,6 @@ p.p {
 
 /*landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
-
-    html{
-        width: 810px !important;
-    }
 
     body{
         height: 100px !important;
