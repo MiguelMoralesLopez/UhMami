@@ -174,8 +174,8 @@ body {
 /* MEDIA QUERIES */
 
 /*Tablet*/
-/*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px){
+/*Landscape*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
 
     #tituloContacto{
         margin-right: -38%;
@@ -234,8 +234,66 @@ body {
 
 }
 
-/*Landscape*/
-@media (min-width: 1080px) and (max-width: 810px) {
+/*Portrait*/
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
 
-  
+    main{
+        width: 810px !important;
+    }
+
+    .foto_principal_contacto{
+        width: 810px;
+        height: 500px;
+    }
+
+    #tituloContacto{
+        right: 0px;
+        width: 810px;
+        top: 119px;
+    }
+
+    h1{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 40px !important;
+    }
+
+    p{
+        font-size: 25px !important;
+    }
+
+    .Icon{
+        width: 80px;
+    }
+
+    #contacto ,#encuentranos, #mancha_encuentranos, #mancha_contactanos, #mancha_horario{
+        width: 810px;
+        gap:40px;
+    }
+
+    #mancha_encuentranos, #mancha_contactanos, #mancha_horario{
+        height: 400px;
+    }
+
+    #datos_encuentranos{
+        left: 0px;
+        margin-left: 25%;
+        top: 720px;
+    }
+
+    #datos_contactanos{
+        right: 0px;
+        top: 1218px;
+        margin-right: 32%;
+    }
+
+    #datos_horario{
+        right: 0px;
+        top: 1641px;
+        margin-right: 30%;
+    }
+
+    
 }
