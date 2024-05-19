@@ -225,6 +225,10 @@ p.p {
         width: 700px !important ;
     }
 
+    h1{
+        margin-top: 0px;
+    }
+
     #tituloRestaurante{
         right: 0px;
     
@@ -252,6 +256,19 @@ p.p {
 
     #fotoRecomendacion{
         width: 100%;
+    }
+
+    .menu_hamburguesa{
+        position: absolute;
+        right: 20px;
+    }
+
+    #principalRestaurante{
+        display: block !important;
+    }
+
+    #tituloRestaurante{
+       top: 157px;
     }
 }
 

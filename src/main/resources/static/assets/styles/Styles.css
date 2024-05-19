@@ -864,7 +864,7 @@ select {
         display: block;
         width: 60px;
         margin-right: 700px;
-        margin-top: 2%;
+        margin-top: 3%;
     }
 
     /* BOTONES NAVEGADOR */
@@ -885,7 +885,11 @@ select {
         height: 58px;
         background-size: contain;
         font-size: 25px;
-        padding-bottom: 5%;
+        padding-bottom: 2%;
+    }
+
+    .botones_principales a{
+        width: 174px !important;
     }
 
 
@@ -964,6 +968,27 @@ select {
     }
 
     .txt_footer{
+        font-size: 20px;
+    }
+
+    #tituloRestaurante{
+        width: 100%;
+    }
+
+    .fotos{
+        width: 100% !important;
+    }
+
+    .fondo_titulo{
+        height: 183px;
+    }
+
+    #fotoRecomendacion{
+        height: 542px !important;
+    }
+
+    #btn_recomendacion{
+        margin-top: 50% !important;
         font-size: 20px;
     }
 }

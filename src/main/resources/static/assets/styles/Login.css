@@ -62,7 +62,12 @@ body {
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
 
-
+    .menu_hamburguesa{
+        display: block;
+        width: 60px;
+        margin-right: 700px;
+        margin-top: 2% !important;
+    }
  
 }
 

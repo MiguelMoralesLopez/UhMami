@@ -136,6 +136,13 @@ tr {
         margin-bottom: 10%;
         margin-top: 0px;
     }
+
+    .menu_hamburguesa{
+        display: block;
+        width: 60px;
+        margin-right: 700px;
+        margin-top: 2% !important;
+    }
  
 }
 
