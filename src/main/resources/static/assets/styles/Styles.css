@@ -991,6 +991,18 @@ select {
         margin-top: 50% !important;
         font-size: 20px;
     }
+
+    .form{
+        width: 809px;
+    }
+
+    #formReserva{
+        padding-left: 8%;
+    }
+
+    #formulariocontacto{
+        padding-left: 8%;
+    }
 }
 
 /*Portrait*/
