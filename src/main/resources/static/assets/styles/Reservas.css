@@ -482,6 +482,32 @@ body {
         margin-left: 10%;
     }
 
+    #tituloGestionarReserva{
+        right: 69px;
+        top: 123px;
+    }
+
+    #botones_modificar_y_cancelar{
+        display: block;
+        margin-bottom: 8%;
+    }
+
+    button#reservar{
+        background-size: cover;
+        width: 212px;
+        height: 62px;
+    }
+
+    button#cancelar{
+        background-size: cover;
+        width: 212px;
+        height: 62px;
+    }
+
+    label{
+        font-size: 24px !important;
+    }
+
   
 }
 
