@@ -25,5 +25,13 @@ public class Mesa implements Serializable {
 	private Integer comensales;
 	@ManyToMany(mappedBy = "mesas")
     private List<Reserva> reservas;
+	
+	@Override
+	public String toString() {
+	    return "Mesa[" +
+	            "id=" + id +
+	            ']';
+	}
 
 }
+

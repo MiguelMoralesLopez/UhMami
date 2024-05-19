@@ -3,6 +3,8 @@ package uhmami.modelo.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -73,7 +75,7 @@ public class Utils {
 			
 	}
 	
-	public boolean procesarFormReserva(ReservaDto reservaDto) {
+	public boolean procesarFormReserva(ReservaDto reservaDto) throws ParseException {
 		Cliente cliente = new Cliente();
 		if(clienteServiceImpl.buscarPorNombreYTelefono(reservaDto.getNombre(), Integer.valueOf(reservaDto.getTelefono())) == null) {
 			cliente.setNombre(reservaDto.getNombre());
@@ -93,16 +95,10 @@ public class Utils {
 		reserva.setComensales(Integer.valueOf(reservaDto.getComensales()));
 		reserva.setObservaciones(reservaDto.getObservaciones());
 		reserva.setHora(reservaDto.getHora());
-		reserva.setUsuario(usuarioServiceImpl.buscarUno("cliente"));
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        try {
-            Date fecha = formatter.parse(reservaDto.getFecha());
-            reserva.setFecha(fecha);
-        } catch (ParseException e) {
-            // Manejar errores de formato de fecha
-            e.printStackTrace();
-            // Puedes agregar un mensaje de error al objeto BindingResult si es necesario
-        }
+		//reserva.setUsuario(usuarioServiceImpl.buscarUno("cliente"));
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaBbdd = LocalDate.parse(reservaDto.getFecha(), formatter);
+		reserva.setFecha(fechaBbdd);
 		List<Mesa> mesa = new ArrayList<>();
 		mesa.add(mesaServiceImpl.buscarUna(Integer.valueOf(reservaDto.getMesa())));
 		reserva.setMesas(mesa);
@@ -111,7 +107,6 @@ public class Utils {
 		} else {
 			return false;
 		}
-		// TODO procesar los campos fecha y hora
 	}
 	
 	public String generarIdReserva(ReservaDto reservaDto) {

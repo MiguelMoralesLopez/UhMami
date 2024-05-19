@@ -41,12 +41,12 @@
                         <th><h6>Modificar</h6></th>
                     </tr>
                     <tr id="registros_tabla" th:each="reserva : ${reservas}">
-                        <td class="td1" th:text="${reserva.hora}">13:00</td>
-                        <td class="td2" th:text="${reserva.nombre}">Manuel</td>
-                        <td class="td3" th:text="${reserva.comensales}">8</td>
-                        <td class="td4" th:text="${reserva.mesa}">10</td>
-                        <td class="td5"><button class="botones_modificar" sec:authorize="isAuthenticated()">
-                            <a th:href="@{/gestionarReserva/{id}(id=${reserva.idReserva})}"></a></button></td>
+                        <td class="td1" th:text="${reserva.hora}"></td>
+                        <td class="td2" th:text="${reserva.cliente.nombre}"></td>
+                        <td class="td3" th:text="${reserva.comensales}"></td>
+                        <td class="td4" th:text="${reserva.mesas}"></td>
+                        <td class="td5"><button class="botones_modificar"> <!-- sec:authorize="isAuthenticated()" -->
+                            <a th:href="@{/gestionarReserva/{id}(id=${reserva.id})}"></a></button></td>
                     </tr>
                 </table>
             </section>

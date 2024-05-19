@@ -1,8 +1,10 @@
 package uhmami.modelo.entities;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -25,9 +27,9 @@ public class Reserva implements Serializable {
 	private String id;
 	private Integer comensales;
 	private String observaciones;
-	@ManyToOne
-	@JoinColumn(name="ID_usuario")
-	private Usuario usuario;
+//	@ManyToOne
+//	@JoinColumn(name="ID_usuario")
+//	private Usuario usuario;
 	@ManyToOne
 	@JoinColumn(name="ID_cliente")
 	private Cliente cliente;
@@ -44,9 +46,13 @@ public class Reserva implements Serializable {
 	private List<Mesa> mesas;
 	
 	@Column(name="fecha")
-    private Date fecha;
+    private LocalDate fecha;
 
     @Column(name="hora")
     private String hora;
+
+
+    
+   
 
 }
