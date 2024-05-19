@@ -124,12 +124,27 @@ tr {
 
 /*Inicio movil*/
 /*Landscape*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+@media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
+
+    #listado{
+        display: none;
+    }
+
+    #datos_fecha{
+        gap: 0px;
+        margin-bottom: 10%;
+        margin-top: 0px;
+    }
  
 }
 
 /*Portrait*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+
+    #listado{
+        display: none;
+    }
+}
 
 /*fin movil*/
