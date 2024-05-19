@@ -36,7 +36,7 @@ body {
     padding-bottom: 554px;
     flex-direction: column;
     align-items: center;
-    background: var(--BASE-Amarillo, #FFFCF2);
+    background: var(--BASE-Amarillo, #F6F2E7);
 }
 
 main {
@@ -135,6 +135,12 @@ p {
     font-style: normal;
     font-weight: 900;
     line-height: normal;
+}
+
+/* MENU HAMBURGUESA */
+
+.menu_hamburguesa{
+   display: none;
 }
 
 
@@ -938,7 +944,7 @@ select {
 
 /*Inicio movil*/
 /*Landscape*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
     body{
         width: 100%;
     }
@@ -947,7 +953,7 @@ select {
     }
 
     header{
-        width: 100%;
+        display: none;
     }
 
     nav {
@@ -986,6 +992,6 @@ select {
 }
 
 /*Portrait*/
-@media (min-width: 390px) and (max-width: 844px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {}
 
 /*fin movil*/
