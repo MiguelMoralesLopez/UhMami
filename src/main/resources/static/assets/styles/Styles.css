@@ -742,6 +742,7 @@ select {
 
     header {
         width: 810px !important;
+        display: block;
     }
 
     nav {
@@ -828,10 +829,7 @@ select {
     .form {
         width: 810px;
     }
-
-
 }
-
 /*fin tablet*/
 
 /*movil*/
@@ -842,7 +840,7 @@ select {
         width: 809px !important;
     }
     main {
-        width: 809px !important;
+        width: 100%;
     }
 
     /* HEADER */
@@ -853,11 +851,6 @@ select {
 
     header{
         display: none !important;
-    }
-
-    /* NAV */
-    nav {
-        margin: 0px;
     }
 
     .menu_hamburguesa{
@@ -1013,7 +1006,6 @@ select {
     main {
         width: 375px !important;
     }
-
 
     h1{
         margin-top: 0% !important;
