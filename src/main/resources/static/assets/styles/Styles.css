@@ -836,10 +836,13 @@ select {
 
 /*movil*/
 /*Landscape*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+@media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
+    body{
+        width: 809px !important;
+    }
     main {
-        margin-left: 3%;
+        width: 809px !important;
     }
 
     /* HEADER */
@@ -946,10 +949,10 @@ select {
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
     body{
-        width: 100%;
+        width: 375px !important;
     }
     main {
-        width: 100%;
+        width: 375px !important;
     }
 
     header{
