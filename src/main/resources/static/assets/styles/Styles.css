@@ -1001,21 +1001,46 @@ select {
 /*Portrait*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
     body{
-        width: 375px !important;
+        width: 100%;
     }
     main {
-        width: 375px !important;
+        width: 100%;
     }
 
-    h1{
-        margin-top: 0% !important;
-        margin-left: 0px !important;
+    header{
+        display: none !important;
     }
 
-    h4{
-        font-size: 30px;
+    .menu_hamburguesa{
+        display: block;
+        width: 60px;
+        margin-top: 3%;
+    }
+
+    h2{
+        font-size: 40px ;
+    }
+
+    h6{
         text-align: center;
-        margin-left: 0px !important;
+        font-size: 32px;
+    }
+
+    p{
+        font-size: 30px ;
+    }
+
+    .Icon{
+        width: 20%;
+    }
+
+    #form{
+        width: 375px;
+    }
+
+    textarea{
+        font-size: 24px;
+        width: 320px;
     }
 
     footer{
@@ -1029,10 +1054,27 @@ select {
 
     #footer{
         width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #datos{
+        text-align: center;
+    }
+
+    #legal{
+        align-items: center;
+        gap: 0px;
     }
 
     #logo_footer{
-        width: 230px;
+        width: 250px;
+    }
+
+    .botones_principales{
+        width: 229px;
+        height: 62px;
+        background-size: cover;
     }
 
 

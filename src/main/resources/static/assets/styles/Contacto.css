@@ -353,6 +353,89 @@ body {
 }
 
 /*Portrait*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+
+    main{
+        width: 100%;
+    }
+
+    .menu_hamburguesa {
+        position: absolute;
+        margin-right: 290px;
+    }
+
+    .foto_principal_contacto{
+        width: 100%;
+        height: 400px;
+    }
+
+    #contacto{
+        width: 100%;
+        gap: 50px;
+    }
+
+    #tituloContacto{
+        right: 48px;
+        top: 16px;
+    }
+
+    #mancha_encuentranos{
+        width: 140%;
+        height: 350px;
+    }
+
+    #mancha_contactanos{
+        width: 180%;
+        height: 350px;
+    }
+
+    #mancha_horario{
+        margin-left: -60px !important;
+        width: 135%;
+        height: 450px;
+    }
+
+    #datos_encuentranos{
+        left: -11px;
+        top: 481px;
+    }
+
+    #datos_contactanos{
+        right: 31px;
+        top: 892px;
+    }
+
+    #datos_horario{
+        right: 4px;
+        top:1317px;
+    }
+
+    #instagram{
+        width: 40px;
+        height: 40px;
+    }
+
+    #facebook{
+        width: 40px;
+        height: 40px;
+    }
+
+    #titulo_pregunta{
+        width: 375px;
+    }
+
+    #datos_contacto{
+        width: 375px;
+    }
+
+    .input_corto{
+        font-size: 24px;
+    }
+
+    #obs{
+        width: 375px;
+    }
+
+}
 
 /*fin movil*/
