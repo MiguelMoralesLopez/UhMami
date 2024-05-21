@@ -26,10 +26,4 @@ public class MesaServiceImpl implements MesaService{
 		return mesaRepository.findAll();
 	}
 
-	@Override
-	public List<Mesa> buscarOcupadas(String fecha, String hora) {
-		
-		return mesaRepository.findMesasReservadasByFechaAndHora(fecha, hora);
-	}
-
 }

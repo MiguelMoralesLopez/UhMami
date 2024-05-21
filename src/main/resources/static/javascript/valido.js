@@ -7,6 +7,8 @@ const fecha = document.getElementById('fecha')
 const hora = document.getElementById('horaReserva')
 const politica = document.getElementById('politica')
 const mapa =  document.querySelector("#plano_mesas > article.container")
+const URL_DESTINO = "http://localhost:8087/"
+const RECURSO = "reservas/mesasBloqueadas"
 
 const formulario = document.getElementById('formReserva')
 const warningIcon = document.getElementById("warning-icon");
@@ -238,7 +240,7 @@ var mesa1 = document.getElementById('mesa1')
 mesa1.addEventListener('click',() =>{
         mesaSeleccionada.value = 1   
          mesaCorrecta = true
-        console.log('mesa 1 eleginada')
+        console.log('mesa 1 elegida')
         
    
 })
@@ -247,7 +249,7 @@ var mesa2 = document.getElementById('mesa2')
 
 mesa2.addEventListener('click',() =>{
         
-        console.log('mesa 2 eleginada')
+        console.log('mesa 2 elegida')
         mesaSeleccionada.value = 2  
         mesaCorrecta = true
    
@@ -257,7 +259,7 @@ var mesa3 = document.getElementById('mesa3')
 
 mesa3.addEventListener('click',() =>{
         
-        console.log('mesa 3 eleginada')
+        console.log('mesa 3 elegida')
         mesaSeleccionada.value = 3  
         mesaCorrecta = true
 })
@@ -266,7 +268,7 @@ var mesa4 = document.getElementById('mesa4')
 
 mesa4.addEventListener('click',() =>{
         
-        console.log('mesa 4 eleginada')
+        console.log('mesa 4 elegida')
         mesaSeleccionada.value = 4 
         mesaCorrecta = true
    
@@ -276,7 +278,7 @@ var mesa5 = document.getElementById('mesa5')
 
 mesa5.addEventListener('click',() =>{
         
-        console.log('mesa 5 eleginada')
+        console.log('mesa 5 elegida')
         mesaSeleccionada.value = 5   
         mesaCorrecta = true
    
@@ -286,7 +288,7 @@ var mesa6 = document.getElementById('mesa6')
 
 mesa6.addEventListener('click',() =>{
         
-        console.log('mesa 6 eleginada')
+        console.log('mesa 6 elegida')
         mesaSeleccionada.value = 6  
         mesaCorrecta = true
    
@@ -296,7 +298,7 @@ var mesa7 = document.getElementById('mesa7')
 
 mesa7.addEventListener('click',() =>{
         
-        console.log('mesa 7 eleginada')
+        console.log('mesa 7 elegida')
         mesaSeleccionada.value = 7 
         mesaCorrecta = true
 })
@@ -315,7 +317,7 @@ var mesa9 = document.getElementById('mesa9')
 
 mesa9.addEventListener('click',() =>{
         
-        console.log('mesa 9 eleginada')
+        console.log('mesa 9 elegida')
         mesaSeleccionada.value = 9
         mesaCorrecta = true
    
@@ -325,7 +327,7 @@ var mesa10 = document.getElementById('mesa10')
 
 mesa10.addEventListener('click',() =>{
         
-        console.log('mesa 10 eleginada')
+        console.log('mesa 10 elegida')
         mesaSeleccionada.value = 10
         mesaCorrecta = true
    
@@ -335,7 +337,7 @@ var mesa11 = document.getElementById('mesa11')
 
 mesa11.addEventListener('click',() =>{
         
-        console.log('mesa 11 eleginada')
+        console.log('mesa 11 elegida')
         mesaSeleccionada.value = 11
         mesaCorrecta = true
    
@@ -345,7 +347,7 @@ var mesa12 = document.getElementById('mesa12')
 
 mesa12.addEventListener('click',() =>{
         
-        console.log('mesa 12 eleginada')
+        console.log('mesa 12 elegida')
         mesaSeleccionada.value = 12
         mesaCorrecta = true
    
@@ -355,7 +357,7 @@ var mesa13 = document.getElementById('mesa13')
 
 mesa13.addEventListener('click',() =>{
         
-        console.log('mesa 13 eleginada')
+        console.log('mesa 13 elegida')
         mesaSeleccionada.value = 13
         mesaCorrecta = true
    
@@ -392,5 +394,31 @@ function validateReservaForm() {
     return validado;
     }
    
+function getMesasOcupadas(){
+	let xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function (){
+		if(this.readyState == 4){
+			if(this.status == 200){
+				procesarRespuesta(this.responseText);
+			} else {
+				alert("Ha habido un problema al recuperar las mesas para esta fecha y hora, por favor vuelve a intentarlo en unos segundos.")
+			}
+		}
+	};
+	xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
+	xmlHttp.setRequestHeader('Content-Type', 'application/json');
+	
+	const mesaDto = {
+		fecha: fecha.value,
+		hora: hora.value
+	}
+	
+	xmlHttp.send(JSON.stringify(mesaDto));
+}
+
+function procesarRespuesta(responseText) {
+	const response = JSON.parse(responseText);
+	console.log(response);
+}
    
 

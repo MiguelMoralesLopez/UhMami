@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import uhmami.modelo.dto.MesaDto;
 import uhmami.modelo.dto.MesasBloqueadasDto;
+import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Consulta;
 import uhmami.modelo.entities.Reserva;
@@ -21,11 +22,7 @@ import uhmami.modelo.utils.Utils;
 @Controller
 public class GetController {
 	
-	@Autowired
-	private Utils utils;
 	
-	@Autowired
-	private ReservaServiceImpl reservaServiceImpl;
 	
 	@GetMapping("/")
 	public String mostrarHome() {
@@ -48,55 +45,26 @@ public class GetController {
 		return "reservas";
 	}
 	
+	
 	@GetMapping("/contacto")
 	public String mostrarContacto(Model model) {
 		model.addAttribute("consulta", new Consulta());
 		return "contacto";
 	}
 	
-//	@GetMapping("/admin")
-//	public String mostrarAdmin(Model model) {
-//		List<Reserva> reservas = reservaServiceImpl.buscarTodas();
-//		List<Map<String, Object>> reservasMap = reservas.stream().map(reserva -> {
-//	        Map<String, Object> reservaMap = new HashMap<>();
-//	        reservaMap.put("hora", reserva.getHora());
-//	        reservaMap.put("nombre", reserva.getCliente().getNombre());
-//	        reservaMap.put("comensales", reserva.getComensales());
-//	        reservaMap.put("mesas", reserva.getMesas().stream().map(Mesa::getId));
-//	        reservaMap.put("idReserva", reserva.getId());
-//	        return reservaMap;
-//	    }).collect(Collectors.toList());
-//	    
-//	    model.addAttribute("reservas", reservasMap);
-//		return "listadoReservas";
-//	}
+
 	
 	@GetMapping("/admin")
 	public String mostrarAdmin(Model model) {
-//	    List<Reserva> reservas = reservaServiceImpl.buscarTodas();
-//	    List<Map<String, Object>> reservasMap = reservas.stream().map(reserva -> {
-//	        Map<String, Object> reservaMap = new HashMap<>();
-//	        reservaMap.put("hora", reserva.getHora());
-//	        reservaMap.put("nombre", reserva.getCliente().getNombre());
-//	        reservaMap.put("comensales", reserva.getComensales());
-//	        
-//	        String mesas = reserva.getMesas().stream()
-//	                              .map(mesa -> mesa.getId().toString())
-//	                              .collect(Collectors.joining(", "));
-//	                              
-//	        reservaMap.put("mesas", mesas);
-//	        reservaMap.put("idReserva", reserva.getId());
-//	        return reservaMap;
-//	    }).collect(Collectors.toList());
-//	    
-//	    model.addAttribute("reservas", reservasMap);
+
 	    return "listadoReservas";
 	}
 	
-	@GetMapping("/reservas/mesasBloqueadas")
-	public MesasBloqueadasDto mostrarReservas(MesaDto mesaDto) {
-
-		return utils.mesasReservadas(mesaDto);
+	
+	@GetMapping("/gestionarReservas")
+	public String gestionarReservas(Model model) {
+		model.addAttribute("modificarReservasDto", new ModificarReservasDto());
+		return "gestionarReservas";
 	}
 
 }

@@ -89,19 +89,12 @@
 							<article id="horas">
 								<label for="hora">Hora : </label> <select th:field="*{hora}"
 									id="horaReserva">
-									<option value="12.30">12:30</option>
-									<option value="13.00">13:00</option>
-									<option value="13.30">13:30</option>
-									<option value="14.00">14:00</option>
-									<option value="14.30">14:30</option>
-									<option value="15.00">15:00</option>
-									<option value="15.30">15:30</option>
-									<option value="21.00">21:00</option>
-									<option value="21.30">21:30</option>
-									<option value="22.00">22:00</option>
-									<option value="22.30">22:30</option>
-									<option value="23.00">23:00</option>
-									<option value="23.30">23:30</option>
+									<option value="1300">13:00</option>
+									<option value="1400">14:00</option>
+									<option value="1500">15:00</option>
+									<option value="2100">21:00</option>
+									<option value="2200">22:00</option>
+									<option value="2300">23:00</option>
 								</select>
 							</article>
 						</article>
@@ -252,12 +245,11 @@
 				<article id="titulo_necesitas">
 					<img id="foto_necesitas" src="assets/img/tit_necesitas.png" />
 				</article>
-				<form id="form" th:action="@{/modificar}" th:object="${reserva}"
-					th:method="post">
+				<form id="form" th:action="@{/modificar}" th:method="post">
 					<article id="datos_modificar_reserva">
 						<p>
 							<input class="input_largo" type="text" name="identificador"
-								th:value="${identificador}"
+								th:value="${id}"
 								placeholder="Identificador de la reserva" />
 						</p>
 						<br>

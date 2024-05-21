@@ -99,9 +99,7 @@ public class Utils {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         LocalDate fechaBbdd = LocalDate.parse(reservaDto.getFecha(), formatter);
 		reserva.setFecha(fechaBbdd);
-		List<Mesa> mesa = new ArrayList<>();
-		mesa.add(mesaServiceImpl.buscarUna(Integer.valueOf(reservaDto.getMesa())));
-		reserva.setMesas(mesa);
+		reserva.setMesa(mesaServiceImpl.buscarUna(Integer.valueOf(reservaDto.getMesa())));
 		if(reservaServiceImpl.altaReserva(reserva)) {
 			return true;
 		} else {
@@ -123,9 +121,10 @@ public class Utils {
 	
 
 	public MesasBloqueadasDto mesasReservadas(MesaDto mesaDto) {
-		List<Mesa> mesasBloqueadas = mesaServiceImpl.buscarOcupadas(mesaDto.getFecha(), mesaDto.getHora());
+		List<Integer> mesasBloqueadas = reservaServiceImpl.buscarMesasOcupadas(mesaDto.getFecha(), mesaDto.getHora());
+		System.out.println(mesasBloqueadas);
 		MesasBloqueadasDto mesasBloqueadasDto = new MesasBloqueadasDto();
-		mesasBloqueadasDto.setMesas(mesasBloqueadas);
+		mesasBloqueadasDto.setIdMesas(mesasBloqueadas);
 		return mesasBloqueadasDto;
 	}
 

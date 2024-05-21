@@ -27,23 +27,15 @@ public class Reserva implements Serializable {
 	private String id;
 	private Integer comensales;
 	private String observaciones;
-//	@ManyToOne
-//	@JoinColumn(name="ID_usuario")
-//	private Usuario usuario;
+	@ManyToOne
+	@JoinColumn(name="ID_usuario")
+	private Usuario usuario;
 	@ManyToOne
 	@JoinColumn(name="ID_cliente")
 	private Cliente cliente;
-	@ManyToMany
-	@JoinTable(
-		name="mesa_con_reserva"
-		, joinColumns={
-			@JoinColumn(name="ID_reserva")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="ID_mesa")
-			}
-		)
-	private List<Mesa> mesas;
+	@ManyToOne
+	@JoinColumn(name="mesa")
+	private Mesa mesa;
 	
 	@Column(name="fecha")
     private LocalDate fecha;

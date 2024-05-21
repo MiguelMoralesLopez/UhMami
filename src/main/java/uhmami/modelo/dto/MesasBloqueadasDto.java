@@ -7,6 +7,6 @@ import uhmami.modelo.entities.Mesa;
 
 @Data
 public class MesasBloqueadasDto {
-	List<Mesa> mesas;
+	List<Integer> idMesas;
 
 }

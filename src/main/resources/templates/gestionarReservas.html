@@ -33,8 +33,8 @@
                     <img class="fondo_titulo"
                         src="assets/img/tit_modificar.png" />
                 </section>
-                <form id="form" th:action="@{/reservar}" th:object="${cliente}"
-                    th:method="post">
+                <form id="form" th:action="@{/modificarReserva}" th:object="${modificarReservasDto}"
+                    th:method="put">
                     <article id="datos_reservar">
                         <p><input class="input_corto" type="text"
                                 th:name="nombre" th:field="*{nombre}"
@@ -75,31 +75,17 @@
                                 <article id="horas">
                                     <label for="hora">Hora : </label>
                                     <select name="horas.idHora">
-                                        <option value="1230"> 12:30
-                                        </option>
                                         <option value="1300"> 13:00
-                                        </option>
-                                        <option value="1330"> 13:30
                                         </option>
                                         <option value="1400"> 14:00
                                         </option>
-                                        <option value="1430"> 14:30
-                                        </option>
                                         <option value="1500"> 15:00
-                                        </option>
-                                        <option value="1530"> 15:30
                                         </option>
                                         <option value="2100"> 21:00
                                         </option>
-                                        <option value="2130"> 21:30
-                                        </option>
                                         <option value="2200"> 22:00
                                         </option>
-                                        <option value="2230"> 22:30
-                                        </option>
                                         <option value="2300"> 23:00
-                                        </option>
-                                        <option value="2330"> 23:30
                                         </option>
                                     </select>
                                 </article>

@@ -66,4 +66,14 @@ public class PostController {
 		redirectAttributes.addFlashAttribute("reservas", lista);
 		return "redirect:/admin";
 	}
+	
+//	@PostMapping(value="/modificar")
+//	public String mostrarFormModificarReserva(String id, String email, RedirectAttributes redirectAttributes) {
+//		
+//		redirectAttributes.addFlashAttribute("reserva", reservaServiceImpl.buscarPorIdReservaYClienteEmail(id, email));
+//		return "redirect:/gestionarReservas";
+//	}
+//	
+//	@PostMapping(value="/generarPdf/{fecha}")
+//	public PdfDto
 } 

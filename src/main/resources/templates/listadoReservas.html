@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/styles/Listado_de_reservas.css">
         <link rel="stylesheet" href="assets/styles/Styles.css">
+        <script src="admin.js"></script>
         <title>Listado de reservas</title>
     </head>
     <body>
@@ -26,9 +27,11 @@
                         th:name="fecha">
                 </article>
                 <article>
-                    <button id="pdf" class="botones_principales">Generar PDF</button>
+                    <button id="pdf" class="botones_principales"> <a id="generarPdfLink" th:href="@{/generarPdf}" style="display:none;">Generar Pdf</a></button>
                         <button id="nueva_reserva" class="botones_principales">Nueva reserva</button>
                 </article>
+                
+                
             </section>
             <section id="listado">
                 <h2>Listado de reservas:</h2>
