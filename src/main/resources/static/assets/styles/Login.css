@@ -72,6 +72,33 @@ body {
 }
 
 /*Portrait*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {
+
+    .menu_hamburguesa{
+        display: block;
+        width: 60px;
+        margin-right: 280px;
+        margin-top: 2% !important;
+    }
+
+    .fondo_titulo{
+        width: 411px !important;
+        height: 178px !important;
+    }
+
+    #botones_form{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #form{
+        gap: 40px;
+    }
+    
+    .botones_principales a{
+        width: 99% !important;
+    }
+ 
+}
 
 /*fin movil*/
