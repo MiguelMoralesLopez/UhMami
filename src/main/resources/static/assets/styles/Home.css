@@ -202,20 +202,30 @@ p.p {
 }
 
 
+
 /* MEDIA QUERIES */
 
 /*Tablet*/
 /*Landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
+    
 
     main{
-        margin: 0;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
     }
     
     p{
-        width: 83%;
+        width: 1000px;
         padding-left: 7%;
+        padding-left: 0%;
     }
+
+    .p2{
+        width: 1000px !important;
+        padding-left: 4%;
+    }
+
 
     .parrafos {
         width: 569px;
@@ -228,7 +238,7 @@ p.p {
     }
 
     .foto_principal_home{
-        width: 1080px !important;
+        width: 100%;
     }
 
     #empezar , #principales , #postre{
@@ -297,29 +307,15 @@ p.p {
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
 
-    html{
-        width: 810px !important;
-    }
-
     h2{
         margin-top: 4%;
         font-size: 45px !important;
     }
+  
 
     p{
         font-size: 25px !important;
     }
-
-    main{
-        width: 100%;
-        margin: 0 !important;
-    }
-
-    nav{
-        width: 100% !important;
-        padding: 0;
-    }
-
 
     #foto_principal{
         width: 100%;
