@@ -538,7 +538,7 @@ select {
 @media (min-width: 810px) and (max-width: 1080px) and (orientation: landscape) {
 
     body {
-        width: 810px;
+        width: 100% !important;
         height: 50px;
         ;
     }
@@ -732,7 +732,7 @@ select {
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
     body {
-        width: 810px !important;
+        width: 100% !important;
         height: 50px !important;
     }
 

@@ -207,21 +207,19 @@ p.p {
 
 /*Tablet*/
 /*Landscape*/
-@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
-    
-
-    main{
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
+    main {
         margin-left: 0% !important;
         margin-right: 0% !important;
     }
-    
-    p{
+
+    p {
         width: 1000px;
         padding-left: 7%;
         padding-left: 0%;
     }
 
-    .p2{
+    .p2 {
         width: 1000px !important;
         padding-left: 4%;
     }
@@ -237,22 +235,24 @@ p.p {
         padding-top: 8%;
     }
 
-    .foto_principal_home{
+    .foto_principal_home {
         width: 100%;
     }
 
-    #empezar , #principales , #postre{
+    #empezar,
+    #principales,
+    #postre {
         height: 350px;
         width: 100%;
     }
 
-    #nuestra_historia{
+    #nuestra_historia {
         width: 1080px !important;
     }
 
-    #historia{
+    #historia {
         padding-left: 3.7%;
-        gap:90px;
+        gap: 90px;
     }
 
     #foto_principal {
@@ -293,11 +293,11 @@ p.p {
         margin-top: 20%;
     }
 
-    #principales{
+    #principales {
         width: 100%;
-       }
+    }
 
-    #postre{
+    #postre {
         width: 100%;
     }
 
@@ -305,117 +305,135 @@ p.p {
 
 
 /*Portrait*/
-@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
-    h2{
+    h2 {
         margin-top: 4%;
         font-size: 45px !important;
     }
-  
 
-    p{
+    p {
         font-size: 25px !important;
     }
 
-    #foto_principal{
+    nav {
+        padding-right: 0px !important;
+        width: 100% !important;
+    }
+
+    main {
         width: 100%;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+    }
+
+    #foto_principal {
+        width: 810px;
     }
 
 
-    .foto_principal_home{
-        width: 100%;
+    .foto_principal_home {
+        width: 810px !important;
         height: 500px;
     }
 
-    .fondo_titulo{
+    .fondo_titulo {
         width: 480px;
     }
 
-    #nuestra_historia{
+    #nuestra_historia {
         width: 100%;
     }
 
-    #fotosSumergete{
+    #fotosSumergete {
         flex-direction: column;
     }
 
-    #caja_empezar , #caja_principales, #caja_postres{
+    #caja_empezar,
+    #caja_principales,
+    #caja_postres {
         width: 100%;
     }
 
-    #empezar{
+    #empezar {
         width: 100%;
         height: 600px;
     }
 
-    #principales{
+    #principales {
         width: 100%;
         height: 600px;
     }
 
-    #postre{
+    #postre {
         width: 100%;
         height: 600px;
-    } 
+    }
 
-    #resenas{
+    #resenas {
         width: 810px;
         padding: 0px;
     }
 
-    #resena{
+    #resena {
         width: 670px;
     }
 
-    #cont_resenas{
+    #cont_resenas {
         width: 600px;
         margin-top: 5% !important;
     }
 
-   p{
-    font-size: 25px;
-   }
+    p {
+        font-size: 25px;
+    }
 
-   .parrafos{
-    width: 500px;
-   }
+    .parrafos {
+        width: 500px;
+    }
 
-   p.p{
-    width: 500px;
-   }
+    p.p {
+        width: 500px;
+    }
 
 
-   .chef{
-    width: 280px;
-    height: 450px;
-   }
+    .chef {
+        width: 280px;
+        height: 450px;
+    }
 
-   .botones_secundarios{
-    width: 271px;
-    height: 83px;
-   }
+    .botones_secundarios {
+        width: 271px;
+        height: 83px;
+        background-size: contain !important;
+    }
 
-   #boton_empezar, #boton_postres, #boton_princ{
-    margin-left: 28%;
-    margin-top: 30%;
-   }
+    #boton_empezar,
+    #boton_postres,
+    #boton_princ {
+        margin-left: 28%;
+        margin-top: 30%;
+    }
 }
+
 /*fin tablet*/
 
 
 /*movil*/
 /*Landscape*/
-@media (min-width: 390px) and (max-width: 810px) and (orientation:landscape) {
+@media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
-   
-    
+    main {
+        width: 100%;
+    }
+
+    header{
+        width: 100%;
+    }
+
+
 }
 
 
 /*Portrait*/
-@media (min-width: 390px) and (max-width: 810px) and (orientation:portrait) {
-
-
-
-}
-
+@media (min-width: 390px) and (max-width: 809px) and (orientation:portrait) {}
