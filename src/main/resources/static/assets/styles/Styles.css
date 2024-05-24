@@ -139,8 +139,8 @@ p {
 
 /* MENU HAMBURGUESA */
 
-.menu_hamburguesa{
-   display: none;
+.menu_hamburguesa {
+    display: none;
 }
 
 
@@ -830,15 +830,17 @@ select {
         width: 810px;
     }
 }
+
 /*fin tablet*/
 
 /*movil*/
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
-    body{
+    body {
         width: 809px !important;
     }
+
     main {
         width: 100%;
     }
@@ -849,11 +851,11 @@ select {
         height: 158px;
     }
 
-    header{
+    header {
         display: none !important;
     }
 
-    .menu_hamburguesa{
+    .menu_hamburguesa {
         display: block;
         width: 60px;
         margin-right: 700px;
@@ -873,7 +875,7 @@ select {
     }
 
     /* BOTONES PRINCIPALES */
-    .botones_principales{
+    .botones_principales {
         width: 200px;
         height: 58px;
         background-size: contain;
@@ -881,7 +883,7 @@ select {
         padding-bottom: 2%;
     }
 
-    .botones_principales a{
+    .botones_principales a {
         width: 174px !important;
     }
 
@@ -960,119 +962,160 @@ select {
         width: 65%;
     }
 
-    .txt_footer{
+    .txt_footer {
         font-size: 20px;
     }
 
-    #tituloRestaurante{
+    #tituloRestaurante {
         width: 100%;
     }
 
-    .fotos{
+    .fotos {
         width: 100% !important;
     }
 
-    .fondo_titulo{
+    .fondo_titulo {
         height: 183px;
     }
 
-    #fotoRecomendacion{
+    #fotoRecomendacion {
         height: 542px !important;
     }
 
-    #btn_recomendacion{
+    #btn_recomendacion {
         margin-top: 50% !important;
         font-size: 20px;
     }
 
-    .form{
+    .form {
         width: 809px;
     }
 
-    #formReserva{
+    #formReserva {
         padding-left: 8%;
     }
 
-    #formulariocontacto{
+    #formulariocontacto {
         padding-left: 8%;
     }
 }
 
 /*Portrait*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
-    body{
+    body {
         width: 100%;
     }
+
     main {
         width: 100%;
     }
 
-    header{
+    header {
         display: none !important;
     }
 
-    .menu_hamburguesa{
+    .menu_hamburguesa {
         display: block;
         width: 60px;
         margin-top: 3%;
     }
-    
 
-    h2{
-        font-size: 40px ;
+    h1 {
+        margin-top: 0% !important;
     }
 
-    h6{
+    h2 {
+        font-size: 40px;
+    }
+
+    h4 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    h6 {
         text-align: center;
         font-size: 32px;
     }
 
-    p{
-        font-size: 30px ;
+    p {
+        font-size: 30px;
     }
 
-    .Icon{
+    p.p {
+        font-size: 21px !important;
+    }
+
+    .botones_principales{
+        width: 210px !important;
+        height: 61px !important;
+        background-size: contain !important;
+    }
+
+    .botones_principales a {
+        width: 100% !important;
+        font-size: 30px;
+        padding-bottom: 3%;
+        padding-left: 2%;
+    }
+
+    .botones_secundarios{
+        width: 210px !important;
+        height: 64px !important;
+        background-size: contain !important;
+        font-size: 25px;
+    }
+
+    .botones_secundarios a:hover{
+        font-size: 25px;
+    }
+
+    .botones_secundarios a{
+        font-size: 25px;
+    }
+
+    .Icon {
         width: 20%;
     }
 
-    #form{
+    #form {
         width: 375px;
     }
 
-    textarea{
+    textarea {
         font-size: 24px;
         width: 320px;
     }
 
-    footer{
+    footer {
         width: 100%;
     }
 
-    .txt_footer{
+    .txt_footer {
         font-size: 25px;
         width: 350px;
     }
 
-    #footer{
+    #footer {
         width: 100%;
         display: flex;
         flex-direction: column;
     }
 
-    #datos{
+    #datos {
         text-align: center;
     }
 
-    #legal{
+    #legal {
         align-items: center;
         gap: 0px;
     }
 
-    #logo_footer{
+    #logo_footer {
         width: 250px;
     }
 
-    .botones_principales{
+    .botones_principales {
         width: 229px;
         height: 62px;
         background-size: cover;
