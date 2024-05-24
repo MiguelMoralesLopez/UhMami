@@ -922,10 +922,6 @@ select {
         margin-bottom: 16px;
     }
 
-    h3 {
-        font-size: 65px;
-    }
-
     h4 {
         font-size: 34px;
         margin: 8px;
@@ -1028,14 +1024,30 @@ select {
         font-size: 40px;
     }
 
+    h3{
+        font-size: 50px;
+        margin-top: 0%;
+        margin-bottom: 3%;
+    }
+
     h4 {
         font-size: 25px;
         text-align: center;
     }
 
+    h5{
+        font-size: 20px;
+        width: 252px;
+    }
+
     h6 {
         text-align: center;
         font-size: 32px;
+    }
+
+    hr{
+        width: 350px;
+        margin-left: 0%;
     }
 
     p {
@@ -1128,6 +1140,7 @@ select {
     .input_largo{
         width: 310px;
     }
+
 
 
 }

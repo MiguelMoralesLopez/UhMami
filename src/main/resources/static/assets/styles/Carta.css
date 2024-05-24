@@ -364,7 +364,7 @@ hr {
     }
 }
 
-@media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+@media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
     h1 {
         margin-top: 0px !important;
     }
@@ -437,4 +437,112 @@ hr {
         width: 100px;
     }
 
+}
+
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+
+    .menu_hamburguesa{
+        position: absolute;
+    }
+
+    #principalCarta{
+        width: 100%;
+    }
+
+    #tituloNuestraCarta{
+        width: 100%;
+        left: 0px;
+        top: 9%;
+    }
+
+    #paraEmpezar{
+        width: 100%;
+    }
+
+    .fotosCarta{
+        width: 100%;
+        height: 400px;
+    }
+
+    #titulo_empezar{
+       left: 0px;
+       top: 110%; 
+    }
+
+    ol.listaAlergenos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 18px;
+        padding-left: 6%;
+    }
+
+    li.alergenos{
+        width: 160px;
+    }
+
+    li.alergenos p{
+        font-size: 20px;
+    }
+
+    .Icon{
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    #frescoComienzo{
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    li.lista{
+        width: 375px;
+    }
+
+    .h5NoIcon{
+        width: 350px;
+    }
+
+    #l1izq{
+        gap: 5px;
+    }
+    #l1drc{
+        gap: 10px;
+    }
+
+    #entrantes{
+        width: 100%;
+        margin-left: 5%;
+    }
+
+    ol.listaComida{
+        flex-direction: column !important;
+        gap: 10px;
+    }
+
+    #titulo_principales{
+        left: 0px;
+        top: 347%;
+    }
+
+    #pastasYarroces, #deLaTierra, #delMar, #nuestrasEspecialidades, #nuestrosPostres, #vinos, #bebidasYrefrescos, #cafesEinfusiones, #cocktails{
+        margin-left: 5%;
+    }
+
+    .textoLista{
+        gap: 15px;
+    }
+
+    #titulo_terminar{
+        left: 0px;
+        top: 701%;
+    }
+
+    .h5NoIcon{
+        width: 295px;
+    }
+
+    #titulo_bebidas{
+        left: 0px;
+        top: 838%;
+    }
 }
