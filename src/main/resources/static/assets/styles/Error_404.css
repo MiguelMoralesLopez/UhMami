@@ -20,6 +20,10 @@ body{
     margin-top: 38%;
 }
 
+#errorMvl{
+    display: none;
+}
+
 
 /*Landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
@@ -48,11 +52,39 @@ body{
 /*Inicio movil*/
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
+    #errorMvl{
+        display: block;
+    }
 
+    #error{
+        display: none !important;
+    }
+
+    #btn_volver{
+        margin-top: 15%;
+    }
  
 }
 
 /*Portrait*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {
+
+    #errorMvl{
+        display: block;
+    }
+
+    #error{
+        display: none !important;
+    }
+
+    #btn_volver{
+        margin-top: 566px;
+    }
+
+    .botones_principales a{
+        font-size: 25px;
+        width: 224px;
+    }
+}
 
 /*fin movil*/
