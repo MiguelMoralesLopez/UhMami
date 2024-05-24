@@ -44,8 +44,17 @@ a {
 }
 
 @media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+
+    main{
+        width: 100% !important;
+    }
+
     h1{
         font-size: 50px !important;
+    }
+
+    .Icon{
+        width: 13% !important;
     }
 }
 
