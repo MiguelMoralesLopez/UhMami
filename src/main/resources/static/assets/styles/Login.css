@@ -75,10 +75,7 @@ body {
 @media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {
 
     .menu_hamburguesa{
-        display: block;
-        width: 60px;
-        margin-right: 280px;
-        margin-top: 2% !important;
+        display: none !important;
     }
 
     .fondo_titulo{
@@ -94,7 +91,7 @@ body {
     #form{
         gap: 40px;
     }
-    
+
     .botones_principales a{
         width: 99% !important;
     }

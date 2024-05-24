@@ -152,6 +152,24 @@ tr {
     #listado{
         display: none;
     }
+
+    #calendario{
+        width: 272px !important;
+    }
+
+    #datos_fecha {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 20%;
+    }
+
+    .botones_principales{
+        font-size: 28px !important;
+    }
+
+    .menu_hamburguesa{
+        margin-right: 280px;
+    }
 }
 
 /*fin movil*/
