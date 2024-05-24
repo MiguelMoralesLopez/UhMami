@@ -673,6 +673,35 @@ body {
     #gestionar a{
         font-size: 26px !important;
     }
+
+    #politicas{
+        margin-left: 5% !important;
+    }
+
+    .foto_principal_reserva{
+        width: 100%;
+    }
+
+    #tituloGestionarReserva{
+        right: 0px;
+        top: 60px;
+    }
+
+    #botones_modificar_y_cancelar{
+        flex-direction: column;
+        gap: 20px;
+        margin-left: 20%;
+        margin-bottom: 10%;
+    }
+
+    #reservar{
+        width: 100% !important;
+        font-size: 26px;
+    }
+
+    #cancelar{
+        font-size: 26px;
+    }
  
 }
 
