@@ -34,6 +34,10 @@ body {
 /*Landscape*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape) {
 
+    body{
+        height: 5px !;
+    }
+
     #btn_volver {
         margin-top: 60%;
     }
@@ -52,13 +56,19 @@ body {
 
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
+
     #btn_volver {
         margin-top: 52%;
     }
-
-    #cosntruccion2{
-        display: block !important;
+    #construccion2 {
+        display: block;
+        width: 100%;
     }
+
+    #btn_volver{
+        margin-top: 166%;
+    }
+
 }
 
 /*Fin tablet*/
@@ -68,10 +78,36 @@ body {
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 810px) and (orientation:landscape) {
 
+    body{
+        height: 5px !important;
+    }
+
+    #btn_volver{
+        margin-top: 5%;
+    }
  
 }
 
 /*Portrait*/
-@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {}
+@media (min-width: 375px) and (max-width: 810px) and (orientation:portrait) {
+
+    #construccion{
+        display: none !important;
+    }
+
+    #construccion2 {
+        display: block;
+        width: 100%;
+    }
+
+    #btn_volver{
+        margin-top: 80px;
+    }
+
+    .botones_principales a{
+        font-size: 25px;
+        width: 100%;
+    }
+}
 
 /*fin movil*/
