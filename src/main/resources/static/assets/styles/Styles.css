@@ -1121,6 +1121,14 @@ select {
         background-size: cover;
     }
 
+    .input_corto{
+        width: 173px;
+    }
+
+    .input_largo{
+        width: 310px;
+    }
+
 
 }
 
