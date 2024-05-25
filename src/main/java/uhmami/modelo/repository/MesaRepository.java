@@ -7,5 +7,6 @@ import uhmami.modelo.entities.Mesa;
 
 @Repository
 public interface MesaRepository extends JpaRepository<Mesa, Integer>{
+	
 
-}
+	}

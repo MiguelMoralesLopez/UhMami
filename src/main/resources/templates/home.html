@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="../static/assets/styles/Home.css">
         <link rel="stylesheet" href="../static/assets/styles/Styles.css">
-        
         <title>Inicio</title>
 
     </head>
@@ -17,7 +16,7 @@
                     alt="Menu" /></a>
                 <img id ="foto_princ_web"
                     class="foto_principal_home"
-                    src="../static/assets/img/principalInicio.png"
+                    src="assets/img/principalInicio.png"
                     alt="foto principal" />
                     <img id ="foto_princ_mvl"
                     class="foto_principal_home"
@@ -26,18 +25,12 @@
             </section>
             <header>
                 <nav>
-                    <button class="botones_nav"><a
-                            href="restaurante.html">Restaurante</a></button>
-                    <button class="botones_nav"><a
-                            href="carta.html">Carta</a></button>
-                    <a href="home.html"><img class="logo"
-                            src="../static/assets/img/logo.png"
-                            alt="Logo UhMami" /></a>
-                    <button class="botones_nav"><a
-                            href="contacto.html">Contacto</a></button>
-                    <button class="botones_nav"><a
-                            href="reservas.html">Reservas</a></button>
-                </nav>
+	                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+	                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+	                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+	                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+	                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
+            	</nav>
             </header>
             <main>
                 <section id="nuestra_historia">
@@ -84,7 +77,7 @@
                         </div>
                         <div>
                             <img class="chef"
-                                src="../static/assets/img/chef.png" />
+                                src="assets/img/chef.png" />
                         </div>
                     </article>
 
@@ -98,7 +91,7 @@
                     <div id="fotosSumergete">
                         <article id="caja_empezar">
                             <img id="empezar"
-                                src="../static/assets/img/empezar.jpg"
+                                src="assets/img/empezar.jpg"
                                 alt="foto comida para empezar" />
                             <button id="boton_empezar"
                                 class="botones_secundarios">
@@ -108,7 +101,7 @@
                         </article>
                         <article id="caja_principales">
                             <img id="principales"
-                                src="../static/assets/img/princip.jpg"
+                                src="assets/img/princip.jpg"
                                 alt="foto comida principal" />
                             <button id="boton_princ"
                                 class="botones_secundarios">
@@ -118,7 +111,7 @@
                         </article>
                         <article id="caja_postres">
                             <img id="postre"
-                                src="../static/assets/img/postr.jpg"
+                                src="assets/img/postr.jpg"
                                 alt="foto postre" />
                             <button id="boton_postres"
                                 class="botones_secundarios">
@@ -130,7 +123,7 @@
 
                 <section id="sec_reservar">
                     <img class="fondo_titulo"
-                        src="../static/assets/img/tit_hazrva.png" />
+                        src="assets/img/tit_hazrva.png" />
                     <button class="botones_principales">
                         <a href="reservas.html">Reservar</a>
                     </button>
@@ -141,7 +134,7 @@
                         <h2>Reseñas de nuestros clientes</h2>
                         <article id="resena">
                             <img class="foto_resena"
-                                src="../static/assets/img/fotoResena.png"
+                                src="assets/img/fotoResena.png"
                                 alt="foto clienta reseña" />
                             <p class="p_resena">
                                 Desde el primer bocado hasta el último, cada
@@ -166,7 +159,7 @@
             <footer>
                 <section id="footer">
                     <article id="datos">
-                        <img id ="logo_footer" src="../static/assets/img/logoPeque.png"
+                        <img id ="logo_footer" src="assets/img/logoPeque.png"
                             alt="Logo Uhmami" />
                         <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
                         <p class="txt_footer">UhMami@contacto.com</p>

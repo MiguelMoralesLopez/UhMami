@@ -1,26 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/assets/styles/Carta.css">
-        <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+        <link rel="stylesheet" href="assets/styles/Carta.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
         <title>Nuestra Carta</title>
     </head>
     <body>
         <header>
             <nav>
-                <button class="botones_nav"><a
-                        href="restaurante.html">Restaurante</a></button>
-                <button class="botones_nav"><a
-                        href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo"
-                        src="../static/assets/img/logo.png"
-                        alt="Logo UhMami" /></a>
-                <button class="botones_nav"><a
-                        href="contacto.html">Contacto</a></button>
-                <button class="botones_nav"><a
-                        href="reservas.html">Reservas</a></button>
+
+                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
+
             </nav>
         </header>
         <main>
@@ -30,7 +26,7 @@
                     alt="Menu" /></a>
                 <img
                     class="foto_principal_carta"
-                    src="../static/assets/img/9.jpg"
+                    src="assets/img/9.jpg"
                     alt="foto comida de nuestra carta" />
                 <article id="tituloNuestraCarta">
                     <h1>Nuestra Carta</h1>
@@ -49,7 +45,7 @@
             <section id="paraEmpezar">
                 <img
                     class="fotosCarta"
-                    src="../static/assets/img/107.jpg"
+                    src="assets/img/107.jpg"
                     alt="foto comida de nuestra carta" />
                 <article id="titulo_empezar">
                     <h3>Para empezar</h3>
@@ -67,29 +63,32 @@
             <section id="alergenos">
                 <ol class="listaAlergenos">
                     <li class="alergenos">
-                        <img class="Icon" src="../static/assets/icons/vegan.png" alt="icono vegano" />
+                        <img class="Icon" src="assets/icons/vegan.png" alt="icono vegano" />
                         <p>Vegano</p>
                     </li>
 
                     <li class="alergenos">
+
                         <img class="Icon" src="../static/assets/icons/glutten.png"
+
                             alt="icono sin glutten" />
                         <p class="p1">Sin glutten</p>
                     </li>
 
                     <li class="alergenos">
-                        <img class="Icon" src="../static/assets/icons/huevo.png" alt="icono huevo" />
+                        <img class="Icon" src="assets/icons/huevo.png" alt="icono huevo" />
                         <p>Huevo</p>
                     </li>
 
                     <li class="alergenos">
-                        <img class="Icon" src="../static/assets/icons/moluscos.png"
+                        <img class="Icon" src="assets/icons/moluscos.png"
                             alt="icono moluscos" />
                         <p>Moluscos</p>
                     </li>
 
                     <li class="alergenos">
                         <img class="Icon" src="../static/assets/icons/recomendacion.png"
+
                             alt="icono recomendación" />
                         <p class="p2">Recomendación del chef</p>
                     </li>
@@ -227,7 +226,7 @@
             <section id="principales">
                 <img 
                     class="fotosCarta"
-                    src="../static/assets/img/108.jpg"
+                    src="assets/img/108.jpg"
                     alt="foto comida de nuestra carta" />
                 <article id="titulo_principales">
                     <h3>Principales</h3>
@@ -485,7 +484,7 @@
             <section id="paraTerminar">
                 <img
                     class="fotosCarta"
-                    src="../static/assets/img/109.jpg"
+                    src="assets/img/109.jpg"
                     alt="foto comida de nuestra carta" />
                 <article id="titulo_terminar">
                     <h3>Para Terminar</h3>
@@ -571,7 +570,7 @@
             <section id="bebidas">
                 <img
                     class="fotosCarta"
-                    src="../static/assets/img/101.jpg"
+                    src="assets/img/101.jpg"
                     alt="foto comida de nuestra carta" />
                 <article id="titulo_bebidas">
                     <h3>Bebidas y Cocktails</h3>
@@ -955,7 +954,7 @@
         <footer>
             <section id="footer">
                 <article id="datos">
-                    <img id ="logo_footer" src="../static/assets/img/logoPeque.png" alt="Logo Uhmami" />
+                    <img id ="logo_footer" src="assets/img/logoPeque.png" alt="Logo Uhmami" />
                     <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
                     <p class="txt_footer">UhMami@contacto.com</p>
                 </article>
