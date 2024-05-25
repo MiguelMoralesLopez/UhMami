@@ -431,14 +431,74 @@ p.p {
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
-    main {
-        width: 100%;
+    body, main {
+        width: 100% !important;
+        max-width: 809px;
     }
 
-    header{
+    header {
         display: none !important;
     }
 
+    #foto_principal{
+        width: 100%;
+    }
+    .foto_principal_home {
+        width: 100% !important;
+        max-width: 809px;
+    }
+
+    #nuestra_historia{
+        width: 100%;
+        margin-left: 2%;
+    }
+
+    p.p {
+        width: 400px;
+      }
+
+      .chef {
+        width: 318px;
+        height: 604px;
+      }
+
+      .parrafos {
+        width: 431px;
+      }
+
+      .menu_hamburguesa{
+        position: absolute;
+      }
+
+      #fotosSumergete{
+        flex-direction: column;
+      }
+
+      #caja_empezar, #caja_principales, #caja_postres{
+        width: 100%;
+      }
+
+      #empezar, #principales, #postre{
+        width: 100%;
+        height: 700px;
+      }
+
+      #boton_empezar, #boton_princ, #boton_postres{
+        margin-left: 37%;
+      }
+
+      #resenas{
+        width: 100%;
+        height: 450px;
+      }
+
+      #resena{
+        width: 700px;
+      }
+
+      footer{
+        height: 300px;
+      }
 
 }
 
