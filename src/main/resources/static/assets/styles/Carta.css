@@ -466,7 +466,7 @@ hr {
 
     #titulo_empezar{
        left: 0px;
-       top: 110%; 
+       top: 99%; 
     }
 
     ol.listaAlergenos{
@@ -521,7 +521,7 @@ hr {
 
     #titulo_principales{
         left: 0px;
-        top: 347%;
+        top: 328%;
     }
 
     #pastasYarroces, #deLaTierra, #delMar, #nuestrasEspecialidades, #nuestrosPostres, #vinos, #bebidasYrefrescos, #cafesEinfusiones, #cocktails{
@@ -534,7 +534,11 @@ hr {
 
     #titulo_terminar{
         left: 0px;
-        top: 701%;
+        top: 668%;
+    }
+
+    h5{
+        font-size: 20px !important;
     }
 
     .h5NoIcon{
@@ -543,6 +547,6 @@ hr {
 
     #titulo_bebidas{
         left: 0px;
-        top: 838%;
+        top: 807%;
     }
 }

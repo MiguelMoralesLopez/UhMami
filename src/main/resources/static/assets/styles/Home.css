@@ -236,7 +236,7 @@ p.p {
     }
 
     .foto_principal_home {
-        width: 100%;
+        width: 1080px;
     }
 
     #empezar,
@@ -307,6 +307,22 @@ p.p {
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
+    body{
+        width: 1080px !important;
+    }
+
+    main{
+        width: 1080px !important;
+    }
+
+    nav{
+        width: 1080px !important;
+    }
+
+    header{
+        width: 1080px !important;
+    }
+
     h2 {
         margin-top: 4%;
         font-size: 45px !important;
@@ -316,24 +332,12 @@ p.p {
         font-size: 25px !important;
     }
 
-    nav {
-        padding-right: 0px !important;
-        width: 100% !important;
-    }
-
-    main {
-        width: 100%;
-        margin-left: 0% !important;
-        margin-right: 0% !important;
-    }
-
     #foto_principal {
         width: 810px;
     }
 
-
     .foto_principal_home {
-        width: 810px !important;
+        width: 1080px !important;
         height: 500px;
     }
 
@@ -429,6 +433,10 @@ p.p {
 
     header{
         width: 100%;
+    }
+
+    .foto_principal_home{
+        width: 809px !important;
     }
 
 
