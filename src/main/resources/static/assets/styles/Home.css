@@ -308,19 +308,19 @@ p.p {
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
     body{
-        width: 1080px !important;
+        width: 100% !important;
     }
 
     main{
-        width: 1080px !important;
+        width: 100% !important;
     }
 
     nav{
-        width: 1080px !important;
+        width: 100% !important;
     }
 
     header{
-        width: 1080px !important;
+        width: 100% !important;
     }
 
     h2 {
@@ -337,7 +337,7 @@ p.p {
     }
 
     .foto_principal_home {
-        width: 1080px !important;
+        width: 100% !important;
         height: 500px;
     }
 
@@ -418,6 +418,10 @@ p.p {
         margin-left: 28%;
         margin-top: 30%;
     }
+
+    header{
+        display: block !important;
+    }
 }
 
 /*fin tablet*/
@@ -432,11 +436,7 @@ p.p {
     }
 
     header{
-        width: 100%;
-    }
-
-    .foto_principal_home{
-        width: 809px !important;
+        display: none !important;
     }
 
 
@@ -444,4 +444,9 @@ p.p {
 
 
 /*Portrait*/
-@media (min-width: 390px) and (max-width: 809px) and (orientation:portrait) {}
+@media (min-width: 390px) and (max-width: 809px) and (orientation:portrait) {
+
+    header{
+        display: none !important;
+    }
+}
