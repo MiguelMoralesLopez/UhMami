@@ -13,7 +13,6 @@ public class RestController {
 	
 	@Autowired
 	private Utils utils;
-
 	
 	
 	@PostMapping("/reservas/mesasBloqueadas")
@@ -21,4 +20,5 @@ public class RestController {
 
 		return utils.mesasReservadas(mesaDto);
 	}
+	
 }

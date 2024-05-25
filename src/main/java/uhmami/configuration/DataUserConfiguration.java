@@ -1,59 +1,51 @@
 package uhmami.configuration;
 
 
-import javax.sql.DataSource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.JdbcUserDetailsManager;
-import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @EnableWebSecurity
 @Configuration
 public class DataUserConfiguration{
 	
-	@Bean
+	@Autowired
+    private AuthenticationConfiguration authenticationConfiguration;
 
-	public UserDetailsManager usersCustom(DataSource dataSource) {
+    @Bean
+    AuthenticationManager authenticationManager() throws Exception {
+        return authenticationConfiguration.getAuthenticationManager();
+    }
 
-	JdbcUserDetailsManager users = 
-			new JdbcUserDetailsManager(dataSource); 
-	users.setUsersByUsernameQuery("select username,password,enabled from Usuarios u where username=?"); 
-	users.setAuthoritiesByUsernameQuery("select u.username,p.nombre from Usuario_Perfiles up " +
-	 "inner join usuarios u on u.username = up.username " +
-			"inner join perfiles p on p.id_perfil = up.id_perfil " +
-			"where u.username = ?");
+    @Bean
+    PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
-	return users;
-
-	}
-	
-
-	@Bean
-	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-		http
-		.csrf(csrf -> csrf.disable());
-		// Los recursos estáticos no requieren autenticación
-		http.authorizeHttpRequests(authorize -> authorize
-			.requestMatchers("../css/**").permitAll()
-			.requestMatchers("../img/**").permitAll()
-			.requestMatchers("../static/**").permitAll()
-			.requestMatchers("/").permitAll()
-			.anyRequest().permitAll());
-		// El formulario de Login no requiere autenticacion
-		return http.build();
-	}
-	
-	
-	@Bean
-	public PasswordEncoder passwordEncoder() {
-		return new BCryptPasswordEncoder();
-	}
+    @Bean
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        return http.authorizeHttpRequests( (authz) -> authz
+        .requestMatchers(HttpMethod.POST, "/login").permitAll()
+        //Añado requisitos de seguridad para los usuarios
+        .requestMatchers(HttpMethod.GET, "/admin").hasRole("ADMIN")
+        .requestMatchers(HttpMethod.POST, "/verReservas/{fecha}").hasAnyRole("ADMIN")
+        .anyRequest().permitAll())
+        .addFilter(new JwtAuthenticationFilter(authenticationManager()))
+        .addFilter(new JwtValidationFilter(authenticationManager()))
+        .csrf(config -> config.disable())
+        .formLogin(form -> form.loginPage("/login").permitAll())
+        .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .build();
+    }
 	
 	
 

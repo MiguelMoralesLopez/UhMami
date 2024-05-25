@@ -53,6 +53,10 @@ public class GetController {
 	}
 	
 
+	@GetMapping("/login")
+    public String login() {
+        return "login";
+    }
 	
 	@GetMapping("/admin")
 	public String mostrarAdmin(Model model) {

@@ -201,8 +201,7 @@
 					<h6>Pregúntanos la disponibilidad aquí</h6>
 				</article>
 				<form id="formulariocontacto" class="form"
-					th:action="@{/contacto/grupo}" th:object="${grupo}"
-					th:method="post">
+					th:action="@{/contacto/alta}" th:method="post">
 					<article id="datos_contacto">
 						<p>
 							<input class="input_corto" type="text" name="nombre"
@@ -217,7 +216,7 @@
 						<p>
 							<label>Observaciones: </label><br>
 							<textarea id="observacionesContacto" name="observacioneGrupo"
-								th:value="${observaciones}" cols="50" rows="8"
+								th:value="${comentario}" cols="50" rows="8"
 								placeholder="Observaciones..."></textarea>
 						</p>
 					</article>
@@ -248,7 +247,7 @@
 				<form id="form" th:action="@{/modificar}" th:method="post">
 					<article id="datos_modificar_reserva">
 						<p>
-							<input class="input_largo" type="text" name="identificador"
+							<input class="input_largo" type="text" name="id"
 								th:value="${id}"
 								placeholder="Identificador de la reserva" />
 						</p>
@@ -259,10 +258,8 @@
 						</p>
 					</article>
 					<br>
-					<button id="gestionar" type="submit" class="botones_principales">
-						<a href="gestionarReservas.html">Gestionar <br> mi
+					<button id="gestionar" type="submit" class="botones_principales">Gestionar <br> mi
 							reserva
-						</a>
 					</button>
 				</form>
 			</section>

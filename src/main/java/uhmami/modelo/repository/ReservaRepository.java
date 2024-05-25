@@ -18,10 +18,8 @@ public interface ReservaRepository extends JpaRepository<Reserva, String>{
 	@Query("SELECT r FROM Reserva r WHERE r.fecha = :fecha ORDER BY r.hora")
     List<Reserva> findByFecha(@Param("fecha") LocalDate fecha);
 	
-	@Query("SELECT r.ID, r.comensales, r.observaciones, r.fecha, r.hora, c.ID, c.nombre, c.apellidos, c.email, c.telefono FROM Reserva r "
-			+ "	JOIN Cliente c"
-			+ "	WHERE r.cliente.id = c.id AND (r.id= :id AND c.email = :email)")
-	ModificarReservasDto findByIdAndEmailCliente(@Param("id") String id, @Param("email") String email);
+	@Query("SELECT r FROM Reserva r JOIN Cliente c ON r.cliente.id = c.id WHERE r.id= :id AND c.email = :email")
+	Reserva findByIdAndClienteEmail(@Param("id") String id, @Param("email") String email);
 	
 	@Query("SELECT r.mesa.id FROM Reserva r WHERE r.fecha = :fecha AND r.hora = :hora")
 	List<Integer> findMesaByFechaAndHora(@Param("fecha") LocalDate fecha, @Param("hora") String hora);

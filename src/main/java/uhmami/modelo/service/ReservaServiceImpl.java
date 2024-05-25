@@ -74,7 +74,19 @@ public class ReservaServiceImpl implements ReservaService{
 
 	@Override
 	public ModificarReservasDto buscarPorIdReservaYClienteEmail(String id, String email) {
-		return reservaRepository.findByIdAndEmailCliente(id, email);
+		ModificarReservasDto modificarReservasDto = new ModificarReservasDto();
+		Reserva reserva = reservaRepository.findByIdAndClienteEmail(id, email);
+		modificarReservasDto.setIdReserva(reserva.getId());
+		modificarReservasDto.setComensales(reserva.getComensales());
+		modificarReservasDto.setObservaciones(reserva.getObservaciones());
+		modificarReservasDto.setFecha(reserva.getFecha().toString());
+		modificarReservasDto.setHora(reserva.getHora());
+		modificarReservasDto.setIdCliente(reserva.getCliente().getId());
+		modificarReservasDto.setNombre(reserva.getCliente().getNombre());
+		modificarReservasDto.setApellidos(reserva.getCliente().getApellidos());
+		modificarReservasDto.setEmail(reserva.getCliente().getEmail());
+		modificarReservasDto.setTelefono(reserva.getCliente().getTelefono());
+		return modificarReservasDto;
 	}
 
 	@Override
