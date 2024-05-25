@@ -9,6 +9,11 @@ p.p {
 
 
 /* IDS */
+
+#foto_princ_mvl {
+    display: none;
+}
+
 #nuestra_historia {
     display: inline-flex;
     flex-direction: column;
@@ -307,19 +312,19 @@ p.p {
 /*Portrait*/
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
-    body{
+    body {
         width: 100% !important;
     }
 
-    main{
+    main {
         width: 100% !important;
     }
 
-    nav{
+    nav {
         width: 100% !important;
     }
 
-    header{
+    header {
         width: 100% !important;
     }
 
@@ -419,7 +424,7 @@ p.p {
         margin-top: 30%;
     }
 
-    header{
+    header {
         display: block !important;
     }
 }
@@ -431,7 +436,8 @@ p.p {
 /*Landscape*/
 @media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
 
-    body, main {
+    body,
+    main {
         width: 100% !important;
         max-width: 809px;
     }
@@ -440,73 +446,186 @@ p.p {
         display: none !important;
     }
 
-    #foto_principal{
+    #foto_principal {
         width: 100%;
     }
+
     .foto_principal_home {
         width: 100% !important;
         max-width: 809px;
     }
 
-    #nuestra_historia{
+    #nuestra_historia {
         width: 100%;
         margin-left: 2%;
     }
 
     p.p {
         width: 400px;
-      }
+    }
 
-      .chef {
+    .chef {
         width: 318px;
         height: 604px;
-      }
+    }
 
-      .parrafos {
+    .parrafos {
         width: 431px;
-      }
+    }
 
-      .menu_hamburguesa{
+    .menu_hamburguesa {
         position: absolute;
-      }
+    }
 
-      #fotosSumergete{
+    #fotosSumergete {
         flex-direction: column;
-      }
+    }
 
-      #caja_empezar, #caja_principales, #caja_postres{
+    #caja_empezar,
+    #caja_principales,
+    #caja_postres {
         width: 100%;
-      }
+    }
 
-      #empezar, #principales, #postre{
+    #empezar,
+    #principales,
+    #postre {
         width: 100%;
         height: 700px;
-      }
+    }
 
-      #boton_empezar, #boton_princ, #boton_postres{
+    #boton_empezar,
+    #boton_princ,
+    #boton_postres {
         margin-left: 37%;
-      }
+    }
 
-      #resenas{
+    #resenas {
         width: 100%;
         height: 450px;
-      }
+    }
 
-      #resena{
+    #resena {
         width: 700px;
-      }
+    }
 
-      footer{
-        height: 300px;
-      }
+    footer {
+        height: 300px !important;
+    }
 
 }
 
 
 /*Portrait*/
-@media (min-width: 390px) and (max-width: 809px) and (orientation:portrait) {
-
-    header{
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+    header {
         display: none !important;
     }
+
+    .menu_hamburguesa {
+        position: absolute;
+        left: 20px;
+    }
+
+    #foto_principal {
+        width: 100%;
+    }
+
+    #foto_princ_web {
+        display: none;
+    }
+
+    #foto_princ_mvl {
+        display: block;
+    }
+
+    .foto_principal_home {
+        width: 100%;
+        height: 800px;
+    }
+
+    .fondo_titulo {
+        width: 370px !important;
+        height: 180px !important;
+    }
+
+    #nuestra_historia {
+        width: 100%;
+    }
+
+    .p2 {
+        font-size: 21px;
+    }
+
+    #historia {
+        width: 100%;
+    }
+
+    p.p {
+        width: 95%;
+
+    }
+
+    .chef {
+        display: none;
+    }
+
+    .botones_principales a {
+        font-size: 25px !important;
+    }
+
+    #fotosSumergete {
+        flex-direction: column;
+    }
+
+    #caja_empezar,
+    #caja_principales,
+    #caja_postres {
+        width: 100%;
+    }
+
+    #empezar,
+    #principales,
+    #postre {
+        width: 100%;
+        height: 400px;
+    }
+
+    #boton_empezar,
+    #boton_princ,
+    #boton_postres {
+        margin-left: 20%;
+    }
+
+    #resenas {
+        width: 375px !important;
+        height: 400px;
+        padding-top: 5%;
+    }
+
+    #resena {
+        width: 100%;
+    }
+
+    #cont_resenas {
+        width: 100%;
+        gap: 0px;
+    }
+
+    .foto_resena {
+        width: 150px;
+    }
+
+    #puntos {
+        width: 70px;
+    }
+
+    .p_resena {
+        font-size: 16px;
+    }
+
+    .botones_secundarios:hover{
+        background-size: cover !important;
+    }
+
 }
