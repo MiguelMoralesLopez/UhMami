@@ -732,7 +732,7 @@ select {
 @media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait) {
 
     body {
-        width: 100% !important;
+        width: 810px !important;
         height: 50px !important;
     }
 
@@ -1113,6 +1113,11 @@ select {
 
     #logo_footer {
         width: 250px;
+    }
+
+    #tituloRestaurante{
+        top: 50px !important;
+        right: 0px !important;
     }
 
     .botones_principales {
