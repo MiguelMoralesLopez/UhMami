@@ -3,11 +3,14 @@ package uhmami.modelo.service;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.dto.ModificarReservasDto;
+import uhmami.modelo.entities.Cliente;
+import uhmami.modelo.entities.Mesa;
 import uhmami.modelo.entities.Reserva;
 import uhmami.modelo.repository.ReservaRepository;
 
@@ -16,6 +19,12 @@ public class ReservaServiceImpl implements ReservaService{
 	
 	@Autowired
 	private ReservaRepository reservaRepository;
+	
+	@Autowired
+	private ClienteServiceImpl clienteServiceImpl;
+	
+	@Autowired
+	private MesaServiceImpl mesaServiceImpl;
 
 	@Override
 	public Reserva buscarUna(String idReserva) {
@@ -44,8 +53,37 @@ public class ReservaServiceImpl implements ReservaService{
 	}
 
 	@Override
-	public boolean modificarReserva(Reserva reserva) {
-		if(buscarUna(reserva.getId()) != null) {
+	public boolean modificarReserva(ModificarReservasDto modificarReservasDto) {
+		Reserva reserva = buscarUna(modificarReservasDto.getIdReserva());
+		if(reserva != null) {
+			Cliente cliente = clienteServiceImpl.buscarPorNombreYTelefono(modificarReservasDto.getNombre(), modificarReservasDto.getTelefono());
+			if(cliente != null) {
+				reserva.setCliente(cliente);
+			} else {
+				cliente.setNombre(modificarReservasDto.getNombre());
+				cliente.setApellidos(modificarReservasDto.getApellidos());
+				cliente.setEmail(modificarReservasDto.getEmail());
+				cliente.setTelefono(modificarReservasDto.getTelefono());
+				clienteServiceImpl.altaCliente(cliente);
+				reserva.setCliente(clienteServiceImpl.buscarPorNombreYTelefono(modificarReservasDto.getNombre(), modificarReservasDto.getTelefono()));
+			}
+			reserva.setComensales(modificarReservasDto.getComensales());
+			reserva.setObservaciones(modificarReservasDto.getObservaciones());
+			reserva.setHora(modificarReservasDto.getHora());
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			LocalDate fechaBbdd = LocalDate.parse(modificarReservasDto.getFecha(), formatter);
+			reserva.setFecha(fechaBbdd);
+			List<Integer> mesasOcupadas = buscarMesasOcupadas(modificarReservasDto.getFecha(), modificarReservasDto.getHora());
+			List<Mesa> listaMesasLibres = mesaServiceImpl.buscarTodas();
+			listaMesasLibres.removeIf(mesa -> mesasOcupadas.contains(mesa.getId()));
+			for (Integer mesa : mesasOcupadas) {
+				if(reserva.getMesa().getId() == mesa) {
+					Optional<Mesa> mesaElegida = listaMesasLibres.stream()
+                            .filter(mesaLibre -> mesaLibre.getComensales() >= reserva.getComensales())
+                            .findFirst();
+					reserva.setMesa(mesaElegida.get());
+				}
+			}
 			reservaRepository.save(reserva);
 			return true;
 		} else {

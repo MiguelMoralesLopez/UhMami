@@ -13,5 +13,5 @@ public interface ReservaService {
 	List<Integer> buscarMesasOcupadas(String fecha, String hora);
 	boolean altaReserva(Reserva reserva);
 	boolean eliminarReserva(String idReserva);
-	boolean modificarReserva(Reserva reserva);
+	boolean modificarReserva(ModificarReservasDto ModificarReservasDto);
 }

@@ -33,8 +33,9 @@
                     <img class="fondo_titulo"
                         src="/assets/img/tit_modificar.png" />
                 </section>
-                <form id="form" th:action="@{/modificarReserva}" th:object="${modificarReservasDto}"
+                <form id="form" th:action="@{/modificarReserva/{idReserva} (idReserva=${modificarReservasDto.idReserva})}" th:object="${modificarReservasDto}"
                     th:method="put">
+                    <input type="hidden" name="_method" value="put"/>
                     <article id="datos_reservar">
                         <p><input class="input_corto" type="text"
                                 th:name="nombre" th:field="*{nombre}"
@@ -53,7 +54,7 @@
                     <section id="datos_reservar">
                         <article id="comensales">
                             <p><label for="comensales">Comensales : </label>
-                                <select name="comensales.idComensal">
+                                <select name="comensales.idComensal" th:field="*{comensales}" id="comensalreserva">
                                     <option value="1"> 1 </option>
                                     <option value="2"> 2 </option>
                                     <option value="3"> 3 </option>
@@ -74,20 +75,15 @@
                             <article id="hora">
                                 <article id="horas">
                                     <label for="hora">Hora : </label>
-                                    <select name="horas.idHora">
-                                        <option value="1300"> 13:00
-                                        </option>
-                                        <option value="1400"> 14:00
-                                        </option>
-                                        <option value="1500"> 15:00
-                                        </option>
-                                        <option value="2100"> 21:00
-                                        </option>
-                                        <option value="2200"> 22:00
-                                        </option>
-                                        <option value="2300"> 23:00
-                                        </option>
-                                    </select>
+                                    <select th:field="*{hora}"
+									id="horaReserva">
+									<option value="1300">13:00</option>
+									<option value="1400">14:00</option>
+									<option value="1500">15:00</option>
+									<option value="2100">21:00</option>
+									<option value="2200">22:00</option>
+									<option value="2300">23:00</option>
+								</select>
                                 </article>
                             </article>
                         </section>
