@@ -109,11 +109,11 @@ public class Utils {
 	
 	public String generarIdReserva(ReservaDto reservaDto) {
 		String iniciales = String.valueOf(reservaDto.getNombre().charAt(0)) + String.valueOf(reservaDto.getApellidos().charAt(0));
-		String id = iniciales + eliminarGuionesYPuntos(reservaDto.getFecha()) + eliminarGuionesYPuntos(reservaDto.getHora());
+		String id = iniciales + eliminarGuiones(reservaDto.getFecha()) + eliminarGuiones(reservaDto.getHora());
 		return id;
 	}
 	
-	public static String eliminarGuionesYPuntos(String texto) {
+	public static String eliminarGuiones(String texto) {
         // Reemplaza las comillas dobles y los puntos por una cadena vacía
         String resultado = texto.replaceAll("-", "");
         return resultado;

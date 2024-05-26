@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Reserva;
 import uhmami.modelo.service.ReservaServiceImpl;
@@ -59,20 +60,17 @@ public class PostController {
 		return "redirect:/reservas";
 	}
 	
-	@PostMapping(value="/admin/{fecha}")
-	public String mostrarReservasPorDia(@PathVariable ("fecha") String fecha, RedirectAttributes redirectAttributes) {
-		List<Reserva> lista = reservaServiceImpl.buscarPorFecha(fecha);
-		System.out.println("lista" + lista);
-		redirectAttributes.addFlashAttribute("reservas", lista);
-		return "redirect:/admin";
-	}
 	
 	@PostMapping(value="/modificar")
 	public String mostrarFormModificarReserva(@RequestParam(name="id")String id,
 			@RequestParam(name="email")String email, RedirectAttributes redirectAttributes) {
+		ModificarReservasDto modificarReservasDto = reservaServiceImpl.buscarPorIdReservaYClienteEmail(id, email);
+		if(modificarReservasDto != null) {
+			return "redirect:/gestionarReservas/" + id + "/" + email;
+		} else {
+			return "redirect:/reservas";
+		}
 		
-		redirectAttributes.addFlashAttribute("modificarReservasDto", reservaServiceImpl.buscarPorIdReservaYClienteEmail(id, email));
-		return "redirect:/gestionarReservas";
 	}
 	
 //	@PostMapping(value="/generarPdf/{fecha}")

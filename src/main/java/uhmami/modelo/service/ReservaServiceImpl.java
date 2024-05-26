@@ -1,10 +1,7 @@
 package uhmami.modelo.service;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,6 +83,7 @@ public class ReservaServiceImpl implements ReservaService{
 		modificarReservasDto.setApellidos(reserva.getCliente().getApellidos());
 		modificarReservasDto.setEmail(reserva.getCliente().getEmail());
 		modificarReservasDto.setTelefono(reserva.getCliente().getTelefono());
+		System.out.println(modificarReservasDto);
 		return modificarReservasDto;
 	}
 
@@ -94,7 +92,6 @@ public class ReservaServiceImpl implements ReservaService{
 		//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 				if(fecha != null) {
-					//Date fechaBbdd = new java.sql.Date(formatter.parse(fecha).getTime());
 					LocalDate fechaBbdd = LocalDate.parse(fecha, formatter);
 					System.out.println(fechaBbdd);
 					List<Integer> lista = reservaRepository.findMesaByFechaAndHora(fechaBbdd, hora);

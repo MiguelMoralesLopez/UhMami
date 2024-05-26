@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="assets/styles/Reservas.css">
-        <link rel="stylesheet" href="assets/styles/Styles.css">
+        <link rel="stylesheet" th:href="@{/assets/styles/Reservas.css}">
+        <link rel="stylesheet" th:href="@{/assets/styles/Styles.css}">
         <title>Gestión de reserva</title>
     </head>
     <body>
@@ -12,7 +12,7 @@
             <nav>
                 <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
                 <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
-                <a th:href="@{/}"><img class="logo" src="assets/img/logo.png" alt="Logo UhMami" /></a>
+                <a th:href="@{/}"><img class="logo" src="/assets/img/logo.png" alt="Logo UhMami" /></a>
                 <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
                 <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
             </nav>
@@ -23,7 +23,7 @@
                 <section id="principalReserva">
                     <img
                         class="foto_principal_reserva"
-                        src="assets/img/7.jpg"
+                        src="/assets/img/7.jpg"
                         alt="foto corquetas" />
                     <article id="tituloGestionarReserva">
                         <h1>Gestionar reserva</h1>
@@ -31,7 +31,7 @@
                 </section>
                 <section id="reservar">
                     <img class="fondo_titulo"
-                        src="assets/img/tit_modificar.png" />
+                        src="/assets/img/tit_modificar.png" />
                 </section>
                 <form id="form" th:action="@{/modificarReserva}" th:object="${modificarReservasDto}"
                     th:method="put">
@@ -123,7 +123,7 @@
             <footer>
                 <section id="footer">
                     <article id="datos">
-                        <img id ="logo_footer" src="assets/img/logoPeque.png" alt="Logo Uhmami" />
+                        <img id ="logo_footer" src="/assets/img/logoPeque.png" alt="Logo Uhmami" />
                         <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>

@@ -1,28 +1,23 @@
 package uhmami.modelo.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import uhmami.modelo.dto.MesaDto;
-import uhmami.modelo.dto.MesasBloqueadasDto;
 import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Consulta;
-import uhmami.modelo.entities.Reserva;
 import uhmami.modelo.service.ReservaServiceImpl;
-import uhmami.modelo.utils.Utils;
 
 @Controller
 public class GetController {
 	
-	
+	@Autowired
+	private ReservaServiceImpl reservaServiceImpl;
 	
 	@GetMapping("/")
 	public String mostrarHome() {
@@ -58,16 +53,19 @@ public class GetController {
         return "login";
     }
 	
-	@GetMapping("/admin")
-	public String mostrarAdmin(Model model) {
+	
+	@PreAuthorize("hasRole('ADMINISTRADOR')")
+	@GetMapping("/listadoReservas")
+	public String listado() {
 
 	    return "listadoReservas";
 	}
 	
-	
-	@GetMapping("/gestionarReservas")
-	public String gestionarReservas(Model model) {
-		model.addAttribute("modificarReservasDto", new ModificarReservasDto());
+	@GetMapping("/gestionarReservas/{idReserva}/{email}")
+	public String gestionarReservas(@PathVariable("idReserva") String idReserva, @PathVariable("email") String email, Model model) {
+		ModificarReservasDto modificarReservasDto = reservaServiceImpl.buscarPorIdReservaYClienteEmail(idReserva, email);
+	    model.addAttribute("modificarReservasDto", modificarReservasDto);
+		
 		return "gestionarReservas";
 	}
 
