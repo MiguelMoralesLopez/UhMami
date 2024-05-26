@@ -81,6 +81,4 @@ public class PostController {
 		return "redirect:/reservas";
 	}
 	
-//	@PostMapping(value="/generarPdf/{fecha}")
-//	public PdfDto
 } 
