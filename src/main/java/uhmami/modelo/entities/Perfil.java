@@ -12,13 +12,13 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="perfiles")
+@Table(name="consultas")
 public class Perfil implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	@Column(name="ID_PERFIL")
+	@Column(name="ID")
 	private Integer id;
 	private String nombre;
 

@@ -612,7 +612,7 @@ p.p {
         gap: 0px;
     }
 
-    .foto_resena {
+    #foto_resena {
         width: 150px;
     }
 
@@ -628,4 +628,24 @@ p.p {
         background-size: cover !important;
     }
 
+}
+
+
+/*Estilos para animación*/
+
+#foto_resena{
+    transition: opacity 0.5s;
+}
+#textoResena{
+    transition: opacity 0.5s;
+}
+#puntos{
+    cursor: pointer;
+    margin: 0 5px;
+}
+.fade-out {
+    opacity: 0;
+}
+.fade-in {
+    opacity: 1;
 }
