@@ -46,9 +46,9 @@ public class RestController {
 	}
 	
 	@PostMapping(value="/generarPdfAdmin")
-	public PdfDto generarPdfAdmin(@RequestParam String fecha) throws IOException {
-		PdfDto pdfDto = pdfAdminServiceImpl.generarPdfAdmin(fecha);
-		return pdfDto;
+	public String generarPdfAdmin(@RequestParam String fecha) throws IOException {
+		String pdf = pdfAdminServiceImpl.generarPdfAdmin(fecha);
+		return pdf;
 	}
 	
 	

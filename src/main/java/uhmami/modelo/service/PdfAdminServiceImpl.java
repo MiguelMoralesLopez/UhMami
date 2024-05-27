@@ -176,7 +176,7 @@ public class PdfAdminServiceImpl {
 	
 	
 	
-	public PdfDto generarPdfAdmin(String fecha) throws IOException {
+	public String generarPdfAdmin(String fecha) throws IOException {
 		
 		lista = reservaServiceImpl.buscarPorFecha(fecha);
 		
@@ -203,7 +203,7 @@ public class PdfAdminServiceImpl {
             Files.delete(path);
         }
         
-        return pdfDto;
+        return this.piePagina(outputStream.toByteArray());
         
 	}
 

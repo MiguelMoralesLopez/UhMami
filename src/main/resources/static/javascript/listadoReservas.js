@@ -1,20 +1,33 @@
-function actualizarHref() {
-            var fecha = document.getElementById('fecha').value;
-            var link = document.getElementById('generarPdfLink');
-            link.href = '/generarPdf?fecha=' + fecha;
-            link.click();
-        }
-        
-function descargaPdf() {
-        if (pdfDto !== null && pdfDto.archivo != undefined) {
-          const link = document.createElement('a');
-          link.href = 'data:application/pdf;base64,' + pdfDto.archivo;
-          link.download = 'ReservasUhmami ' + '.pdf';
-          document.body.appendChild(link);
-          this._global.loadingOcultar();
-          link.click();
-          document.body.removeChild(link);
-        }
+ function descargaPdf() {
+	let xmlHttp = new XMLHttpRequest();
+	xmlHttp.onreadystatechange = function (){
+		if(this.readyState == 4){
+			if(this.status == 200){
+				if (this.responseText != null) {
+		          const link = document.createElement('a');
+		          link.href = 'data:application/pdf;base64,' + this.responseText;
+		          link.download = 'ReservasUhmami ' + '.pdf';
+		          document.body.appendChild(link);
+		          link.click();
+		          document.body.removeChild(link);
+		        }
+			} else {
+				alert ("Hubo un problema al realizar la petición, por favor intentelo de nuevo");
+			}
+		}
+	};
+	
+	const fecha = document.getElementById("fecha").value;
+	xmlHttp.open('POST', 'http://localhost:8087/generarPdfAdmin?fecha=' + fecha, true);
+	xmlHttp.setRequestHeader('Content-Type', 'application/json');
+	xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
+	
+	
+	const datos = {
+		fecha: fecha,
+	};
+	xmlHttp.send(JSON.stringify(datos));
+	
  };
 
 //Configuración para hacer llamada POST al endpoint que muestra el listado
