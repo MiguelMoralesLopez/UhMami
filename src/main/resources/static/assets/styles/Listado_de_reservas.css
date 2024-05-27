@@ -96,7 +96,7 @@ tr {
 
 /*MEDIA QUERIES*/
 /*TABLET*/
-@media (min-width: 810px) and (max-width: 1080px){
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:landscape){
 
     #datos_fecha{
         margin-bottom: 10%;
@@ -107,3 +107,69 @@ tr {
     }
 
 }
+
+@media (min-width: 810px) and (max-width: 1080px) and (orientation:portrait){
+    #datos_fecha{
+        gap: 0px;
+        margin-bottom: 10%;
+    }
+
+    #listado{
+        display: none;
+    }
+}
+
+/*Fin tablet*/
+
+
+/*Inicio movil*/
+/*Landscape*/
+@media (min-width: 375px) and (max-width: 809px) and (orientation:landscape) {
+
+
+    #listado{
+        display: none;
+    }
+
+    #datos_fecha{
+        gap: 0px;
+        margin-bottom: 10%;
+        margin-top: 0px;
+    }
+
+    .menu_hamburguesa{
+        display: block;
+        width: 60px;
+        margin-right: 700px;
+        margin-top: 2% !important;
+    }
+ 
+}
+
+/*Portrait*/
+@media (min-width: 375px) and (max-width: 809px) and (orientation:portrait) {
+
+    #listado{
+        display: none;
+    }
+
+    #calendario{
+        width: 272px !important;
+    }
+
+    #datos_fecha {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 20%;
+    }
+
+    .botones_principales{
+        font-size: 28px !important;
+    }
+
+    .menu_hamburguesa{
+        margin-right: 280px;
+    }
+}
+
+/*fin movil*/
