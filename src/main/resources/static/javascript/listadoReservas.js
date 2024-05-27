@@ -94,10 +94,12 @@ function procesarRespuestaLista(responseText){
 	//Añado la primera línea de la tabla a la misma
 	tabla.appendChild(tr1)
 	
-	let tr2 = document.createElement("tr");
-	tr2.id = "registros_tabla";
+	
 	//Ahora leo el json que devuelve el servidor con el listado de reservas y las voy añadiendo una a una a la tabla
 	for(let reserva of response){
+		let tr2 = document.createElement("tr");
+		tr2.id = "registros_tabla";
+	
 		let td1 = document.createElement("td");
 		td1.class="td1";
 		let td1_cont = document.createTextNode(reserva.hora.slice(0, 2) + ":" + reserva.hora.slice(2));

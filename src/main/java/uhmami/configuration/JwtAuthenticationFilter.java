@@ -17,6 +17,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 import com.fasterxml.jackson.core.exc.StreamReadException;
@@ -29,6 +30,7 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
 import uhmami.modelo.entities.Usuario;
 
 //Generar token
@@ -54,16 +56,14 @@ public class JwtAuthenticationFilter  extends UsernamePasswordAuthenticationFilt
 			username = usuario.getUsername();
 			password = usuario.getPassword();
 		} catch (StreamReadException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (DatabindException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(username, password);
+		
 		return authenticationManager.authenticate(authenticationToken);
 	}
 
@@ -96,6 +96,8 @@ public class JwtAuthenticationFilter  extends UsernamePasswordAuthenticationFilt
 		response.getWriter().write(new ObjectMapper().writeValueAsString(body));
 		response.setContentType(CONTENT_TYPE);
 		response.setStatus(200);
+		
+		
 		
 	}
 

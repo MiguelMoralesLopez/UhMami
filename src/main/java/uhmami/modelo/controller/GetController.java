@@ -53,13 +53,13 @@ public class GetController {
         return "login";
     }
 	
-	
 	@PreAuthorize("hasRole('ADMINISTRADOR')")
 	@GetMapping("/listadoReservas")
 	public String listado() {
 
 	    return "listadoReservas";
 	}
+	
 	
 	@GetMapping("/gestionarReservas/{idReserva}/{email}")
 	public String gestionarReservas(@PathVariable("idReserva") String idReserva, @PathVariable("email") String email, Model model) {

@@ -53,7 +53,7 @@ public class DataUserConfiguration{
         .addFilter(new JwtValidationFilter(authenticationManager()))
         .csrf(config -> config.disable())
         .formLogin(form -> form.loginPage("/login").permitAll())
-        //.sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+        .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .build();
     }
 	

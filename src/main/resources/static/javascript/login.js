@@ -15,7 +15,6 @@ function enviarPeticionAsincrona(){
 		}
 	};
 	xmlHttp.open('POST', URL_DESTINO + RECURSO_LOGIN, true);
-	
 	const username = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
 	const datos = {
