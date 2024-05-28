@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Consulta;
-import uhmami.modelo.service.ReservaServiceImpl;
+import uhmami.modelo.serviceImpl.ReservaServiceImpl;
 
 @Controller
 public class GetController {

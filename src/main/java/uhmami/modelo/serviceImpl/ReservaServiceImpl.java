@@ -1,4 +1,4 @@
-package uhmami.modelo.service;
+package uhmami.modelo.serviceImpl;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -8,11 +8,14 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import uhmami.modelo.dto.MesaDto;
+import uhmami.modelo.dto.MesasBloqueadasDto;
 import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.entities.Cliente;
 import uhmami.modelo.entities.Mesa;
 import uhmami.modelo.entities.Reserva;
 import uhmami.modelo.repository.ReservaRepository;
+import uhmami.modelo.service.ReservaService;
 
 @Repository
 public class ReservaServiceImpl implements ReservaService{
@@ -138,6 +141,14 @@ public class ReservaServiceImpl implements ReservaService{
 				}
 		        
 				return null;
+	}
+	@Override
+	public MesasBloqueadasDto mesasReservadas(MesaDto mesaDto) {
+		List<Integer> mesasBloqueadas = buscarMesasOcupadas(mesaDto.getFecha(), mesaDto.getHora());
+		System.out.println(mesasBloqueadas);
+		MesasBloqueadasDto mesasBloqueadasDto = new MesasBloqueadasDto();
+		mesasBloqueadasDto.setIdMesas(mesasBloqueadas);
+		return mesasBloqueadasDto;
 	}
 
 }

@@ -236,7 +236,7 @@ function getMesasOcupadas(){
     const mesaDto = {
         fecha: fecha.value,
         hora: hora.value
-    }
+    };
     
     xmlHttp.send(JSON.stringify(mesaDto));
 }
@@ -244,6 +244,16 @@ function getMesasOcupadas(){
 function procesarRespuesta(responseText) {
     const response = JSON.parse(responseText);
     console.log(response);
+    if(response != null){
+		let mesas = response.idMesas;
+		pintarOcupadas(mesas);
+	}
+}
+
+function pintarOcupadas(mesas){
+	for(mesa of mesas){
+		//lógica para cambiar las mesas a ocupadas en la imagen
+	}
 }
 
 }})

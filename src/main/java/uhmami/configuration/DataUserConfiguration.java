@@ -15,7 +15,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
-import uhmami.modelo.service.JpaUserDetailsServiceImpl;
+import uhmami.modelo.serviceImpl.JpaUserDetailsServiceImpl;
 
 @EnableWebSecurity
 @Configuration

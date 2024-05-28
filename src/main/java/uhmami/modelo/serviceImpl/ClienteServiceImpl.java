@@ -1,4 +1,4 @@
-package uhmami.modelo.service;
+package uhmami.modelo.serviceImpl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.entities.Cliente;
 import uhmami.modelo.repository.ClienteRepository;
+import uhmami.modelo.service.ClienteService;
 
 @Repository
 public class ClienteServiceImpl implements ClienteService{

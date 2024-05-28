@@ -19,14 +19,15 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Reserva;
-import uhmami.modelo.service.ReservaServiceImpl;
+import uhmami.modelo.serviceImpl.FormServiceImpl;
+import uhmami.modelo.serviceImpl.ReservaServiceImpl;
 import uhmami.modelo.utils.Utils;
 
 @Controller
 public class PostController {
 	
 	@Autowired
-	private Utils utils;
+	private FormServiceImpl formServiceImpl;
 	
 	@Autowired
 	private ReservaServiceImpl reservaServiceImpl;
@@ -37,7 +38,7 @@ public class PostController {
 			@RequestParam(name="comentario")String comentario,
 			RedirectAttributes redirectAttributes) {
 		
-		if(utils.procesarFormContacto(nombre, telefono, comentario)) {
+		if(formServiceImpl.procesarFormContacto(nombre, telefono, comentario)) {
 			return "redirect:/contacto";
 		} else {
 			//redirectAttributes.addFlashAttribute("mensajeError", "Parece que ha ocurrido un error, por favor intentelo de nuevo en unos minutos.");
@@ -51,7 +52,7 @@ public class PostController {
 			RedirectAttributes redirectAttributes) {
 		
 		try {
-			if(utils.procesarFormReserva(reservaDto)) {
+			if(formServiceImpl.procesarFormReserva(reservaDto)) {
 				return "redirect:/reservas";
 			}
 		} catch (ParseException e) {

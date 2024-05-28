@@ -15,15 +15,13 @@ import uhmami.modelo.dto.MesaDto;
 import uhmami.modelo.dto.MesasBloqueadasDto;
 import uhmami.modelo.dto.PdfDto;
 import uhmami.modelo.entities.Reserva;
-import uhmami.modelo.service.PdfAdminServiceImpl;
-import uhmami.modelo.service.ReservaServiceImpl;
+import uhmami.modelo.serviceImpl.MesaServiceImpl;
+import uhmami.modelo.serviceImpl.PdfAdminServiceImpl;
+import uhmami.modelo.serviceImpl.ReservaServiceImpl;
 import uhmami.modelo.utils.Utils;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
-	
-	@Autowired
-	private Utils utils;
 	
 	@Autowired
 	private ReservaServiceImpl reservaServiceImpl;
@@ -35,7 +33,7 @@ public class RestController {
 	@PostMapping("/reservas/mesasBloqueadas")
 	public MesasBloqueadasDto mostrarMesasbloqueadas(@RequestBody MesaDto mesaDto) {
 
-		return utils.mesasReservadas(mesaDto);
+		return reservaServiceImpl.mesasReservadas(mesaDto);
 	}
 	
 	@PostMapping(value="/listaReservas")

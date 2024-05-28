@@ -1,4 +1,4 @@
-package uhmami.modelo.service;
+package uhmami.modelo.serviceImpl;
 
 import java.util.List;
 
@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.entities.Consulta;
 import uhmami.modelo.repository.ConsultaRepository;
+import uhmami.modelo.service.ConsultaService;
 
 @Repository
 public class ConsultaServiceImpl implements ConsultaService{
