@@ -114,7 +114,7 @@ public class Utils {
 	}
 	
 	public static String eliminarGuiones(String texto) {
-        // Reemplaza las comillas dobles y los puntos por una cadena vacía
+        // Reemplaza los guiones de las string
         String resultado = texto.replaceAll("-", "");
         return resultado;
     }
