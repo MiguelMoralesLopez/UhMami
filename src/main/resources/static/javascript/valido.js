@@ -203,15 +203,50 @@ fecha.addEventListener('focusin', ()=> {
 
 //Validación de elegir hora
 
-hora.addEventListener('click', () => {
+
     if(hora.value!=''){
         console.log('hora elegida')
         horaCorrecto = true
+
+       
+
     }
     else{
         horaCorrecto = false
     }
-})
+    
+
+hora.addEventListener('focusout',()=> {
+if(horaCorrecto===true && fechaCorrecto===true){
+    console.log('haciendo')
+function getMesasOcupadas(){
+    let xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function (){
+        if(this.readyState == 4){
+            if(this.status == 200){
+                procesarRespuesta(this.responseText);
+            } else {
+                alert("Ha habido un problema al recuperar las mesas para esta fecha y hora, por favor vuelve a intentarlo en unos segundos.")
+            }
+        }
+    };
+    xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
+    xmlHttp.setRequestHeader('Content-Type', 'application/json');
+    
+    const mesaDto = {
+        fecha: fecha.value,
+        hora: hora.value
+    }
+    
+    xmlHttp.send(JSON.stringify(mesaDto));
+}
+
+function procesarRespuesta(responseText) {
+    const response = JSON.parse(responseText);
+    console.log(response);
+}
+
+}})
 
 //Validar el checkeo de las politicas de privacidad
 politica.addEventListener('click',()=> {
@@ -226,7 +261,6 @@ politica.addEventListener('click',()=> {
         polCorrecto = false
     }
 })
-
 
 
 
@@ -365,7 +399,7 @@ mesa13.addEventListener('click',() =>{
 
 
 
-
+   
 
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
@@ -393,32 +427,3 @@ function validateReservaForm() {
       
     return validado;
     }
-   
-function getMesasOcupadas(){
-	let xmlHttp = new XMLHttpRequest();
-	xmlHttp.onreadystatechange = function (){
-		if(this.readyState == 4){
-			if(this.status == 200){
-				procesarRespuesta(this.responseText);
-			} else {
-				alert("Ha habido un problema al recuperar las mesas para esta fecha y hora, por favor vuelve a intentarlo en unos segundos.")
-			}
-		}
-	};
-	xmlHttp.open("GET", URL_DESTINO + RECURSO, true);
-	xmlHttp.setRequestHeader('Content-Type', 'application/json');
-	
-	const mesaDto = {
-		fecha: fecha.value,
-		hora: hora.value
-	}
-	
-	xmlHttp.send(JSON.stringify(mesaDto));
-}
-
-function procesarRespuesta(responseText) {
-	const response = JSON.parse(responseText);
-	console.log(response);
-}
-   
-
