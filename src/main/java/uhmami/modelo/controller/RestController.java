@@ -1,11 +1,11 @@
 package uhmami.modelo.controller;
 
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import uhmami.modelo.dto.FechaDto;
 import uhmami.modelo.dto.MesaDto;
 import uhmami.modelo.dto.MesasBloqueadasDto;
-import uhmami.modelo.dto.PdfDto;
+import uhmami.modelo.dto.ReservaDto;
 import uhmami.modelo.entities.Reserva;
-import uhmami.modelo.serviceImpl.MesaServiceImpl;
+import uhmami.modelo.serviceImpl.FormServiceImpl;
 import uhmami.modelo.serviceImpl.PdfAdminServiceImpl;
+import uhmami.modelo.serviceImpl.PdfClienteServiceImpl;
 import uhmami.modelo.serviceImpl.ReservaServiceImpl;
-import uhmami.modelo.utils.Utils;
 
 @org.springframework.web.bind.annotation.RestController
 public class RestController {
@@ -28,6 +28,12 @@ public class RestController {
 	
 	@Autowired
 	private PdfAdminServiceImpl pdfAdminServiceImpl;
+	
+	@Autowired
+	private PdfClienteServiceImpl pdfClienteServiceImpl;
+	
+	@Autowired
+    private FormServiceImpl formServiceImpl;
 	
 	
 	@PostMapping("/reservas/mesasBloqueadas")
@@ -49,7 +55,16 @@ public class RestController {
 		return pdf;
 	}
 	
+	@PostMapping(value="/generarPdfCliente")
+	public String generarPdfCliente(@RequestParam String id) throws IOException {
+		String pdf = pdfClienteServiceImpl.generarPdfCliente(id);
+		return pdf;
+	}
 	
-	
+	@PostMapping(value="/reservar")
+    public String reservar(@RequestBody ReservaDto reservaDto) throws ParseException {
+    
+        return formServiceImpl.procesarFormReserva(reservaDto);
+    }
 	
 }

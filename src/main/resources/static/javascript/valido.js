@@ -1,14 +1,14 @@
-const nombre = document.getElementById("nombrereserva");
-const apellido = document.getElementById('apellidoreserva');
-const email = document.getElementById("emailreserva");
-const telefono = document.getElementById("telefonoreserva");
-const comensales = document.getElementById('comensalreserva')
-const fecha = document.getElementById('fecha')
-const hora = document.getElementById('horaReserva')
-const politica = document.getElementById('politica')
-const mapa =  document.querySelector("#plano_mesas > article.container")
-const URL_DESTINO = "http://localhost:8087/"
-const RECURSO = "reservas/mesasBloqueadas"
+let nombre = document.getElementById("nombrereserva");
+let apellido = document.getElementById('apellidoreserva');
+let email = document.getElementById("emailreserva");
+let telefono = document.getElementById("telefonoreserva");
+let comensales = document.getElementById('comensalreserva')
+let fecha = document.getElementById('fecha')
+let hora = document.getElementById('horaReserva')
+let politica = document.getElementById('politica')
+let mapa =  document.querySelector("#plano_mesas > article.container")
+let URL_DESTINO = "http://localhost:8087/"
+let RECURSO = "reservas/mesasBloqueadas"
 
 const formulario = document.getElementById('formReserva')
 const warningIcon = document.getElementById("warning-icon");
@@ -437,3 +437,4 @@ function validateReservaForm() {
       
     return validado;
     }
+    

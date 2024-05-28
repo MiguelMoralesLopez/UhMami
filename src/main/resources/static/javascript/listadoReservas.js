@@ -53,7 +53,7 @@ function enviarPeticionLista(){
 	};
 	xmlHttp.open('POST', URL_DESTINO_LISTA + RECURSO_LISTA, true);
 	xmlHttp.setRequestHeader('Content-Type', 'application/json');
-	xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
+	//xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
 	
 	const fecha = document.getElementById("fecha").value;
 	const datos = {
@@ -114,35 +114,33 @@ function procesarRespuestaLista(responseText){
 		tr2.id = "registros_tabla";
 	
 		let td1 = document.createElement("td");
-		td1.class="td1";
+		td1.className="td1";
 		let td1_cont = document.createTextNode(reserva.hora.slice(0, 2) + ":" + reserva.hora.slice(2));
 		td1.appendChild(td1_cont);
 		tr2.appendChild(td1);
 		
 		let td2 = document.createElement("td");
-		td2.class="td2";
+		td2.className="td2";
 		let td2_cont = document.createTextNode(reserva.cliente.nombre);
 		td2.appendChild(td2_cont);
 		tr2.appendChild(td2);
 		
 		let td3 = document.createElement("td");
-		td3.class="td3";
+		td3.className="td3";
 		let td3_cont = document.createTextNode(reserva.comensales);
 		td3.appendChild(td3_cont);
 		tr2.appendChild(td3);
 		
 		let td4 = document.createElement("td");
-		td4.class="td4";
+		td4.className="td4";
 		let td4_cont = document.createTextNode(reserva.mesa.id);
 		td4.appendChild(td4_cont);
 		tr2.appendChild(td4);
 		
 		let td5 = document.createElement("td");
-		td5.class="td5";
+		td5.className="td5";
 		let td5_cont = document.createElement("button");
-		td5_cont.class= "botones_modificar"
-		let a_cont = document.createTextNode("Modificar Reserva");
-		td5_cont.appendChild(a_cont);
+		td5_cont.className= "botones_modificar"
 		td5.appendChild(td5_cont);
 		tr2.appendChild(td5);
 		tabla.appendChild(tr2);

@@ -61,7 +61,7 @@ public class FormServiceImpl implements FormService{
 	}
 
 	@Override
-	public boolean procesarFormReserva(ReservaDto reservaDto) throws ParseException {
+	public String procesarFormReserva(ReservaDto reservaDto) throws ParseException {
 		Cliente cliente = new Cliente();
 		if(clienteServiceImpl.buscarPorNombreYTelefono(reservaDto.getNombre(), Integer.valueOf(reservaDto.getTelefono())) == null) {
 			cliente.setNombre(reservaDto.getNombre());
@@ -87,9 +87,9 @@ public class FormServiceImpl implements FormService{
 		reserva.setFecha(fechaBbdd);
 		reserva.setMesa(mesaServiceImpl.buscarUna(Integer.valueOf(reservaDto.getMesa())));
 		if(reservaServiceImpl.altaReserva(reserva)) {
-			return true;
+			return reserva.getId();
 		} else {
-			return false;
+			return "Error al crear la reserva";
 		}
 	}
 
