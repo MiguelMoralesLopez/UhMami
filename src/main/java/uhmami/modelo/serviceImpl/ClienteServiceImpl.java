@@ -9,6 +9,9 @@ import uhmami.modelo.entities.Cliente;
 import uhmami.modelo.repository.ClienteRepository;
 import uhmami.modelo.service.ClienteService;
 
+/**
+ * Implementación de la interfaz ClienteService que proporciona servicios relacionados con la entidad Cliente.
+ */
 @Repository
 public class ClienteServiceImpl implements ClienteService{
 	

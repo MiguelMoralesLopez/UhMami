@@ -112,4 +112,34 @@ public class GetController {
         model.addAttribute("modificarReservasDto", modificarReservasDto);
         return "gestionarReservas";
     }
+    
+    /**
+     * Maneja las solicitudes GET para la ruta "/error".
+     *
+     * @return el nombre de la vista "error404".
+     */
+    @GetMapping("/error")
+    public String mostrarError() {
+    	return "error404";
+    }
+    
+    /**
+     * Maneja las solicitudes GET para la ruta "/enConstruccion".
+     *
+     * @return el nombre de la vista "enConstruccion".
+     */
+    @GetMapping("/enConstruccion")
+    public String mostrarEnConstruccion() {
+    	return "enConstruccion";
+    }
+    
+    /**
+     * Maneja las solicitudes GET para la ruta "/hamburguesa".
+     *
+     * @return el nombre de la vista "menu_hamburguesa".
+     */
+    @GetMapping("/hamburguesa")
+    public String mostrarMenuHamburguesa() {
+    	return "menu_hamburguesa";
+    }
 }

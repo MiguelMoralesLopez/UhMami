@@ -11,6 +11,10 @@ import uhmami.modelo.entities.Mesa;
 import uhmami.modelo.repository.MesaRepository;
 import uhmami.modelo.service.MesaService;
 
+/**
+ * Esta clase proporciona una implementación del servicio para operaciones relacionadas con las mesas.
+ * Implementa la interfaz MesaService.
+ */
 @Repository
 public class MesaServiceImpl implements MesaService{
 	

@@ -5,7 +5,12 @@ import org.springframework.stereotype.Repository;
 
 import uhmami.modelo.entities.Usuario;
 
+/**
+ * Interfaz que define un repositorio para la entidad Usuario.
+ * Extiende JpaRepository, lo que proporciona operaciones CRUD estándar
+ * y métodos de búsqueda predefinidos.
+ */
 @Repository
-public interface UsuarioRepository extends JpaRepository<Usuario, String>{
+public interface UsuarioRepository extends JpaRepository<Usuario, String> {
 
 }

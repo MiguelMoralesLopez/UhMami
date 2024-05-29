@@ -22,7 +22,7 @@
         </header>
         <main>
             <section id="principalCarta">
-                <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
+                <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
                     src="assets/img/menuhamburguesa.png"
                     alt="Menu" /></a>
                 <img
@@ -960,12 +960,12 @@
                     <p class="txt_footer">UhMami@contacto.com</p>
                 </article>
                 <article id="legal">
-                    <p><a href="#" class="txt_footer">Terminos y
+                    <p><a th:href="@{/error}" class="txt_footer">Terminos y
                             condiciones</a></p>
-                    <p><a href="#" class="txt_footer">Políticas de
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
                             privacidad</a></p>
-                    <p><a href="#" class="txt_footer">Aviso legal</a></p>
-                    <p><a href="#" class="txt_footer">Política de
+                    <p><a th:href="@{/error}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
                             cookies</a></p>
                 </article>
             </section>

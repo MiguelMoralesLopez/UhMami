@@ -141,6 +141,9 @@ function procesarRespuestaLista(responseText){
 		td5.className="td5";
 		let td5_cont = document.createElement("button");
 		td5_cont.className= "botones_modificar"
+		td5_cont.addEventListener("click", function() {
+		    window.location.href = "/gestionarReservas/" + reserva.id + "/" + reserva.cliente.email; // Redirige al formulario de modificación de la reserva
+		});
 		td5.appendChild(td5_cont);
 		tr2.appendChild(td5);
 		tabla.appendChild(tr2);

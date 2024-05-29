@@ -68,7 +68,7 @@ public class DataUserConfiguration{
         .requestMatchers(HttpMethod.POST, "/login").permitAll()
         //Añado requisitos de seguridad para los usuarios
         .requestMatchers(HttpMethod.GET,"/admin").hasRole("ADMINISTRADOR")
-        //.requestMatchers(HttpMethod.POST,"/listaReservas").hasRole("ADMINISTRADOR")
+        .requestMatchers(HttpMethod.POST,"/listaReservas").hasRole("ADMINISTRADOR")
         .requestMatchers(HttpMethod.POST,"/pdfReservas").hasRole("ADMINISTRADOR")
         .anyRequest().permitAll())
         .addFilter(new JwtAuthenticationFilter(authenticationManager()))

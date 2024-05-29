@@ -9,6 +9,9 @@ import uhmami.modelo.entities.Consulta;
 import uhmami.modelo.repository.ConsultaRepository;
 import uhmami.modelo.service.ConsultaService;
 
+/**
+ * Implementación de la interfaz ConsultaService que proporciona servicios relacionados con la entidad Consulta.
+ */
 @Repository
 public class ConsultaServiceImpl implements ConsultaService{
 	
