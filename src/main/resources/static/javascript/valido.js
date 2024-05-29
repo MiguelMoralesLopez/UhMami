@@ -177,6 +177,7 @@ comensales.addEventListener('focusin', ()=>{
     comenCorrecto = true
     console.log('comensal elegido')
 
+
 })
 
 
@@ -250,21 +251,14 @@ politica.addEventListener('click',()=> {
 
 //MESAS
 
-
-
-
-
-
-
 mesa1.addEventListener('click',() =>{
         mesaSeleccionada.value = 1   
          mesaCorrecta = true
         console.log('mesa 1 elegida')
+        mesa1.style.backgroundImage = "url(../img/2_cuadrada_naranja.png)"
         
    
 })
-
-
 
 mesa2.addEventListener('click',() =>{
         
@@ -274,16 +268,12 @@ mesa2.addEventListener('click',() =>{
    
 })
 
-
-
 mesa3.addEventListener('click',() =>{
         
         console.log('mesa 3 elegida')
         mesaSeleccionada.value = 3  
         mesaCorrecta = true
 })
-
-
 
 mesa4.addEventListener('click',() =>{
         
@@ -293,8 +283,6 @@ mesa4.addEventListener('click',() =>{
    
 })
 
-
-
 mesa5.addEventListener('click',() =>{
         
         console.log('mesa 5 elegida')
@@ -302,8 +290,6 @@ mesa5.addEventListener('click',() =>{
         mesaCorrecta = true
    
 })
-
-
 
 mesa6.addEventListener('click',() =>{
         
@@ -313,16 +299,12 @@ mesa6.addEventListener('click',() =>{
    
 })
 
-
-
 mesa7.addEventListener('click',() =>{
         
         console.log('mesa 7 elegida')
         mesaSeleccionada.value = 7 
         mesaCorrecta = true
 })
-
-
 
 mesa8.addEventListener('click',() =>{
         
@@ -332,8 +314,6 @@ mesa8.addEventListener('click',() =>{
    
 })
 
-
-
 mesa9.addEventListener('click',() =>{
         
         console.log('mesa 9 elegida')
@@ -341,8 +321,6 @@ mesa9.addEventListener('click',() =>{
         mesaCorrecta = true
    
 })
-
-
 
 mesa10.addEventListener('click',() =>{
         
@@ -352,8 +330,6 @@ mesa10.addEventListener('click',() =>{
    
 })
 
-
-
 mesa11.addEventListener('click',() =>{
         
         console.log('mesa 11 elegida')
@@ -362,8 +338,6 @@ mesa11.addEventListener('click',() =>{
    
 })
 
-
-
 mesa12.addEventListener('click',() =>{
         
         console.log('mesa 12 elegida')
@@ -371,8 +345,6 @@ mesa12.addEventListener('click',() =>{
         mesaCorrecta = true
    
 })
-
-
 
 mesa13.addEventListener('click',() =>{
         
