@@ -111,28 +111,28 @@
 						<input id="mesaSeleccionada" type="hidden" th:field="*{mesa}" />
 						<!-- 1º fila de mesas -->
 						<div class="item">
-							<button type="button" id="mesa1" class="dos_cuadrada"></button>
+							<button type="button" data-id="mesa1" value=1 id="mesa1" class="dos_cuadrada"></button>
 						</div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" id="mesa2" class="cuatro_cuadrada"></button>
+							<button type="button" data-id="mesa2" value=2 id="mesa2" class="cuatro_cuadrada"></button>
 						</div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" id="mesa3" class="seis"></button>
+							<button type="button" data-id="mesa3" value=3 id="mesa3" class="seis"></button>
 						</div>
 						<div class="item">
-							<button type="button" id="mesa4" class="cuatro_redonda"></button>
+							<button type="button" data-id="mesa4" value="4" id="mesa4" class="cuatro_redonda"></button>
 						</div>
 
 						<!-- 2º fila de mesas -->
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" id="mesa5" class="dos_redonda"></button>
+							<button type="button" data-id="mesa5" value=5 id="mesa5" class="dos_redonda"></button>
 						</div>
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" id="mesa6" class="dos_redonda"></button>
+							<button type="button" data-id="mesa6" value=6 id="mesa6" class="dos_redonda"></button>
 						</div>
 
 						<!-- 3º fila de mesas -->
@@ -140,34 +140,34 @@
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" id="mesa7" class="ocho"></button>
+							<button type="button" data-id="mesa7" value=7 id="mesa7" class="ocho"></button>
 						</div>
 						<div class="item"></div>
 
 						<!-- 4º fila de mesas -->
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" id="mesa8" class="dos_redonda"></button>
+							<button type="button" data-id="mesa8" value=8 id="mesa8" class="dos_redonda"></button>
 						</div>
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" id="mesa9" class="dos_redonda"></button>
+							<button type="button" data-id="mesa9" value=9 id="mesa9" class="dos_redonda"></button>
 						</div>
 
 						<!-- 5º fila de mesas -->
 						<div class="item">
-							<button type="button" id="mesa10" class="dos_cuadrada"></button>
+							<button type="button" data-id="mesa10" value=10 id="mesa10" class="dos_cuadrada"></button>
 						</div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" id="mesa11" class="cuatro_cuadrada"></button>
+							<button type="button" data-id="mesa11" value=11 id="mesa11" class="cuatro_cuadrada"></button>
 						</div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" id="mesa12" class="seis"></button>
+							<button type="button" data-id="mesa12" value=12 id="mesa12" class="seis"></button>
 						</div>
 						<div class="item">
-							<button type="button" id="mesa13" class="cuatro_redonda"></button>
+							<button type="button" data-id="mesa13" id="mesa13" class="cuatro_redonda"></button>
 						</div>
 
 					</article>
@@ -263,6 +263,7 @@
 			</section>
 
 			<script src="javascript/valido.js"></script>
+			<script src="javascript/mesasOcupadas.js"></script>
 	</main>
 
 	<footer>
