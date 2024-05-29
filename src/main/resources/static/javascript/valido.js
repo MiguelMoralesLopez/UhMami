@@ -1,4 +1,3 @@
-
 const nombre = document.getElementById("nombrereserva");
 const apellido = document.getElementById('apellidoreserva');
 const email = document.getElementById("emailreserva");
@@ -44,7 +43,7 @@ var errorT = false
 var mesaCorrecta = false
 
 //Añado un escucha para cada input
-
+/*
 nombre.addEventListener('focusout', () => {
     var nom = nombre.value.trim();
     
@@ -246,15 +245,12 @@ politica.addEventListener('click',()=> {
 
 
 
-
+*/
 
 //MESAS
 
 
-
-
-
-
+var mesa1 = document.getElementById('mesa1')
 
 mesa1.addEventListener('click',() =>{
         mesaSeleccionada.value = 1   
@@ -264,7 +260,7 @@ mesa1.addEventListener('click',() =>{
    
 })
 
-
+var mesa2 = document.getElementById('mesa2')
 
 mesa2.addEventListener('click',() =>{
         
@@ -274,7 +270,7 @@ mesa2.addEventListener('click',() =>{
    
 })
 
-
+var mesa3 = document.getElementById('mesa3')
 
 mesa3.addEventListener('click',() =>{
         
@@ -283,7 +279,7 @@ mesa3.addEventListener('click',() =>{
         mesaCorrecta = true
 })
 
-
+var mesa4 = document.getElementById('mesa4')
 
 mesa4.addEventListener('click',() =>{
         
@@ -293,7 +289,7 @@ mesa4.addEventListener('click',() =>{
    
 })
 
-
+var mesa5 = document.getElementById('mesa5')
 
 mesa5.addEventListener('click',() =>{
         
@@ -303,7 +299,7 @@ mesa5.addEventListener('click',() =>{
    
 })
 
-
+var mesa6 = document.getElementById('mesa6')
 
 mesa6.addEventListener('click',() =>{
         
@@ -313,7 +309,7 @@ mesa6.addEventListener('click',() =>{
    
 })
 
-
+var mesa7 = document.getElementById('mesa7')
 
 mesa7.addEventListener('click',() =>{
         
@@ -322,7 +318,7 @@ mesa7.addEventListener('click',() =>{
         mesaCorrecta = true
 })
 
-
+var mesa8 = document.getElementById('mesa8')
 
 mesa8.addEventListener('click',() =>{
         
@@ -332,7 +328,7 @@ mesa8.addEventListener('click',() =>{
    
 })
 
-
+var mesa9 = document.getElementById('mesa9')
 
 mesa9.addEventListener('click',() =>{
         
@@ -342,7 +338,7 @@ mesa9.addEventListener('click',() =>{
    
 })
 
-
+var mesa10 = document.getElementById('mesa10')
 
 mesa10.addEventListener('click',() =>{
         
@@ -352,7 +348,7 @@ mesa10.addEventListener('click',() =>{
    
 })
 
-
+var mesa11 = document.getElementById('mesa11')
 
 mesa11.addEventListener('click',() =>{
         
@@ -362,7 +358,7 @@ mesa11.addEventListener('click',() =>{
    
 })
 
-
+var mesa12 = document.getElementById('mesa12')
 
 mesa12.addEventListener('click',() =>{
         
@@ -372,11 +368,11 @@ mesa12.addEventListener('click',() =>{
    
 })
 
-
+var mesa13 = document.getElementById('mesa13')
 
 mesa13.addEventListener('click',() =>{
         
-        console.log('mesa 13 elegida')
+        console.log('mesa 13 elegada')
         mesaSeleccionada.value = 13
         mesaCorrecta = true
    

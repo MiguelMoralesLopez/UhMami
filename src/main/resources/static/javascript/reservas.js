@@ -12,14 +12,13 @@ function descargaPdf(idReserva) {
 		          document.body.removeChild(link);
 		        }
 			} else {
-				alert ("Hubo un problema al realizar la petición, por favor intentelo de nuevo");
+				alert ("Hubo un problema al realizar el pdf, por favor intentelo de nuevo");
 			}
 		}
 	};
 	
 	xmlHttp.open('POST', 'http://localhost:8087/generarPdfCliente?id=' + idReserva, true);
 	xmlHttp.setRequestHeader('Content-Type', 'application/json');
-	xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
 	
 	
 	const datos = {
