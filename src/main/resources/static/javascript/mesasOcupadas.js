@@ -2,23 +2,7 @@ const URL_DESTINO = "http://localhost:8087/"
 const RECURSO = "reservas/mesasBloqueadas"
 const fecha = document.getElementById('fecha')
 const hora = document.getElementById('horaReserva')
-/*
-const arrayMesas = ['mesa1', 'mesa2', 'mesa3', 'mesa4', 'mesa5', 'mesa6', 'mesa7', 'mesa8', 'mesa9', 'mesa10', 'mesa11', 'mesa12', 'mesa13']
-const arrayNodomesas = arrayMesas.map(id => document.getElementById(id))
-const cantComen = document.getElementById('comensalreserva')*/
 
-// Mostrar mesas segun comensales
-    /*cantComen.addEventListener('focusin',()=>{
-        let cantidad = cantComen.value
-
-            arrayNodomesas.forEach(
-                mesa=> {
-                    if(cantidad.includes(parseInt(mesa.value))){
-                        mesa.disabled = false
-                    }
-               }
-            )     
-    })*/
 
 
     hora.addEventListener('change', function getMesasOcupadas(){

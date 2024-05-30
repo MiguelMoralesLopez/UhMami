@@ -251,20 +251,34 @@ politica.addEventListener('click',()=> {
 
 //MESAS
 
-mesa1.addEventListener('click',() =>{
-        mesaSeleccionada.value = 1   
-         mesaCorrecta = true
-        console.log('mesa 1 elegida')
-        mesa1.style.backgroundImage = "url(../img/2_cuadrada_naranja.png)"
-        
+const mesacuadrada = [
+    '../assets/img/2_cuadrada_verde.png',
+    '../assets/img/2_cuadrada_naranja.png'
+    
+]
+let indice = 0
+
+mesaSeleccionada.value = 0
    
+plano = document.getElementById('planomesas')
+
+
+
+mesa1.addEventListener('click',() =>{
+        parseInt(mesaSeleccionada.value = 1)   
+        mesaCorrecta = true
+        console.log('mesa 1 elegida')
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"    
 })
+
+
 
 mesa2.addEventListener('click',() =>{
         
         console.log('mesa 2 elegida')
         mesaSeleccionada.value = 2  
         mesaCorrecta = true
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
    
 })
 
@@ -273,6 +287,7 @@ mesa3.addEventListener('click',() =>{
         console.log('mesa 3 elegida')
         mesaSeleccionada.value = 3  
         mesaCorrecta = true
+        mesa3.style.backgroundImage = "url('../assets/img/6_naranja.png')"
 })
 
 mesa4.addEventListener('click',() =>{
@@ -280,6 +295,7 @@ mesa4.addEventListener('click',() =>{
         console.log('mesa 4 elegida')
         mesaSeleccionada.value = 4 
         mesaCorrecta = true
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
@@ -288,6 +304,7 @@ mesa5.addEventListener('click',() =>{
         console.log('mesa 5 elegida')
         mesaSeleccionada.value = 5   
         mesaCorrecta = true
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -296,6 +313,7 @@ mesa6.addEventListener('click',() =>{
         console.log('mesa 6 elegida')
         mesaSeleccionada.value = 6  
         mesaCorrecta = true
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -304,6 +322,7 @@ mesa7.addEventListener('click',() =>{
         console.log('mesa 7 elegida')
         mesaSeleccionada.value = 7 
         mesaCorrecta = true
+        mesa7.style.backgroundImage = "url('../assets/img/8_naranja.png')"
 })
 
 mesa8.addEventListener('click',() =>{
@@ -311,6 +330,7 @@ mesa8.addEventListener('click',() =>{
         console.log('mesa 8 elegida')
         mesaSeleccionada.value = 8   
         mesaCorrecta = true
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -319,6 +339,7 @@ mesa9.addEventListener('click',() =>{
         console.log('mesa 9 elegida')
         mesaSeleccionada.value = 9
         mesaCorrecta = true
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -327,7 +348,7 @@ mesa10.addEventListener('click',() =>{
         console.log('mesa 10 elegida')
         mesaSeleccionada.value = 10
         mesaCorrecta = true
-   
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"
 })
 
 mesa11.addEventListener('click',() =>{
@@ -335,7 +356,7 @@ mesa11.addEventListener('click',() =>{
         console.log('mesa 11 elegida')
         mesaSeleccionada.value = 11
         mesaCorrecta = true
-   
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
 })
 
 mesa12.addEventListener('click',() =>{
@@ -343,6 +364,7 @@ mesa12.addEventListener('click',() =>{
         console.log('mesa 12 elegida')
         mesaSeleccionada.value = 12
         mesaCorrecta = true
+        mesa12.style.backgroundImage = "url('../assets/img/6_naranja.png')"
    
 })
 
@@ -351,12 +373,59 @@ mesa13.addEventListener('click',() =>{
         console.log('mesa 13 elegida')
         mesaSeleccionada.value = 13
         mesaCorrecta = true
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
 
+plano.addEventListener('click',()=>{
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value)){
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa2.value)){
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    } 
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa3.value)){
+        mesa3.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa4.value)){
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa5.value)){
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa6.value)){
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa7.value)){
+        mesa7.style.backgroundImage = "url('../assets/img/8_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa8.value)){
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa9.value)){
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa10.value)){
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa11.value)){
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa12.value)){
+        mesa12.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa13.value)){
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    
 
-   
+})
+
+
+
 
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
