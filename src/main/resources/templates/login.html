@@ -17,13 +17,13 @@
                 <img class="fondo_titulo"
                     src="assets/img/tit_login.png" />
             </section>
-            <form id="form" method="post">
+            <form id="form" method="post" th:action="@{/login}" onsubmit="enviarPeticionAsincrona()">
                 <article id="datos_login">
                     <label> Nombre de usuario: </label>
-                    <p><input class="input_corto" type="text" id="username" name="username"
+                    <p><input class="input_corto" type="text" id="username" name="username" th:value="username"
                             placeholder="Usuario" /></p>
                     <label> Contraseña: </label>
-                    <p><input class="input_corto" type="password" id="password"
+                    <p><input class="input_corto" type="password" id="password" th:value="password"
                             name="password" placeholder="Password" /></p>
                 </article>
                 <article id="botones_form">
