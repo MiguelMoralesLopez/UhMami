@@ -53,7 +53,7 @@ function enviarPeticionLista(){
 	};
 	xmlHttp.open('POST', URL_DESTINO_LISTA + RECURSO_LISTA, true);
 	xmlHttp.setRequestHeader('Content-Type', 'application/json');
-	//xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
+	xmlHttp.setRequestHeader('Authorization', 'Bearer ' + sessionStorage.getItem("token"));
 	
 	const fecha = document.getElementById("fecha").value;
 	const datos = {
