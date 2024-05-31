@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="assets/styles/Reservas.css">
 <link rel="stylesheet" href="assets/styles/Styles.css">
+<script type="text/javascript" src="../javascript/valido.js" defer></script>
+<script type="text/javascript" src="../javascript/reservas.js" defer></script>
+<script type="text/javascript" src="../javascript/mesasOcupadas.js" defer></script>
 <title>Reservas</title>
 </head>
 <body>
@@ -30,6 +33,9 @@
 	<main>
 		<section id="reservas">
 			<section id="principalReserva">
+			<a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                src="assets/img/menuhamburguesa.png"
+                alt="Menu" /></a>
 				<img class="foto_principal_reserva" src="assets/img/21.jpg"
 					alt="foto tarta" />
 				<article id="tituloReservas">
@@ -39,34 +45,27 @@
 			<section id="reservar">
 				<img class="fondo_titulo" src="assets/img/tit_reservar.png" />
 			</section>
-			<form id="formReserva" class="form" th:action="@{/reservas/reservar}"
-				th:object="${reservaDto}" th:method="post"
-				>
-				<article id="datos_reservar">
-					<p>
-						<input id="nombrereserva" class="input_corto" type="text"
-							th:field="*{nombre}" placeholder="Nombre" />
-					</p>
-					<p>
-						<input id="apellidoreserva" class="input_largo" type="text"
-							th:field="*{apellidos}" placeholder="Apellidos" />
-					</p>
-					<p>
-						<input id="emailreserva" class="input_largo" type="email"
-							th:field="*{email}" placeholder="Email" />
-					</p>
-					<p>
-						<input id="telefonoreserva" class="input_corto" type="text"
-							th:field="*{telefono}" placeholder="Teléfono" /> <span
-							id="errorTel"></span>
-					</p>
-				</article>
-
-				<section id="datos_reservar">
+			<form id="formReserva" class="form" >
+			    <article id="datos_reservar">
+			        <p>
+			            <input id="nombre" class="input_corto" type="text" name="nombre" placeholder="Nombre" />
+			        </p>
+			        <p>
+			            <input id="apellidos" class="input_largo" type="text" name="apellidos" placeholder="Apellidos" />
+			        </p>
+			        <p>
+			            <input id="email" class="input_largo" type="email" name="email" placeholder="Email" />
+			        </p>
+			        <p>
+			            <input id="telefono" class="input_corto" type="text" name="telefono" placeholder="Teléfono" />
+			        </p>
+			    </article>
+			
+			    <section id="datos_reservar">
 					<article id="comensales">
 						<p>
 							<label for="comensales">Comensales : </label> <select
-								th:field="*{comensales}" id="comensalreserva">
+								name="comensales" id="comensalreserva">
 								<option value="1">1</option>
 								<option value="2">2</option>
 								<option value="3">3</option>
@@ -81,11 +80,11 @@
 					<section id="fecha_hora">
 						<article id="calendario">
 							<label for="fecha">Fecha : </label> <input type="date"
-								th:field="*{fecha}" id="fecha" name="fecha">
+								name="fecha" id="fecha">
 						</article>
 						<article id="hora">
 							<article id="horas">
-								<label for="hora">Hora : </label> <select th:field="*{hora}"
+								<label for="hora">Hora : </label> <select name="hora"
 									id="horaReserva">
 									<option hidden selected value="">00:00</option>
 									<option value="1300">13:00</option>
@@ -108,8 +107,13 @@
 						<img id="foto_plano" src="assets/img/plano_color.png"
 							alt="foto plano del restaurante" />
 					</article>
+<<<<<<< HEAD
 					<article class="container" id="planomesas">
 						<input id="mesaSeleccionada" type="hidden" th:field="*{mesa}" />
+=======
+					<article class="container">
+						<input id="mesaSeleccionada" type="hidden" name="mesa" />
+>>>>>>> 779be5f83b96df866622270cfde5c7d1ad55cd30
 						<!-- 1º fila de mesas -->
 						<div class="item">
 							<button type="button" value=1 id="mesa1" class="dos_cuadrada" disabled></button>
@@ -175,20 +179,18 @@
 				</section>
 
 				<article id="obs">
-					<p>
-						<label>Observaciones: </label><br>
-						<textarea id="observacionesReservar" th:field="*{observaciones}"
-							cols="50" rows="8" placeholder="Observaciones..."></textarea>
-					</p>
-				</article>
-				<article id="politicasreserva">
-					<input type="checkbox" id="politica" name="politica"> <label
-						for="politica">Acepto el aviso legal y la política de
-						privacidad</label><br>
-				</article>
-
-				<br>
-				<button id="enviarReserva" type="submit" class="botones_principales">Reservar</button>
+			        <p>
+			            <label>Observaciones: </label><br>
+			            <textarea name="observaciones" id="observaciones" cols="50" rows="8" placeholder="Observaciones..."></textarea>
+			        </p>
+			    </article>
+			    <article id="politicasreserva">
+			        <input type="checkbox" id="politica" name="politica">
+			        <label for="politica">Acepto el aviso legal y la política de privacidad</label><br>
+			    </article>
+			
+			    <br>
+			    <button type="button" class="botones_principales" onclick="enviarFormReserva()">Reservar</button>
 			</form>
 
 
@@ -276,19 +278,14 @@
 				<p class="txt_footer">UhMami@contacto.com</p>
 			</article>
 			<article id="legal">
-				<p>
-					<a href="#" class="txt_footer">Terminos y condiciones</a>
-				</p>
-				<p>
-					<a href="#" class="txt_footer">Políticas de privacidad</a>
-				</p>
-				<p>
-					<a href="#" class="txt_footer">Aviso legal</a>
-				</p>
-				<p>
-					<a href="#" class="txt_footer">Política de cookies</a>
-				</p>
-			</article>
+                    <p><a th:href="@{/error}" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a th:href="@{/error}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
 		</section>
 	</footer>
 </body>

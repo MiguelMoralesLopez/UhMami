@@ -71,7 +71,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 19%;
-    top: 23%;
+    top: 66%;
 }
 
 #paraEmpezar {
@@ -87,7 +87,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 21%;
-    top: 136%;
+    top: 158%;
 }
 
 #titulo_principales {
@@ -96,7 +96,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 21%;
-    top: 370%;
+    top: 646%;
 }
 
 #titulo_terminar {
@@ -105,7 +105,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 25%;
-    top: 705%;
+    top: 1242%;
 }
 
 #titulo_bebidas {
@@ -114,7 +114,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 30%;
-    top: 868%;
+    top: 1524%;
 }
 
 #alergenos {
@@ -196,7 +196,7 @@ hr {
 
     h1 {
         width: 100%;
-        margin-left: 100%;
+        margin-left: 0%;
         padding-top: 18%;
     }
 
@@ -241,21 +241,21 @@ hr {
 
     #tituloNuestraCarta {
         height: 200px;
-        margin-top: 15%;
+        margin-top: -18%;
         margin-left: -20%;
     }
 
     #titulo_principales {
-        top: 470%;
+        top: 516%;
     }
 
     #titulo_terminar {
-        top: 956%;
+        top: 1066%;
         left: 20%;
     }
 
     #titulo_bebidas {
-        top: 1185%;
+        top: 1312%;
         left: 24%;
     }
 
@@ -300,12 +300,13 @@ hr {
     }
 
     #tituloNuestraCarta {
+    	top: 14% !important;
         left: 1% !important;
     }
 
     #titulo_empezar {
         left: 4% !important;
-        top: 75% !important;
+        top: 82% !important;
     }
 
     li.alergenos {
@@ -347,19 +348,19 @@ hr {
 
     #titulo_principales {
         left: 0px;
-        top: 302% !important;
+        top: 342% !important;
         margin-left: 8%;
     }
 
     #titulo_terminar {
         left: 0px;
-        top: 667% !important;
+        top: 749% !important;
         margin-left: 8%;
     }
 
     #titulo_bebidas {
         left: 0px;
-        top: 815% !important;
+        top: 914% !important;
         margin-left: 8%;
     }
 }
@@ -387,25 +388,30 @@ hr {
         width: 100%;
         height: 747px;
     }
+    
+    #tituloNuestraCarta{
+    	top: 18%;
+    }
+    
 
     #tituloNuestraCarta, #titulo_empezar , #titulo_principales, #titulo_terminar, #titulo_bebidas{
         left: 0%;
     }
 
     #titulo_empezar{
-        top:201%;
+        top:217%;
     }
 
     #titulo_principales{
-        top: 900%;
+        top: 979%;
     }
 
     #titulo_terminar{
-        top:1961%;
+        top:2122%;
     }
 
     #titulo_bebidas{
-        top: 2429%;
+        top: 2641%;
         left: 2% !important;
     }
 
@@ -466,7 +472,7 @@ hr {
 
     #titulo_empezar{
        left: 0px;
-       top: 99%; 
+       top: 107%; 
     }
 
     ol.listaAlergenos{
@@ -521,7 +527,7 @@ hr {
 
     #titulo_principales{
         left: 0px;
-        top: 328%;
+        top: 778%;
     }
 
     #pastasYarroces, #deLaTierra, #delMar, #nuestrasEspecialidades, #nuestrosPostres, #vinos, #bebidasYrefrescos, #cafesEinfusiones, #cocktails{
@@ -547,6 +553,6 @@ hr {
 
     #titulo_bebidas{
         left: 0px;
-        top: 807%;
+        top: 938%;
     }
 }

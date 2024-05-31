@@ -4,15 +4,15 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="../static/assets/styles/Home.css">
-        <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+        <link rel="stylesheet" href="assets/styles/Home.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
         <title>Inicio</title>
 
     </head>
     <body>
             <section id="foto_principal">
-                <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-                    src="../static/assets/img/menuhamburguesa.png"
+                <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                    src="assets/img/menuhamburguesa.png"
                     alt="Menu" /></a>
                 <img id ="foto_princ_web"
                     class="foto_principal_home"
@@ -20,7 +20,7 @@
                     alt="foto principal" />
                     <img id ="foto_princ_mvl"
                     class="foto_principal_home"
-                    src="../static/assets/img/princ_mvl.png"
+                    src="assets/img/princ_mvl.png"
                     alt="foto principal" />
             </section>
             <header>
@@ -35,7 +35,7 @@
             <main>
                 <section id="nuestra_historia">
                     <img class="fondo_titulo"
-                        src="../static/assets/img/tit_nuestraHistoria.png" />
+                        src="assets/img/tit_nuestraHistoria.png" />
                     <p class="p2">
                         En la cala Gració, "UhMami" se destaca como un oasis
                         culinario que cautiva los sentidos con</p>
@@ -151,7 +151,7 @@
                                 pronto!"
                             </p>
                         </article>
-                        <img id="puntos" src="../static/assets/icons/dots.svg"
+                        <img id="puntos" src="assets/icons/dots.svg"
                             alt="puntos" />
                     </div>
                 </section>
@@ -167,14 +167,14 @@
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>
                     <article id="legal">
-                        <p><a href="#" class="txt_footer">Terminos y
-                                condiciones</a></p>
-                        <p><a href="#" class="txt_footer">Políticas de
-                                privacidad</a></p>
-                        <p><a href="#" class="txt_footer">Aviso legal</a></p>
-                        <p><a href="#" class="txt_footer">Política de
-                                cookies</a></p>
-                    </article>
+                    <p><a th:href="@{/error}" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a th:href="@{/error}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
                 </section>
             </footer>
         </body>

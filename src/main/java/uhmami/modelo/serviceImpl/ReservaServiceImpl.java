@@ -17,6 +17,10 @@ import uhmami.modelo.entities.Reserva;
 import uhmami.modelo.repository.ReservaRepository;
 import uhmami.modelo.service.ReservaService;
 
+/**
+ * Esta clase proporciona una implementación del servicio para operaciones relacionadas con las reservas.
+ * Implementa la interfaz ReservaService.
+ */
 @Repository
 public class ReservaServiceImpl implements ReservaService{
 	
