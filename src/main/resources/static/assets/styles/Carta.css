@@ -71,7 +71,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 19%;
-    top: 66%;
+    top: 45%;
 }
 
 #paraEmpezar {
@@ -87,7 +87,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 21%;
-    top: 158%;
+    top: 150%;
 }
 
 #titulo_principales {
@@ -96,7 +96,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 21%;
-    top: 646%;
+    top: 420%;
 }
 
 #titulo_terminar {
@@ -105,7 +105,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 25%;
-    top: 1242%;
+    top: 820%;
 }
 
 #titulo_bebidas {
@@ -114,7 +114,7 @@ hr {
     align-items: center;
     position: absolute;
     left: 30%;
-    top: 1524%;
+    top: 1000%;
 }
 
 #alergenos {
@@ -241,7 +241,7 @@ hr {
 
     #tituloNuestraCarta {
         height: 200px;
-        margin-top: -18%;
+        margin-top: 0%;
         margin-left: -20%;
     }
 
@@ -255,7 +255,7 @@ hr {
     }
 
     #titulo_bebidas {
-        top: 1312%;
+        top: 1316%;
         left: 24%;
     }
 
@@ -527,7 +527,7 @@ hr {
 
     #titulo_principales{
         left: 0px;
-        top: 778%;
+        top: 383%;
     }
 
     #pastasYarroces, #deLaTierra, #delMar, #nuestrasEspecialidades, #nuestrosPostres, #vinos, #bebidasYrefrescos, #cafesEinfusiones, #cocktails{
@@ -540,7 +540,7 @@ hr {
 
     #titulo_terminar{
         left: 0px;
-        top: 668%;
+        top: 778%;
     }
 
     h5{
