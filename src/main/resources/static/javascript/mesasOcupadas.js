@@ -1,4 +1,4 @@
-const URL_DESTINO = "http://localhost:8087/"
+const URL_DESTINOP = "http://localhost:8087/"
 const RECURSO = "reservas/mesasBloqueadas"
 const fecha = document.getElementById('fecha')
 const hora = document.getElementById('horaReserva')
@@ -19,7 +19,7 @@ const hora = document.getElementById('horaReserva')
                             }
                         }
                     }
-                    xmlHttp.open("POST", URL_DESTINO + RECURSO, true)
+                    xmlHttp.open("POST", URL_DESTINOP + RECURSO, true)
                     xmlHttp.setRequestHeader('Content-Type', 'application/json')
                     
                     const mesaDto = {
