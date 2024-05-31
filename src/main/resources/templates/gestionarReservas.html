@@ -113,7 +113,7 @@
                     <div id="botones_modificar_y_cancelar">
                     <button id="reservar" type="submit"
                         class="botones_principales">Modificar <br> Reserva</button>
-                    <button id="cancelar" type="submit"
+                    <button id="cancelar" type="submit" th:action="@{/eliminar/{idReserva} (idReserva=${modificarReservasDto.idReserva})}"
                         class="botones_principales">Cancelar <br> Reserva</button>
                     </div>
                 </form>
@@ -127,11 +127,11 @@
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>
                     <article id="legal">
-                    <p><a th:href="@{/error}" class="txt_footer">Terminos y
+                    <p><a th:href="@{/error404}" class="txt_footer">Terminos y
                             condiciones</a></p>
                     <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
                             privacidad</a></p>
-                    <p><a th:href="@{/error}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/error404}" class="txt_footer">Aviso legal</a></p>
                     <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
                             cookies</a></p>
                 </article>
