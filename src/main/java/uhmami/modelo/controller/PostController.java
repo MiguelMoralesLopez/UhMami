@@ -86,4 +86,10 @@ public class PostController {
         return "redirect:/reservas";
     }
     
+    @PostMapping("/eliminar/{idReserva}")
+    public String eliminarReserva(@PathVariable("idReserva") String idReserva, ModificarReservasDto modificarReservasDto) {
+        reservaServiceImpl.eliminarReserva(idReserva);
+        return "redirect:/reservas";
+    }
+    
 } 

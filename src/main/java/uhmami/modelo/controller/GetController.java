@@ -118,7 +118,7 @@ public class GetController {
      *
      * @return el nombre de la vista "error404".
      */
-    @GetMapping("/error")
+    @GetMapping("/error404")
     public String mostrarError() {
     	return "error404";
     }
