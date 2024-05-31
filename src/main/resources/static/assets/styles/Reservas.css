@@ -300,6 +300,11 @@ body {
     .botones_principales{
     	margin-left: 31% !important;
     }
+    
+    .foto{
+    	width: 264px;
+  		height: 304px;
+    }
 
 }
 

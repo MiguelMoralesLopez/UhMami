@@ -198,6 +198,7 @@ hr {
         width: 100%;
         margin-left: 100%;
         padding-top: 18%;
+         margin-left: 0% !important;
     }
 
     #h4 {
@@ -244,13 +245,17 @@ hr {
         margin-top: 0%;
         margin-left: -20%;
     }
+    
+    #titulo_empezar{
+    	top:158%;
+    }
 
     #titulo_principales {
-        top: 470%;
+        top: 519%;
     }
 
     #titulo_terminar {
-        top: 956%;
+        top: 1067%;
         left: 20%;
     }
 
@@ -266,6 +271,7 @@ hr {
     ol.listaAlergenos {
         gap: 20px;
     }
+
 
 }
 
@@ -301,11 +307,12 @@ hr {
 
     #tituloNuestraCarta {
         left: 1% !important;
+    	top: 14% !important;
     }
 
     #titulo_empezar {
         left: 4% !important;
-        top: 75% !important;
+        top: 83% !important;
     }
 
     li.alergenos {
@@ -347,19 +354,19 @@ hr {
 
     #titulo_principales {
         left: 0px;
-        top: 302% !important;
+        top: 343% !important;
         margin-left: 8%;
     }
 
     #titulo_terminar {
         left: 0px;
-        top: 667% !important;
+        top: 748% !important;
         margin-left: 8%;
     }
 
     #titulo_bebidas {
         left: 0px;
-        top: 815% !important;
+        top: 912% !important;
         margin-left: 8%;
     }
 }
