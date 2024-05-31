@@ -65,7 +65,6 @@ public class DataUserConfiguration{
     	.requestMatchers("/img/**").permitAll()
     	.requestMatchers("/styles/**").permitAll()
     	.requestMatchers("/").permitAll()
-        .requestMatchers(HttpMethod.POST, "/login").permitAll()
         //Añado requisitos de seguridad para los usuarios
         .requestMatchers(HttpMethod.GET,"/admin").hasRole("ADMINISTRADOR")
         .requestMatchers(HttpMethod.POST,"/listaReservas").hasRole("ADMINISTRADOR")
