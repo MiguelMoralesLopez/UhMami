@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import uhmami.modelo.dto.ModificarReservasDto;
 import uhmami.modelo.dto.ReservaDto;
@@ -141,5 +142,20 @@ public class GetController {
     @GetMapping("/hamburguesa")
     public String mostrarMenuHamburguesa() {
     	return "menu_hamburguesa";
+    }
+    
+    /**
+     * Maneja la eliminación de una reserva por su ID.
+     *
+     * Este método está mapeado a la solicitud GET a "/eliminar/{idReserva}". Elimina la reserva
+     * con el ID dado y redirige al usuario a la página de reservas.
+     *
+     * @param idReserva el ID de la reserva que se va a eliminar.
+     * @return una cadena de redirección a la página de reservas.
+     */
+    @GetMapping("/eliminar/{idReserva}")
+    public String eliminarReserva(@PathVariable("idReserva") String idReserva) {
+        reservaServiceImpl.eliminarReserva(idReserva);
+        return "redirect:/reservas";
     }
 }
