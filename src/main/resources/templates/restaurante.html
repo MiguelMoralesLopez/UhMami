@@ -57,10 +57,10 @@
         </p>
         <article id="btnCartaYreserva">
           <button class="botones_principales">
-            <a href="carta.html">Ver carta</a>
+            <a th:href="@{/carta}">Ver carta</a>
           </button>
           <button class="botones_principales">
-            <a href="reservas.html">Reservar</a>
+            <a th:href="@{/reservas}">Reservar</a>
           </button>
         </article>
       </section>
@@ -104,7 +104,7 @@
         <img id="fotoRecomendacion" src="assets/img/106.jpg"
           alt="foto recomendación del chef" />
         <button id="btn_recomendacion" class="botones_secundarios"><a
-            href="carta.html"> Recomendación del chef </a></button>
+            th:href="@{/carta}"> Recomendación del chef </a></button>
       </section>
 
     </main>
