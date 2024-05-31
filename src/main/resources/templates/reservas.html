@@ -86,7 +86,7 @@
 							<article id="horas">
 								<label for="hora">Hora : </label> <select name="hora"
 									id="horaReserva">
-									<option hidden selected value="">00:00</option>
+									<option hidden = true selected value="">00:00</option>
 									<option value="1300">13:00</option>
 									<option value="1400">14:00</option>
 									<option value="1500">15:00</option>
@@ -107,13 +107,8 @@
 						<img id="foto_plano" src="assets/img/plano_color.png"
 							alt="foto plano del restaurante" />
 					</article>
-<<<<<<< HEAD
-					<article class="container" id="planomesas">
-						<input id="mesaSeleccionada" type="hidden" th:field="*{mesa}" />
-=======
 					<article class="container">
 						<input id="mesaSeleccionada" type="hidden" name="mesa" />
->>>>>>> 779be5f83b96df866622270cfde5c7d1ad55cd30
 						<!-- 1º fila de mesas -->
 						<div class="item">
 							<button type="button" value=1 id="mesa1" class="dos_cuadrada" disabled></button>

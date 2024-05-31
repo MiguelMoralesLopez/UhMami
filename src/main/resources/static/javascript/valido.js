@@ -1,7 +1,7 @@
-const nombre = document.getElementById("nombrereserva");
-const apellido = document.getElementById('apellidoreserva');
-const email = document.getElementById("emailreserva");
-const telefono = document.getElementById("telefonoreserva");
+const vnombre = document.getElementById('nombre');
+const apellido = document.getElementById('apellido');
+const email = document.getElementById('email');
+const telefono = document.getElementById("telefono");
 const comensales = document.getElementById('comensalreserva')
 const vfecha = document.getElementById('fecha')
 const vhora = document.getElementById('horaReserva')
@@ -9,26 +9,11 @@ const politica = document.getElementById('politica')
 const mapa =  document.querySelector("#plano_mesas > article.container")
 
 const formulario = document.getElementById('formReserva')
-const warningIcon = document.getElementById("warning-icon");
 const errorTel = document.getElementById('errorTel')
 var mesaSeleccionada = document.getElementById('mesaSeleccionada')
 
 
 
-//Mesas
-var mesa1 = document.getElementById('mesa1')
-var mesa2 = document.getElementById('mesa2')
-var mesa3 = document.getElementById('mesa3')
-var mesa4 = document.getElementById('mesa4')
-var mesa5 = document.getElementById('mesa5')
-var mesa6 = document.getElementById('mesa6')
-var mesa7 = document.getElementById('mesa7')
-var mesa8 = document.getElementById('mesa8')
-var mesa9 = document.getElementById('mesa9')
-var mesa10 = document.getElementById('mesa10')
-var mesa11 = document.getElementById('mesa11')
-var mesa12 = document.getElementById('mesa12')
-var mesa13 = document.getElementById('mesa13')
 //Validaciones 
 var nomCorrecto = false
 var apeCorrecto = false
@@ -43,22 +28,22 @@ var errorT = false
 var mesaCorrecta = false
 
 //Añado un escucha para cada input
-/*
-nombre.addEventListener('focusout', () => {
-    var nom = nombre.value.trim();
+
+vnombre.addEventListener('focusout', () => {
+    var nom = vnombre.value.trim();
     
     if (nom=== "") {
         console.log('estoy en nombre vacio')
                
-        nombre.style.color = '#E13600'
-        nombre.value = "Introduzca el nombre"
+        vnombre.style.color = '#E13600'
+        vnombre.value = "Introduzca el nombre"
         
-        nombre.addEventListener('focusin',() => {
+        vnombre.addEventListener('focusin',() => {
            
             if(nom === ""){
-            nombre.value = ''
-            nombre.style.color = '#616D69'
-            nombre.placeholder = ''
+            vnombre.value = ''
+            vnombre.style.color = '#616D69'
+            vnombre.placeholder = ''
             } 
         })
         nomCorrecto = false
@@ -273,16 +258,9 @@ politica.addEventListener('click',()=> {
 
 
 
-*/
 
 //MESAS
 
-const mesacuadrada = [
-    '../assets/img/2_cuadrada_verde.png',
-    '../assets/img/2_cuadrada_naranja.png'
-    
-]
-let indice = 0
 
 mesaSeleccionada.value = 0
    
@@ -480,8 +458,8 @@ function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
     var validado = false
     
-    if (nombre.value === "" || apellido.value=="" || email.value=="" || telefono.value=="" ) {
-        nombre.focus()
+    if (vnombre.value === "" || apellido.value=="" || email.value=="" || telefono.value=="" ) {
+        vnombre.focus()
         alert('Faltan campos de rellenar')
         validado = false
     }else{
