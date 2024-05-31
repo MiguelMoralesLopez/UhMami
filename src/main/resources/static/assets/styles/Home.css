@@ -607,6 +607,7 @@ p.p {
 
     #resena {
         width: 100%;
+        gap:0px !important;
     }
 
     #cont_resenas {
@@ -634,7 +635,7 @@ p.p {
 
 /*Animaciones*/
 #foto_resena {
-    width: 300px;
+    width: 140px;
     height: auto;
     transition: opacity 0.5s;
 }

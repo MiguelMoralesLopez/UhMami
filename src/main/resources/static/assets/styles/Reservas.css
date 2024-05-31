@@ -158,8 +158,7 @@ body {
     padding: 12px;
 }
 
-.dos_cuadrada,
-.dos_cuadrada:hover {
+.dos_cuadrada{
     background: transparent;
     background-image: url(../img/2_cuadrada_verde.png);
     width: 49px;
@@ -179,8 +178,7 @@ body {
 
 
 
-.dos_redonda, 
-.dos_redonda:hover {
+.dos_redonda{
     background: transparent;
     background-image: url(../img/2_redonda_verde.png);
     width: 104px;
@@ -199,8 +197,7 @@ body {
 }
 
 
-.cuatro_cuadrada,
-.cuatro_cuadrada:hover {
+.cuatro_cuadrada{
     background: transparent;
     background-image: url(../img/4_cuadrada_verde.png);
     width: 99px;
@@ -218,8 +215,8 @@ body {
     background-image: url(../img/4_cuadrada_naranja.png);
 }
 
-.cuatro_redonda,
-.cuatro_redonda:hover {
+.cuatro_redonda
+ {
     background: transparent;
     background-image: url(../img/4_redonda_verde.png);
     width: 129px;
@@ -236,8 +233,7 @@ body {
     background-image: url(../img/4_redonda_normal.png);
 }
 
-.seis,
-.seis:hover {
+.seis{
     background: transparent;
     background-image: url(../img/6_verde.png);
     width: 110px;
@@ -255,8 +251,7 @@ body {
     background-image: url(../img/6_naranja.png);
 }
 
-.ocho,
-.ocho:hover {
+.ocho{
     background: transparent;
     background-image: url(../img/8_verde.png);
     width: 186px;
@@ -300,6 +295,10 @@ body {
         width: 100%;
         margin-left: 100%;
         margin-top: 15%;
+    }
+    
+    .botones_principales{
+    	margin-left: 31% !important;
     }
 
 }
@@ -468,8 +467,8 @@ body {
     }
 
     .container{
-        top: 1359px;
-        left: 7%;
+        top: 1330px;
+        left: 5%;
     }
 
     .botones_principales{
