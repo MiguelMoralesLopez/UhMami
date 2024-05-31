@@ -176,25 +176,53 @@ comensales.addEventListener('focusin', ()=>{
     comenCorrecto = true
     console.log('comensal elegido')
 
+
 })
 
 
 //No se puede elegir una fecha anterior a la de hoy
 var fechaMin = new Date();
     var anio = fechaMin.getFullYear();
-    var dia = fechaMin.getDate() + 1;
+    var dia = fechaMin.getDate() +1;
     var _mes = fechaMin.getMonth(); //viene con valores de 0 al 11
     _mes = _mes + 1; //ahora lo tienes de 1 al 12
-    if (_mes < 10) //ahora le agregas un 0 para el formato date
+
+    if(_mes === 9 || _mes === 4 || _mes ===6 || _mes ===10 || _mes ===10){
+        if(dia===31){
+            dia=1
+            _mes+=1
+        }
+    }
+    if(_mes === 1 || _mes === 3 || _mes ===5 || _mes ===10 || _mes ===7 || _mes ===8 || _mes ===9 || _mes ===12){
+            if(dia===32){
+                dia=1
+                _mes+=1
+            }
+    if(_mes === 2){
+        if(dia===29){
+        dia=1
+        _mes+=1
+                }
+            }
+    
+    }
+    if (_mes < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
     {
         var mes = "0" + _mes;
     } else {
         var mes = _mes.toString;
     }
 
+    if (dia < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
+    {
+        var dia = "0" + dia;
+    }
+    
+
     var fecha_minimo = anio + '-' + mes + '-' + dia;
 
 vfecha.setAttribute('min',fecha_minimo)
+vfecha.setAttribute('value',fecha_minimo)
 //Evitamos que el usuario no haya dejado los comensales sin elegir 
 // y validamos que haya seleccionado una fecha
 vfecha.addEventListener('focusin', ()=> {
@@ -249,15 +277,25 @@ politica.addEventListener('click',()=> {
 
 //MESAS
 
+const mesacuadrada = [
+    '../assets/img/2_cuadrada_verde.png',
+    '../assets/img/2_cuadrada_naranja.png'
+    
+]
+let indice = 0
+
+mesaSeleccionada.value = 0
+   
+plano = document.getElementById('planomesas')
+
 
 var mesa1 = document.getElementById('mesa1')
 
 mesa1.addEventListener('click',() =>{
-        mesaSeleccionada.value = 1   
-         mesaCorrecta = true
+        parseInt(mesaSeleccionada.value = 1)   
+        mesaCorrecta = true
         console.log('mesa 1 elegida')
-        
-   
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"    
 })
 
 var mesa2 = document.getElementById('mesa2')
@@ -267,6 +305,7 @@ mesa2.addEventListener('click',() =>{
         console.log('mesa 2 elegida')
         mesaSeleccionada.value = 2  
         mesaCorrecta = true
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
    
 })
 
@@ -277,6 +316,7 @@ mesa3.addEventListener('click',() =>{
         console.log('mesa 3 elegida')
         mesaSeleccionada.value = 3  
         mesaCorrecta = true
+        mesa3.style.backgroundImage = "url('../assets/img/6_naranja.png')"
 })
 
 var mesa4 = document.getElementById('mesa4')
@@ -286,6 +326,7 @@ mesa4.addEventListener('click',() =>{
         console.log('mesa 4 elegida')
         mesaSeleccionada.value = 4 
         mesaCorrecta = true
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
@@ -296,6 +337,7 @@ mesa5.addEventListener('click',() =>{
         console.log('mesa 5 elegida')
         mesaSeleccionada.value = 5   
         mesaCorrecta = true
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -306,6 +348,7 @@ mesa6.addEventListener('click',() =>{
         console.log('mesa 6 elegida')
         mesaSeleccionada.value = 6  
         mesaCorrecta = true
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -316,6 +359,7 @@ mesa7.addEventListener('click',() =>{
         console.log('mesa 7 elegida')
         mesaSeleccionada.value = 7 
         mesaCorrecta = true
+        mesa7.style.backgroundImage = "url('../assets/img/8_naranja.png')"
 })
 
 var mesa8 = document.getElementById('mesa8')
@@ -325,6 +369,7 @@ mesa8.addEventListener('click',() =>{
         console.log('mesa 8 elegida')
         mesaSeleccionada.value = 8   
         mesaCorrecta = true
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -335,6 +380,7 @@ mesa9.addEventListener('click',() =>{
         console.log('mesa 9 elegida')
         mesaSeleccionada.value = 9
         mesaCorrecta = true
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -345,7 +391,7 @@ mesa10.addEventListener('click',() =>{
         console.log('mesa 10 elegida')
         mesaSeleccionada.value = 10
         mesaCorrecta = true
-   
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"
 })
 
 var mesa11 = document.getElementById('mesa11')
@@ -355,7 +401,7 @@ mesa11.addEventListener('click',() =>{
         console.log('mesa 11 elegida')
         mesaSeleccionada.value = 11
         mesaCorrecta = true
-   
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
 })
 
 var mesa12 = document.getElementById('mesa12')
@@ -365,6 +411,7 @@ mesa12.addEventListener('click',() =>{
         console.log('mesa 12 elegida')
         mesaSeleccionada.value = 12
         mesaCorrecta = true
+        mesa12.style.backgroundImage = "url('../assets/img/6_naranja.png')"
    
 })
 
@@ -375,12 +422,59 @@ mesa13.addEventListener('click',() =>{
         console.log('mesa 13 elegada')
         mesaSeleccionada.value = 13
         mesaCorrecta = true
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
 
+plano.addEventListener('click',()=>{
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value)){
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa2.value)){
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    } 
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa3.value)){
+        mesa3.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa4.value)){
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa5.value)){
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa6.value)){
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa7.value)){
+        mesa7.style.backgroundImage = "url('../assets/img/8_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa8.value)){
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa9.value)){
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa10.value)){
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa11.value)){
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa12.value)){
+        mesa12.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa13.value)){
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    
 
-   
+})
+
+
+
 
 function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false

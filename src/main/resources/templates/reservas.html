@@ -86,6 +86,7 @@
 							<article id="horas">
 								<label for="hora">Hora : </label> <select name="hora"
 									id="horaReserva">
+									<option hidden selected value="">00:00</option>
 									<option value="1300">13:00</option>
 									<option value="1400">14:00</option>
 									<option value="1500">15:00</option>
@@ -106,32 +107,37 @@
 						<img id="foto_plano" src="assets/img/plano_color.png"
 							alt="foto plano del restaurante" />
 					</article>
+<<<<<<< HEAD
+					<article class="container" id="planomesas">
+						<input id="mesaSeleccionada" type="hidden" th:field="*{mesa}" />
+=======
 					<article class="container">
 						<input id="mesaSeleccionada" type="hidden" name="mesa" />
+>>>>>>> 779be5f83b96df866622270cfde5c7d1ad55cd30
 						<!-- 1º fila de mesas -->
 						<div class="item">
-							<button type="button" data-id="mesa1" value=1 id="mesa1" class="dos_cuadrada"></button>
+							<button type="button" value=1 id="mesa1" class="dos_cuadrada" disabled></button>
 						</div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" data-id="mesa2" value=2 id="mesa2" class="cuatro_cuadrada"></button>
+							<button type="button" value=2 id="mesa2" class="cuatro_cuadrada" disabled></button>
 						</div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" data-id="mesa3" value=3 id="mesa3" class="seis"></button>
+							<button type="button" value=3 id="mesa3" class="seis" disabled></button>
 						</div>
 						<div class="item">
-							<button type="button" data-id="mesa4" value="4" id="mesa4" class="cuatro_redonda"></button>
+							<button type="button" value="4" id="mesa4" class="cuatro_redonda" disabled></button>
 						</div>
 
 						<!-- 2º fila de mesas -->
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" data-id="mesa5" value=5 id="mesa5" class="dos_redonda"></button>
+							<button type="button" value=5 id="mesa5" class="dos_redonda" disabled></button>
 						</div>
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" data-id="mesa6" value=6 id="mesa6" class="dos_redonda"></button>
+							<button type="button" value=6 id="mesa6" class="dos_redonda" disabled></button>
 						</div>
 
 						<!-- 3º fila de mesas -->
@@ -139,34 +145,34 @@
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" data-id="mesa7" value=7 id="mesa7" class="ocho"></button>
+							<button type="button" value=7 id="mesa7" class="ocho" disabled></button>
 						</div>
 						<div class="item"></div>
 
 						<!-- 4º fila de mesas -->
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" data-id="mesa8" value=8 id="mesa8" class="dos_redonda"></button>
+							<button type="button" value=8 id="mesa8" class="dos_redonda" disabled></button>
 						</div>
 						<div class="item"></div>
 						<div class="item"></div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" data-id="mesa9" value=9 id="mesa9" class="dos_redonda"></button>
+							<button type="button" value=9 id="mesa9" class="dos_redonda" disabled></button>
 						</div>
 
 						<!-- 5º fila de mesas -->
 						<div class="item">
-							<button type="button" data-id="mesa10" value=10 id="mesa10" class="dos_cuadrada"></button>
+							<button type="button"  value=10 id="mesa10" class="dos_cuadrada" disabled></button>
 						</div>
 						<div class="item"></div>
 						<div class="item">
-							<button type="button" data-id="mesa11" value=11 id="mesa11" class="cuatro_cuadrada"></button>
+							<button type="button"  value=11 id="mesa11" class="cuatro_cuadrada" disabled></button>
 						</div>
 						<div class="item" style="margin: 0 auto;">
-							<button type="button" data-id="mesa12" value=12 id="mesa12" class="seis"></button>
+							<button type="button"  value=12 id="mesa12" class="seis" disabled></button>
 						</div>
 						<div class="item">
-							<button type="button" data-id="mesa13" id="mesa13" class="cuatro_redonda"></button>
+							<button type="button" value=13 id="mesa13" class="cuatro_redonda" disabled></button>
 						</div>
 
 					</article>
