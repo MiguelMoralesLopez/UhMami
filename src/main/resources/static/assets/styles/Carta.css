@@ -399,20 +399,24 @@ hr {
         left: 0%;
     }
 
+	#tituloNuestraCarta{
+		top: 13%;
+	}
+
     #titulo_empezar{
-        top:201%;
+        top:219%;
     }
 
     #titulo_principales{
-        top: 900%;
+        top: 980%;
     }
 
     #titulo_terminar{
-        top:1961%;
+        top:2118%;
     }
 
     #titulo_bebidas{
-        top: 2429%;
+        top: 2639%;
         left: 2% !important;
     }
 
@@ -451,6 +455,10 @@ hr {
     .menu_hamburguesa{
         position: absolute;
     }
+    
+    footer{
+    	height: 264px !important;
+    }
 
     #principalCarta{
         width: 100%;
@@ -473,7 +481,7 @@ hr {
 
     #titulo_empezar{
        left: 0px;
-       top: 99%; 
+       top: 108%; 
     }
 
     ol.listaAlergenos{
@@ -554,6 +562,6 @@ hr {
 
     #titulo_bebidas{
         left: 0px;
-        top: 807%;
+        top: 938%;
     }
 }

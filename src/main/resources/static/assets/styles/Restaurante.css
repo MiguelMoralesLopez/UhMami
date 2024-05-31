@@ -22,7 +22,6 @@ p.p {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    gap: 82px;
 }
 
 #tituloRestaurante {
@@ -311,10 +310,10 @@ p.p {
         height: 400px;
     }
 
-    .fondo_titulo{
-        width: 100%;
-        height: 150px;
-    }
+    .fondo_titulo {
+    width: 69%;
+    height: 126px;
+  }
 
     #fotoRecomendacion{
         width: 100%;
@@ -324,6 +323,7 @@ p.p {
     #btn_recomendacion{
        margin-left: 616px;
     }
+
 }
 
 /*fin movil*/
