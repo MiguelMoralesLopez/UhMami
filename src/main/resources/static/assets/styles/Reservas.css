@@ -584,7 +584,7 @@ body {
 
     .container{
         top: 1275px !important;
-        left: 30px;
+        left: 54px;
         gap: 0px;
         grid-template-columns: 10% 18% 18% 30% 12%;
         grid-template-rows: 80px 30px 50px 40px 80px;
