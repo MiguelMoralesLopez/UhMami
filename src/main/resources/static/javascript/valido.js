@@ -184,19 +184,46 @@ comensales.addEventListener('focusin', ()=>{
 //No se puede elegir una fecha anterior a la de hoy
 var fechaMin = new Date();
     var anio = fechaMin.getFullYear();
-    var dia = fechaMin.getDate() + 1;
+    var dia = fechaMin.getDate() +1;
     var _mes = fechaMin.getMonth(); //viene con valores de 0 al 11
     _mes = _mes + 1; //ahora lo tienes de 1 al 12
-    if (_mes < 10) //ahora le agregas un 0 para el formato date
+
+    if(_mes === 9 || _mes === 4 || _mes ===6 || _mes ===10 || _mes ===10){
+        if(dia===31){
+            dia=1
+            _mes+=1
+        }
+    }
+    if(_mes === 1 || _mes === 3 || _mes ===5 || _mes ===10 || _mes ===7 || _mes ===8 || _mes ===9 || _mes ===12){
+            if(dia===32){
+                dia=1
+                _mes+=1
+            }
+    if(_mes === 2){
+        if(dia===29){
+        dia=1
+        _mes+=1
+                }
+            }
+    
+    }
+    if (_mes < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
     {
         var mes = "0" + _mes;
     } else {
         var mes = _mes.toString;
     }
 
+    if (dia < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
+    {
+        var dia = "0" + dia;
+    }
+    
+
     var fecha_minimo = anio + '-' + mes + '-' + dia;
 
 vfecha.setAttribute('min',fecha_minimo)
+vfecha.setAttribute('value',fecha_minimo)
 //Evitamos que el usuario no haya dejado los comensales sin elegir 
 // y validamos que haya seleccionado una fecha
 vfecha.addEventListener('focusin', ()=> {
