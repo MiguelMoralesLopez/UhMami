@@ -264,7 +264,7 @@ politica.addEventListener('click',()=> {
 
 mesaSeleccionada.value = 0
    
-plano = document.getElementById('planomesas')
+plano = document.getElementById('plano_mesas')
 
 
 var mesa1 = document.getElementById('mesa1')
@@ -404,7 +404,7 @@ mesa13.addEventListener('click',() =>{
    
 })
 
-plano = document.getElementById('plano')
+
 plano.addEventListener('click',()=>{
     
     if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value)){
