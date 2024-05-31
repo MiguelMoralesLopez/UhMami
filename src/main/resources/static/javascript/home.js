@@ -13,8 +13,9 @@ const textoResena = [
 let indiceActual = 0
 let indiceActual2 = 0
 const puntos = document.getElementById('puntos')
+
 puntos.addEventListener('click',()=>{
-    console.log('click')
+    
 
     // Añadimos la clase fade-out para iniciar la animación de desvanecimiento
     foto.classList.add('fade-out')

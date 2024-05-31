@@ -83,7 +83,7 @@
                     </article>
 
                     <button class="botones_principales">
-                        <a href="restaurante.html">El restaurante</a>
+                        <a th:href="@{/restaurante}">El restaurante</a>
                     </button>
                 </section>
 
@@ -96,7 +96,7 @@
                                 alt="foto comida para empezar" />
                             <button id="boton_empezar"
                                 class="botones_secundarios">
-                                <a href="carta.html#titulo_empezar">Para
+                                <a th:href="@{/carta#paraEmpezar}">Para
                                     empezar</a>
                             </button>
                         </article>
@@ -107,7 +107,7 @@
                             <button id="boton_princ"
                                 class="botones_secundarios">
                                 <a
-                                    href="carta.html#titulo_principales">Principales</a>
+                                    th:href="@{/carta#titulo_principales}">Principales</a>
                             </button>
                         </article>
                         <article id="caja_postres">
@@ -116,7 +116,7 @@
                                 alt="foto postre" />
                             <button id="boton_postres"
                                 class="botones_secundarios">
-                                <a href="carta.html#titulo_terminar">Postres</a>
+                                <a th:href="@{/carta#titulo_terminar}">Postres</a>
                             </button>
                         </article>
                     </div>
@@ -126,7 +126,8 @@
                     <img class="fondo_titulo"
                         src="assets/img/tit_hazrva.png" />
                     <button class="botones_principales">
-                        <a href="reservas.html">Reservar</a>
+                        <a th:href="@{/reservas}">Reservas</a>
+                        
                     </button>
                 </section>
 
