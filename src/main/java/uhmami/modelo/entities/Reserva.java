@@ -42,13 +42,6 @@ public class Reserva implements Serializable {
     private String observaciones;
 
     /**
-     * El usuario que realizó la reserva.
-     */
-    @ManyToOne
-    @JoinColumn(name = "ID_usuario")
-    private Usuario usuario;
-
-    /**
      * El cliente asociado a la reserva.
      */
     @ManyToOne
