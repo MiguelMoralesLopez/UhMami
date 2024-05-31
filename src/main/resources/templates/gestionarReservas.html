@@ -111,10 +111,10 @@
 
                     <br>
                     <div id="botones_modificar_y_cancelar">
-                    <button id="reservar" type="submit"
+                    <button id="reservar" type="submit" 
                         class="botones_principales">Modificar <br> Reserva</button>
-                    <button id="cancelar" type="submit" th:action="@{/eliminar/{idReserva} (idReserva=${modificarReservasDto.idReserva})}"
-                        class="botones_principales">Cancelar <br> Reserva</button>
+                    <button id="cancelar" type="submit" 
+                        class="botones_principales"><a th:href="@{/eliminar/{idReserva} (idReserva=${modificarReservasDto.idReserva})}">Cancelar <br> Reserva</a></button>
                     </div>
                 </form>
             </main>
