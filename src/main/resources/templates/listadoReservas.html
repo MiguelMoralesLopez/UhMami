@@ -3,8 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
         <link rel="stylesheet" href="../static/assets/styles/Listado_de_reservas.css">
         <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+=======
+        <link rel="stylesheet" href="assets/styles/Listado_de_reservas.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
+        <script type="text/javascript" src="../javascript/listadoReservas.js"></script>
+>>>>>>> main
         <title>Listado de reservas</title>
     </head>
     <body>
@@ -25,38 +31,23 @@
         </header>
 
         <main>
-            <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-                src="../static/assets/img/menuhamburguesa.png"
+            <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                src="assets/img/menuhamburguesa.png"
                 alt="Menu" /></a>
             <section id="datos_fecha">
-                <article id="calendario">
+                <article id="calendario" onchange="enviarPeticionLista()">
                     <label for="fecha">Fecha : </label>
                     <input type="date" id="fecha"
-                        th:name="fecha">
+                        name="fecha" >
                 </article>
                 <article>
-                    <button id="pdf" class="botones_principales">Generar PDF</button>
-                        <button id="nueva_reserva" class="botones_principales">Nueva reserva</button>
+                    <button id="pdf" type="button" class="botones_principales" onclick="descargaPdf()">Generar Pdf</button>
+                    <button id="nueva_reserva" class="botones_principales">Nueva reserva</button>
                 </article>
             </section>
             <section id="listado">
                 <h2>Listado de reservas:</h2>
-                <table>
-                    <tr id="titulos_tabla">
-                        <th><h6>Hora</h6></th>
-                        <th><h6>Nombre</h6></th>
-                        <th><h6>Comensales</h6></th>
-                        <th><h6>Mesa</h6></th>
-                        <th><h6>Modificar</h6></th>
-                    </tr>
-                    <tr id="registros_tabla" th:each="reserva : ${reservas}">
-                        <td class="td1" th:text="${reserva.hora}">13:00</td>
-                        <td class="td2" th:text="${reserva.nombre}">Manuel</td>
-                        <td class="td3" th:text="${reserva.comensales}">8</td>
-                        <td class="td4" th:text="${reserva.mesa}">10</td>
-                        <td class="td5"><button class="botones_modificar" sec:authorize="isAuthenticated()">
-                            <a th:href="@{/gestionarReserva/{id}(id=${reserva.idReserva})}"></a></button></td>
-                    </tr>
+                <table id="tabla">
                 </table>
             </section>
 
@@ -70,12 +61,12 @@
                     <p class="txt_footer">UhMami@contacto.com</p>
                 </article>
                 <article id="legal">
-                    <p><a href="#" class="txt_footer">Terminos y
+                    <p><a th:href="@{/error404}" class="txt_footer">Terminos y
                             condiciones</a></p>
-                    <p><a href="#" class="txt_footer">Políticas de
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
                             privacidad</a></p>
-                    <p><a href="#" class="txt_footer">Aviso legal</a></p>
-                    <p><a href="#" class="txt_footer">Política de
+                    <p><a th:href="@{/error404}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
                             cookies</a></p>
                 </article>
             </section>

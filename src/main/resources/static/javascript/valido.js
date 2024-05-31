@@ -1,17 +1,19 @@
-const nombre = document.getElementById("nombrereserva");
-const apellido = document.getElementById('apellidoreserva');
-const email = document.getElementById("emailreserva");
-const telefono = document.getElementById("telefonoreserva");
+const vnombre = document.getElementById('nombre');
+const apellido = document.getElementById('apellidos');
+const email = document.getElementById('email');
+const telefono = document.getElementById("telefono");
 const comensales = document.getElementById('comensalreserva')
-const fecha = document.getElementById('fecha')
-const hora = document.getElementById('horaReserva')
+const vfecha = document.getElementById('fecha')
+const vhora = document.getElementById('horaReserva')
 const politica = document.getElementById('politica')
 const mapa =  document.querySelector("#plano_mesas > article.container")
 
 const formulario = document.getElementById('formReserva')
-const warningIcon = document.getElementById("warning-icon");
 const errorTel = document.getElementById('errorTel')
 var mesaSeleccionada = document.getElementById('mesaSeleccionada')
+
+
+
 //Validaciones 
 var nomCorrecto = false
 var apeCorrecto = false
@@ -27,21 +29,21 @@ var mesaCorrecta = false
 
 //Añado un escucha para cada input
 
-nombre.addEventListener('focusout', () => {
-    var nom = nombre.value.trim();
+vnombre.addEventListener('focusout', () => {
+    var nom = vnombre.value.trim();
     
     if (nom=== "") {
         console.log('estoy en nombre vacio')
                
-        nombre.style.color = '#E13600'
-        nombre.value = "Introduzca el nombre"
+        vnombre.style.color = '#E13600'
+        vnombre.value = "Introduzca el nombre"
         
-        nombre.addEventListener('focusin',() => {
+        vnombre.addEventListener('focusin',() => {
            
             if(nom === ""){
-            nombre.value = ''
-            nombre.style.color = '#616D69'
-            nombre.placeholder = ''
+            vnombre.value = ''
+            vnombre.style.color = '#616D69'
+            vnombre.placeholder = ''
             } 
         })
         nomCorrecto = false
@@ -159,35 +161,63 @@ comensales.addEventListener('focusin', ()=>{
     comenCorrecto = true
     console.log('comensal elegido')
 
+
 })
 
 
 //No se puede elegir una fecha anterior a la de hoy
 var fechaMin = new Date();
     var anio = fechaMin.getFullYear();
-    var dia = fechaMin.getDate() + 1;
+    var dia = fechaMin.getDate() +1;
     var _mes = fechaMin.getMonth(); //viene con valores de 0 al 11
     _mes = _mes + 1; //ahora lo tienes de 1 al 12
-    if (_mes < 10) //ahora le agregas un 0 para el formato date
+
+    if(_mes === 9 || _mes === 4 || _mes ===6 || _mes ===10 || _mes ===10){
+        if(dia===31){
+            dia=1
+            _mes+=1
+        }
+    }
+    if(_mes === 1 || _mes === 3 || _mes ===5 || _mes ===10 || _mes ===7 || _mes ===8 || _mes ===9 || _mes ===12){
+            if(dia===32){
+                dia=1
+                _mes+=1
+            }
+    if(_mes === 2){
+        if(dia===29){
+        dia=1
+        _mes+=1
+                }
+            }
+    
+    }
+    if (_mes < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
     {
         var mes = "0" + _mes;
     } else {
         var mes = _mes.toString;
     }
 
+    if (dia < 10) //ahora le agregas un 0 para el formato date en los meses menor que 10
+    {
+        var dia = "0" + dia;
+    }
+    
+
     var fecha_minimo = anio + '-' + mes + '-' + dia;
 
-fecha.setAttribute('min',fecha_minimo)
+vfecha.setAttribute('min',fecha_minimo)
+vfecha.setAttribute('value',fecha_minimo)
 //Evitamos que el usuario no haya dejado los comensales sin elegir 
 // y validamos que haya seleccionado una fecha
-fecha.addEventListener('focusin', ()=> {
+vfecha.addEventListener('focusin', ()=> {
     if(elegirComensal == 0){
         alert('Por favor, dígamos cuantos comensales son.')
         elegirComensal = 1
         comensales.focus()
     }
 
-    if(fecha.value != null){
+    if(vfecha.value != null){
         console.log('fecha correcto')
         fechaCorrecto = true
     }
@@ -201,15 +231,16 @@ fecha.addEventListener('focusin', ()=> {
 
 //Validación de elegir hora
 
-hora.addEventListener('click', () => {
-    if(hora.value!=''){
+vhora.addEventListener('focusin',()=>{
+    if(vhora.value!=''){
         console.log('hora elegida')
         horaCorrecto = true
     }
     else{
         horaCorrecto = false
-    }
-})
+    }})
+    
+
 
 //Validar el checkeo de las politicas de privacidad
 politica.addEventListener('click',()=> {
@@ -228,19 +259,29 @@ politica.addEventListener('click',()=> {
 
 
 
-
-
 //MESAS
+
+
+mesaSeleccionada.value = 0
+   
+plano = document.getElementById('plano_mesas')
 
 
 var mesa1 = document.getElementById('mesa1')
 
 mesa1.addEventListener('click',() =>{
+<<<<<<< HEAD
         mesaSeleccionada.value = 1   
          mesaCorrecta = true
         console.log('mesa 1 eleginada')
         
    
+=======
+        parseInt(mesaSeleccionada.value = 1)   
+        mesaCorrecta = true
+        console.log('mesa 1 elegida')
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"    
+>>>>>>> main
 })
 
 var mesa2 = document.getElementById('mesa2')
@@ -250,6 +291,7 @@ mesa2.addEventListener('click',() =>{
         console.log('mesa 2 eleginada')
         mesaSeleccionada.value = 2  
         mesaCorrecta = true
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
    
 })
 
@@ -260,6 +302,7 @@ mesa3.addEventListener('click',() =>{
         console.log('mesa 3 eleginada')
         mesaSeleccionada.value = 3  
         mesaCorrecta = true
+        mesa3.style.backgroundImage = "url('../assets/img/6_naranja.png')"
 })
 
 var mesa4 = document.getElementById('mesa4')
@@ -269,6 +312,7 @@ mesa4.addEventListener('click',() =>{
         console.log('mesa 4 eleginada')
         mesaSeleccionada.value = 4 
         mesaCorrecta = true
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
@@ -279,6 +323,7 @@ mesa5.addEventListener('click',() =>{
         console.log('mesa 5 eleginada')
         mesaSeleccionada.value = 5   
         mesaCorrecta = true
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -289,6 +334,7 @@ mesa6.addEventListener('click',() =>{
         console.log('mesa 6 eleginada')
         mesaSeleccionada.value = 6  
         mesaCorrecta = true
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -299,6 +345,7 @@ mesa7.addEventListener('click',() =>{
         console.log('mesa 7 eleginada')
         mesaSeleccionada.value = 7 
         mesaCorrecta = true
+        mesa7.style.backgroundImage = "url('../assets/img/8_naranja.png')"
 })
 
 var mesa8 = document.getElementById('mesa8')
@@ -308,6 +355,7 @@ mesa8.addEventListener('click',() =>{
         console.log('mesa 8 elegida')
         mesaSeleccionada.value = 8   
         mesaCorrecta = true
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -318,6 +366,7 @@ mesa9.addEventListener('click',() =>{
         console.log('mesa 9 eleginada')
         mesaSeleccionada.value = 9
         mesaCorrecta = true
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_naranja.png')"
    
 })
 
@@ -328,7 +377,7 @@ mesa10.addEventListener('click',() =>{
         console.log('mesa 10 eleginada')
         mesaSeleccionada.value = 10
         mesaCorrecta = true
-   
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_naranja.png')"
 })
 
 var mesa11 = document.getElementById('mesa11')
@@ -338,7 +387,7 @@ mesa11.addEventListener('click',() =>{
         console.log('mesa 11 eleginada')
         mesaSeleccionada.value = 11
         mesaCorrecta = true
-   
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_naranja.png')"
 })
 
 var mesa12 = document.getElementById('mesa12')
@@ -348,6 +397,7 @@ mesa12.addEventListener('click',() =>{
         console.log('mesa 12 eleginada')
         mesaSeleccionada.value = 12
         mesaCorrecta = true
+        mesa12.style.backgroundImage = "url('../assets/img/6_naranja.png')"
    
 })
 
@@ -355,12 +405,63 @@ var mesa13 = document.getElementById('mesa13')
 
 mesa13.addEventListener('click',() =>{
         
+<<<<<<< HEAD
         console.log('mesa 13 eleginada')
+=======
+        console.log('mesa 13 elegada')
+>>>>>>> main
         mesaSeleccionada.value = 13
         mesaCorrecta = true
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_naranja.png')"
    
 })
 
+
+plano.addEventListener('click',()=>{
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value) & mesa1.disabled === false){
+        mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa2.value) & mesa2.disabled === false){
+        mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    } 
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa3.value) & mesa3.disabled === false){
+        mesa3.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa4.value)  & mesa4.disabled === false){
+        mesa4.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa5.value)  & mesa5.disabled === false){
+        mesa5.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa6.value)  & mesa6.disabled === false){
+        mesa6.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa7.value)  & mesa7.disabled === false){
+        mesa7.style.backgroundImage = "url('../assets/img/8_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa8.value)  & mesa8.disabled === false){
+        mesa8.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa9.value)  & mesa9.disabled === false){
+        mesa9.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa10.value)  & mesa10.disabled === false){
+        mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa11.value)  & mesa11.disabled === false){
+        mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa12.value)  & mesa12.disabled === false){
+        mesa12.style.backgroundImage = "url('../assets/img/6_verde.png')" 
+    }
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa13.value)  & mesa13.disabled === false){
+        mesa13.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
+    }
+    
+
+})
 
 
 
@@ -369,8 +470,8 @@ function validateReservaForm() {
     //Creamos un valor que hasta que no sea validado sea false
     var validado = false
     
-    if (nombre.value === "" || apellido.value=="" || email.value=="" || telefono.value=="" ) {
-        nombre.focus()
+    if (vnombre.value === "" || apellido.value=="" || email.value=="" || telefono.value=="" ) {
+        vnombre.focus()
         alert('Faltan campos de rellenar')
         validado = false
     }else{
@@ -391,6 +492,10 @@ function validateReservaForm() {
       
     return validado;
     }
+<<<<<<< HEAD
    
    
 
+=======
+    
+>>>>>>> main

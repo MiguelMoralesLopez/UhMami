@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Restaurante</title>
-    <link rel="stylesheet" href="../static/assets/styles/Styles.css">
-    <link rel="stylesheet" href="../static/assets/styles/Restaurante.css">
+    <link rel="stylesheet" href="../assets/styles/Styles.css">
+    <link rel="stylesheet" href="../assets/styles/Restaurante.css">
   </head>
   <body>
     <header>
@@ -25,8 +25,8 @@
     </header>
     <main>
       <section id="principalRestaurante">
-        <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-          src="../static/assets/img/menuhamburguesa.png"
+        <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+          src="assets/img/menuhamburguesa.png"
           alt="Menu" /></a>
         <img
           class="foto_principal_restaurante"
@@ -124,11 +124,14 @@
           <p class="txt_footer">UhMami@contacto.com</p>
         </article>
         <article id="legal">
-          <p><a href="#" class="txt_footer">Terminos y condiciones</a></p>
-          <p><a href="#" class="txt_footer">Políticas de privacidad</a></p>
-          <p><a href="#" class="txt_footer">Aviso legal</a></p>
-          <p><a href="#" class="txt_footer">Política de cookies</a></p>
-        </article>
+                    <p><a th:href="@{/error404}" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a th:href="@{/error404}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
       </section>
     </footer>
 

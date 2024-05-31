@@ -9,7 +9,9 @@ p.p {
 
 
 /* IDS */
-
+#puntos:hover{
+   cursor: pointer; 
+}
 #foto_princ_mvl {
     display: none;
 }
@@ -630,18 +632,14 @@ p.p {
 
 }
 
-
-/*Estilos para animación*/
-
-#foto_resena{
+/*Animaciones*/
+#foto_resena {
+    width: 300px;
+    height: auto;
     transition: opacity 0.5s;
 }
-#textoResena{
+#textoResena {
     transition: opacity 0.5s;
-}
-#puntos{
-    cursor: pointer;
-    margin: 0 5px;
 }
 .fade-out {
     opacity: 0;

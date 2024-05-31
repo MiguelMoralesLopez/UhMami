@@ -3,36 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../static/assets/styles/Reservas.css">
-        <link rel="stylesheet" href="../static/assets/styles/Styles.css">
+        <link rel="stylesheet" th:href="@{/assets/styles/Reservas.css}">
+        <link rel="stylesheet" th:href="@{/assets/styles/Styles.css}">
         <title>Gestión de reserva</title>
     </head>
     <body>
         <header>
             <nav>
-                <button class="botones_nav"><a
-                        href="restaurante.html">Restaurante</a></button>
-                <button class="botones_nav"><a
-                        href="carta.html">Carta</a></button>
-                <a href="home.html"><img class="logo"
-                        src="../static/assets/img/logo.png"
-                        alt="Logo UhMami" /></a>
-                <button class="botones_nav"><a
-                        href="contacto.html">Contacto</a></button>
-                <button class="botones_nav"><a
-                        href="reservas.html">Reservas</a></button>
+                <button class="botones_nav"><a th:href="@{/restaurante}">Restaurante</a></button>
+                <button class="botones_nav"><a th:href="@{/carta}">Carta</a></button>
+                <a th:href="@{/}"><img class="logo" src="/assets/img/logo.png" alt="Logo UhMami" /></a>
+                <button class="botones_nav"><a th:href="@{/contacto}">Contacto</a></button>
+                <button class="botones_nav"><a th:href="@{/reservas}">Reservas</a></button>
             </nav>
         </header>
 
         <main>
             <section id="reservas">
                 <section id="principalReserva">
-                    <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-                        src="../static/assets/img/menuhamburguesa.png"
+                    <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                        src="assets/img/menuhamburguesa.png"
                         alt="Menu" /></a>
                     <img
                         class="foto_principal_reserva"
-                        src="../static/assets/img/7.jpg"
+                        src="/assets/img/7.jpg"
                         alt="foto corquetas" />
                     <article id="tituloGestionarReserva">
                         <h1>Gestionar Reserva</h1>
@@ -40,10 +34,11 @@
                 </section>
                 <section id="reservar">
                     <img class="fondo_titulo"
-                        src="../static/assets/img/tit_modificar.png" />
+                        src="/assets/img/tit_modificar.png" />
                 </section>
-                <form id="form" th:action="@{/reservar}" th:object="${cliente}"
-                    th:method="post">
+                <form id="form" th:action="@{/modificarReserva/{idReserva} (idReserva=${modificarReservasDto.idReserva})}" th:object="${modificarReservasDto}"
+                    th:method="put">
+                    <input type="hidden" name="_method" value="put"/>
                     <article id="datos_reservar">
                         <p><input class="input_corto" type="text"
                                 th:name="nombre" th:field="*{nombre}"
@@ -62,7 +57,7 @@
                     <section id="datos_reservar">
                         <article id="comensales">
                             <p><label for="comensales">Comensales : </label>
-                                <select name="comensales.idComensal">
+                                <select name="comensales.idComensal" th:field="*{comensales}" id="comensalreserva">
                                     <option value="1"> 1 </option>
                                     <option value="2"> 2 </option>
                                     <option value="3"> 3 </option>
@@ -83,34 +78,15 @@
                             <article id="hora">
                                 <article id="horas">
                                     <label for="hora">Hora : </label>
-                                    <select name="horas.idHora">
-                                        <option value="1230"> 12:30
-                                        </option>
-                                        <option value="1300"> 13:00
-                                        </option>
-                                        <option value="1330"> 13:30
-                                        </option>
-                                        <option value="1400"> 14:00
-                                        </option>
-                                        <option value="1430"> 14:30
-                                        </option>
-                                        <option value="1500"> 15:00
-                                        </option>
-                                        <option value="1530"> 15:30
-                                        </option>
-                                        <option value="2100"> 21:00
-                                        </option>
-                                        <option value="2130"> 21:30
-                                        </option>
-                                        <option value="2200"> 22:00
-                                        </option>
-                                        <option value="2230"> 22:30
-                                        </option>
-                                        <option value="2300"> 23:00
-                                        </option>
-                                        <option value="2330"> 23:30
-                                        </option>
-                                    </select>
+                                    <select th:field="*{hora}"
+									id="horaReserva">
+									<option value="1300">13:00</option>
+									<option value="1400">14:00</option>
+									<option value="1500">15:00</option>
+									<option value="2100">21:00</option>
+									<option value="2200">22:00</option>
+									<option value="2300">23:00</option>
+								</select>
                                 </article>
                             </article>
                         </section>
@@ -135,10 +111,10 @@
 
                     <br>
                     <div id="botones_modificar_y_cancelar">
-                    <button id="reservar" type="submit"
+                    <button id="reservar" type="submit" 
                         class="botones_principales">Modificar <br> Reserva</button>
-                    <button id="cancelar" type="submit"
-                        class="botones_principales">Cancelar <br> Reserva</button>
+                    <button id="cancelar" type="submit" 
+                        class="botones_principales"><a th:href="@{/eliminar/{idReserva} (idReserva=${modificarReservasDto.idReserva})}">Cancelar <br> Reserva</a></button>
                     </div>
                 </form>
             </main>
@@ -146,19 +122,19 @@
             <footer>
                 <section id="footer">
                     <article id="datos">
-                        <img id ="logo_footer" src="../static/assets/img/logoPeque.png" alt="Logo Uhmami" />
+                        <img id ="logo_footer" src="/assets/img/logoPeque.png" alt="Logo Uhmami" />
                         <p class="txt_footer">Cala Gració, Ibiza - 07800</p>
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>
                     <article id="legal">
-                        <p><a href="#" class="txt_footer">Terminos y
-                                condiciones</a></p>
-                        <p><a href="#" class="txt_footer">Políticas de
-                                privacidad</a></p>
-                        <p><a href="#" class="txt_footer">Aviso legal</a></p>
-                        <p><a href="#" class="txt_footer">Política de
-                                cookies</a></p>
-                    </article>
+                    <p><a th:href="@{/error404}" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a th:href="@{/error404}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
                 </section>
             </footer>
 

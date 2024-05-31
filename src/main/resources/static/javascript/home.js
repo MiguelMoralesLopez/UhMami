@@ -2,8 +2,13 @@
 const foto = document.getElementById('foto_resena')
 const p = document.getElementById('textoResena')
 const imagenes = [
+<<<<<<< HEAD
     '../static/assets/img/fotoResena.png',
     '../static/assets/img/fotoResena2.png',
+=======
+    '/assets/img/fotoResena.png',
+    '/assets/img/fotoResena2.png',
+>>>>>>> main
 ]
 const textoResena = [
     'Desde el primer bocado hasta el último, cada plato era una obra maestra de sabores sorprendentes y presentación impecable. El  ambiente acogedor y el servicio atento hicieron que mi experiencia fuera inolvidable. ¡Definitivamente volveré pronto!',
@@ -13,8 +18,14 @@ const textoResena = [
 let indiceActual = 0
 let indiceActual2 = 0
 const puntos = document.getElementById('puntos')
+<<<<<<< HEAD
 puntos.addEventListener('click',()=>{
     console.log('click')
+=======
+
+puntos.addEventListener('click',()=>{
+    
+>>>>>>> main
 
     // Añadimos la clase fade-out para iniciar la animación de desvanecimiento
     foto.classList.add('fade-out')

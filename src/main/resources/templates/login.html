@@ -9,8 +9,8 @@
     </head>
     <body>
         <main>
-            <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-                src="../static/assets/img/menuhamburguesa.png"
+            <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                src="assets/img/menuhamburguesa.png"
                 alt="Menu" /></a>
             <section id="titulo_login">
                 <img class="fondo_titulo"
@@ -29,8 +29,7 @@
                             placeholder="Password" /></p>
                 </article>
                 <article id="botones_form">
-                    <button id="enviar" type="submit"
-                        class="botones_principales">Enviar</button>
+                    <button id="enviar" type="button" onClick="enviarPeticionAsincrona()" class="botones_principales">Enviar</button>
                     <button id="volver"
                         class="botones_principales"><a
                         th:href="@{/}">Volver</a></button>

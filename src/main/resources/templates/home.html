@@ -3,17 +3,16 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="../static/assets/styles/Home.css">
-        <link rel="stylesheet" href="../static/assets/styles/Styles.css">
-        
+        <link rel="stylesheet" href="assets/styles/Home.css">
+        <link rel="stylesheet" href="assets/styles/Styles.css">
+        <script type="text/javascript" src="../javascript/home.js" defer></script>
         <title>Inicio</title>
 
     </head>
     <body>
             <section id="foto_principal">
-                <a href="menu_hamburguesa.html"><img class="menu_hamburguesa"
-                    src="../static/assets/img/menuhamburguesa.png"
+                <a th:href="@{/hamburguesa}"><img class="menu_hamburguesa"
+                    src="assets/img/menuhamburguesa.png"
                     alt="Menu" /></a>
                 <img id ="foto_princ_web"
                     class="foto_principal_home"
@@ -21,7 +20,7 @@
                     alt="foto principal" />
                     <img id ="foto_princ_mvl"
                     class="foto_principal_home"
-                    src="../static/assets/img/princ_mvl.png"
+                    src="assets/img/princ_mvl.png"
                     alt="foto principal" />
             </section>
             <header>
@@ -42,7 +41,7 @@
             <main>
                 <section id="nuestra_historia">
                     <img class="fondo_titulo"
-                        src="../static/assets/img/tit_nuestraHistoria.png" />
+                        src="assets/img/tit_nuestraHistoria.png" />
                     <p class="p2">
                         En la cala Gració, "UhMami" se destaca como un oasis
                         culinario que cautiva los sentidos con</p>
@@ -89,7 +88,7 @@
                     </article>
 
                     <button class="botones_principales">
-                        <a href="restaurante.html">El restaurante</a>
+                        <a th:href="@{/restaurante}">El restaurante</a>
                     </button>
                 </section>
 
@@ -102,7 +101,7 @@
                                 alt="foto comida para empezar" />
                             <button id="boton_empezar"
                                 class="botones_secundarios">
-                                <a href="carta.html#titulo_empezar">Para
+                                <a th:href="@{/carta#paraEmpezar}">Para
                                     empezar</a>
                             </button>
                         </article>
@@ -112,8 +111,7 @@
                                 alt="foto comida principal" />
                             <button id="boton_princ"
                                 class="botones_secundarios">
-                                <a
-                                    href="carta.html#titulo_principales">Principales</a>
+                                <a th:href="@{/carta#titulo_principales}">Principales</a>
                             </button>
                         </article>
                         <article id="caja_postres">
@@ -122,7 +120,7 @@
                                 alt="foto postre" />
                             <button id="boton_postres"
                                 class="botones_secundarios">
-                                <a href="carta.html#titulo_terminar">Postres</a>
+                                <a th:href="@{/carta#titulo_terminar}">Postres</a>
                             </button>
                         </article>
                     </div>
@@ -132,7 +130,8 @@
                     <img class="fondo_titulo"
                         src="../static/assets/img/tit_hazrva.png" />
                     <button class="botones_principales">
-                        <a href="reservas.html">Reservar</a>
+                        <a th:href="@{/reservas}">Reservas</a>
+                        
                     </button>
                 </section>
 
@@ -141,7 +140,7 @@
                         <h2>Reseñas de nuestros clientes</h2>
                         <article id="resena">
                             <img id="foto_resena"
-                                src="../static/assets/img/fotoResena.png"
+                                src="assets/img/fotoResena.png"
                                 alt="foto clienta reseña" />
                             <p id="textoResena" class="p_resena">
                                 Desde el primer bocado hasta el último, cada
@@ -158,12 +157,12 @@
                                 pronto!"
                             </p>
                         </article>
-                        <img id="puntos" src="../static/assets/icons/dots.svg"
+                        <img id="puntos" src="assets/icons/dots.svg"
                             alt="puntos" />
                     </div>
                 </section>
 
-                <script src="../static/javascript/home.js"></script>
+                
             </main>
             <footer>
                 <section id="footer">
@@ -174,14 +173,14 @@
                         <p class="txt_footer">UhMami@contacto.com</p>
                     </article>
                     <article id="legal">
-                        <p><a href="#" class="txt_footer">Terminos y
-                                condiciones</a></p>
-                        <p><a href="#" class="txt_footer">Políticas de
-                                privacidad</a></p>
-                        <p><a href="#" class="txt_footer">Aviso legal</a></p>
-                        <p><a href="#" class="txt_footer">Política de
-                                cookies</a></p>
-                    </article>
+                    <p><a th:href="@{/error404}" class="txt_footer">Terminos y
+                            condiciones</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Políticas de
+                            privacidad</a></p>
+                    <p><a th:href="@{/error404}" class="txt_footer">Aviso legal</a></p>
+                    <p><a th:href="@{/enConstruccion}" class="txt_footer">Política de
+                            cookies</a></p>
+                </article>
                 </section>
             </footer>
         </body>
