@@ -407,44 +407,44 @@ mesa13.addEventListener('click',() =>{
 
 plano.addEventListener('click',()=>{
     
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value) & mesa1.disabled === false){
         mesa1.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa2.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa2.value) & mesa2.disabled === false){
         mesa2.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
     } 
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa3.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa3.value) & mesa3.disabled === false){
         mesa3.style.backgroundImage = "url('../assets/img/6_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa4.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa4.value)  & mesa4.disabled === false){
         mesa4.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa5.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa5.value)  & mesa5.disabled === false){
         mesa5.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa6.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa6.value)  & mesa6.disabled === false){
         mesa6.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa7.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa7.value)  & mesa7.disabled === false){
         mesa7.style.backgroundImage = "url('../assets/img/8_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa8.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa8.value)  & mesa8.disabled === false){
         mesa8.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
     }
     
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa9.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa9.value)  & mesa9.disabled === false){
         mesa9.style.backgroundImage = "url('../assets/img/2_redonda_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa10.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa10.value)  & mesa10.disabled === false){
         mesa10.style.backgroundImage = "url('../assets/img/2_cuadrada_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa11.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa11.value)  & mesa11.disabled === false){
         mesa11.style.backgroundImage = "url('../assets/img/4_cuadrada_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa12.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa12.value)  & mesa12.disabled === false){
         mesa12.style.backgroundImage = "url('../assets/img/6_verde.png')" 
     }
-    if(parseInt(mesaSeleccionada.value) != parseInt(mesa13.value)){
+    if(parseInt(mesaSeleccionada.value) != parseInt(mesa13.value)  & mesa13.disabled === false){
         mesa13.style.backgroundImage = "url('../assets/img/4_redonda_verde.png')" 
     }
     
