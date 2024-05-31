@@ -1,5 +1,5 @@
 const vnombre = document.getElementById('nombre');
-const apellido = document.getElementById('apellido');
+const apellido = document.getElementById('apellidos');
 const email = document.getElementById('email');
 const telefono = document.getElementById("telefono");
 const comensales = document.getElementById('comensalreserva')
@@ -404,7 +404,7 @@ mesa13.addEventListener('click',() =>{
    
 })
 
-
+plano = document.getElementById('plano')
 plano.addEventListener('click',()=>{
     
     if(parseInt(mesaSeleccionada.value) != parseInt(mesa1.value)){

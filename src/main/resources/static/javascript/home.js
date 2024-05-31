@@ -2,8 +2,8 @@
 const foto = document.getElementById('foto_resena')
 const p = document.getElementById('textoResena')
 const imagenes = [
-    '../static/assets/img/fotoResena.png',
-    '../static/assets/img/fotoResena2.png',
+    '/assets/img/fotoResena.png',
+    '/assets/img/fotoResena2.png',
 ]
 const textoResena = [
     'Desde el primer bocado hasta el último, cada plato era una obra maestra de sabores sorprendentes y presentación impecable. El  ambiente acogedor y el servicio atento hicieron que mi experiencia fuera inolvidable. ¡Definitivamente volveré pronto!',
